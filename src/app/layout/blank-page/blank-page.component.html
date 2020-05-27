@@ -1,0 +1,184 @@
+<div id="row_1" class="row ">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 cloumn1 paddingt-5 border-b">
+
+            <div class="row paddingr-10">
+
+                <form id="contact" #contactForm="ngForm">
+                    <legend> {{ 'Contáctanos' | translate }}</legend>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" [(ngModel)]="selectedData.nombre" id="nombre" #nombre="ngModel" name="nombre" placeholder="{{'Nombre' | translate}}">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" class="form-control" [(ngModel)]="selectedData.emailSend" id="emailSend" #emailSend="ngModel" name="emailSend" placeholder="{{'Correo' | translate}}">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="phone" class="form-control" [(ngModel)]="selectedData.telefono" id="telefono" #telefono="ngModel" name="telefono" placeholder="{{'Teléfono' | translate}}">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" [(ngModel)]="selectedData.asunto" id="asunto" #asunto="ngModel" name="asunto" placeholder="{{'Asunto' | translate}}">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" [(ngModel)]="selectedData.pais" id="pais" #pais="ngModel" name="pais" placeholder="{{'País' | translate}}">
+                    </div>
+                    <div class="input-group">
+
+                    <select name="marca" id="marca" class="form-control" required="required" [(ngModel)]="selectedData.marca">
+                        <option value="Seleccione un mercado" disabled hidden>{{ 'Seleccione un mercado' | translate }}</option>
+                        <option *ngFor="let data of Table" [value]="data.id">
+                            <img [src]="data.icono" style="width: 10xp;height: 10px;">
+                            {{data.nombre | translate}}
+                        </option>
+                    </select>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <textarea name="mensaje" id="mensaje" class="form-control" rows="3" required="required" [(ngModel)]="selectedData.mensaje" placeholder="{{'Escribir mensaje...' | translate}}"></textarea>
+
+                    </div>
+
+                    <div class="input-group">
+                        <button type="button" class="btn btn-primary ingrup-btn" (click)="contact(selectedData)">{{ 'Enviar' | translate }}</button>
+                        <label class="descriptino_mail">{{ 'O escríbenos al correo:' | translate }} <span class="my-mail">info@ingrup.com</span></label>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+            <div class="row paddingr-10 w-100">
+                    <h2 class="title">{{ 'Proveedores' | translate }}</h2>
+                    <p class="description_proveedores">
+                        {{ 'Si eres un proveedor y buscas trabajar con nosotros haz clic en el botón a continuación y envíanos tu solicitud al correo electrónico:' | translate }}<br>
+                        suministros@ingrup.com
+                    </p>
+                    <button id="button_forma"></button>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="row_2" class="row paddingt-5 border-b vh100">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <ngb-accordion class="row paddingr-20 container_mapas" #acc="ngbAccordion" activeIds="config-panel-one">
+
+                            <ngb-panel class="text_pais"  id="config-panel-one">
+                                <ng-template ngbPanelTitle class="w-100">
+
+                                    <h3>Guatemala</h3>
+                                    <img class="row_pais" src="./../../../assets/images/flecha.png">
+                                </ng-template>
+                              <ng-template ngbPanelContent>
+                                    {{ 'Av. Petapa y 56 Calle, Zona 12 Ciudad de Guatemala, Guatemala.' | translate }}<br>
+
+                                    Tel. + (502) 2326-5600
+                              </ng-template>
+                              <img class="row_pais" src="./../../../assets/images/flecha.png">
+                            </ngb-panel>
+                            <ngb-panel  >
+                                    <ng-template ngbPanelTitle  class="w-100">
+
+                                            <h3>El Salvador</h3>
+                                            <img class="row_pais" src="./../../../assets/images/flecha.png">
+                                        </ng-template>
+                              <ng-template ngbPanelContent>
+                                    {{ 'Boulevard Bayer, Calle L1, Edificio Salaverría Cáceres, Bodegas 1 y 2, Merliot, El Salvador' | translate }}<br>
+
+                                    Tel.+(503) 2278-7918
+                              </ng-template>
+                            </ngb-panel>
+                            <ngb-panel  >
+                                    <ng-template ngbPanelTitle class="w-100">
+
+                                            <h3>Honduras</h3>
+                                            <img class="row_pais" src="./../../../assets/images/flecha.png">
+                                        </ng-template>
+                                <ng-template ngbPanelContent>
+                                       {{ 'Km. 13 Desvío a Residencial Monte María, Dos Caminos, Villanueva, Cortés, Honduras.' | translate }} <br>
+
+                                        Tel. + (504) 2670-2220
+                                </ng-template>
+                            </ngb-panel>
+                            <ngb-panel  >
+                                    <ng-template ngbPanelTitle class="w-100">
+
+                                            <h3>Nicaragua</h3>
+                                            <img class="row_pais" src="./../../../assets/images/flecha.png">
+                                        </ng-template>
+                                <ng-template ngbPanelContent>
+                                        {{ 'km 7.5 Carretera Norte, de la Kativo 50 mts al Este' | translate }}<br>
+                                        Tel. + (505) 2233-1744 <br>Tel. + (505) 2233-4622 <br>Tel. + (505) 2233-0476
+                                </ng-template>
+                            </ngb-panel>
+                            <ngb-panel  >
+                                    <ng-template ngbPanelTitle class="w-100">
+
+                                            <h3>Costa Rica</h3>
+                                            <img class="row_pais" src="./../../../assets/images/flecha.png">
+                                        </ng-template>
+                                <ng-template ngbPanelContent>
+                                        {{ 'De la Cervecería C.R. 1 Km. al Este, San Joaquín de Flores, Heredia, Costa Rica' | translate }}<br>
+
+                                        Tel. + (506) 2265-6500
+                                </ng-template>
+                            </ngb-panel>
+                            <ngb-panel  >
+                                    <ng-template ngbPanelTitle class="w-100">
+
+                                            <h3> {{ 'Panamá' | translate }}</h3>
+                                            <img class="row_pais" src="./../../../assets/images/flecha.png">
+                                        </ng-template>
+                                <ng-template ngbPanelContent>
+                                        {{ 'Calle 50, PH Torre Global Bank,
+                                        Piso 25, Of. 2501
+                                        Ciudad de Panamá, Panamá'  | translate }}<br>
+
+                                        Tel. + (507) 6263-2629
+                                </ng-template>
+                            </ngb-panel>
+                          </ngb-accordion>
+
+
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 cloumn1 d-flex">
+                <img class="mapa m-auto" src="././../../../assets/images/mapa.png">
+            </div>
+            <div class="buttons">
+
+            </div>
+
+        </div>
+        <div class="content_footer w-100">
+
+            <div class="row w-100">
+                
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 text-right">
+                    <img class="logo_white" src="../../../assets/images/LogoIngrupBlanco.svg">
+                </div>
+                
+                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 d-flex text-left content_info_footer">
+                    <div class="separador_footer" style="width: 3px;height: 80%;">
+                    </div>
+                    <p class="text_footer"> 
+                        © 2020 Ingrup<br>
+                        info@ingrup.com
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/pg/Ingrup-103428294520345/about/?ref=page_internal" target="_blank">
+                            <img class=" logo_1 logo_1_footer" src="./../../../../assets/images/facebookc.svg">
+                        </a>
+                        <a href="https://www.instagram.com/ingruplatam/" target="_blank">
+                            <img class=" logo_2_footer" src="./../../../../assets/images/instagramc.svg">
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            </div>

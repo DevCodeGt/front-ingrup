@@ -1,0 +1,215 @@
+html , body{
+    width: 100%;
+}
+.padding-all-5{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.paddingt-5{
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+#contact{
+    width: 100% !important;
+}
+.ingrup-btn{
+    background-color: #44D62C !important;
+    border: 2px solid #44D62C !important;
+
+}
+#contact legend{
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 2%;
+    color: #44D62C !important;
+}
+input , select, textarea{
+    border: 2px solid #44D62C !important;
+    margin-bottom: 1% !important;
+    font-size: 1.5em !important;
+    opacity: .5;
+}
+#send{
+    background-color: #44D62C !important;
+    border: none !important;
+    font-size: 1.5em !important;
+}
+#inputmensaje{
+    min-height: 243px;
+    height: 343px;
+}
+select{
+    padding: 6px 12px;
+    height: fit-content;
+}
+.descriptino_mail{
+    margin-bottom: 0 !important;
+    vertical-align: middle !important;
+    font-size: 1.5em;
+    padding-left: 5%;
+    line-height: 2;
+    width: fit-content !important;
+}
+.descriptino_mail span{
+    color: #44D62C !important;
+
+}
+
+.paddingr-10{
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 2%;
+    color: #44D62C !important;
+}
+.description_proveedores{
+    font-size: 1.8em;
+    line-height: 1.3;
+}
+#button_forma{
+    background-color: #44D62C !important;
+    border: none !important;
+    font-size: 1.5em !important;
+    color: white;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    width: fit-content;
+    background-image: url(./../../../assets/images/descargar.png);
+    width: 50%;
+    height: 6vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+
+}
+#row_1{
+    background-image: url(./../../../assets/images/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cloumn1{
+    border-right: 1px solid black;
+}
+.border-b{
+    border-bottom: 1px solid black;
+}
+.row_pais{
+    margin-left: auto;
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2%;
+}
+.pais{
+    text-align: left;
+    padding: 10px;
+    border: 2px solid #44D62C;
+    border-radius: 8px;
+    margin-bottom: 2%;
+}
+.text_pais{
+    margin-top: auto;
+    margin-bottom: 0 !important;
+    font-size: 1.5em;
+}
+.paddingr-20{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.desck_marca{
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 2em !important;
+}
+.vh100{
+    height: 120vh;
+}
+.mapa{
+    height: 100%;
+}
+.buttons{
+    width: 100%;
+    background-image: url(./../../../assets/images/points.png);
+    background-size: cover;
+    background-repeat: none;
+    height: 30vh;
+}
+select{
+    height: fit-content !important;
+}
+
+@media only screen and (max-width: 1500px){
+    #button_forma{
+        width: 70%;
+    }
+    .description_proveedores{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .w-50{
+        width: 100% !important;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .container_mapas{
+        margin: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .logo_contacto{
+        position: absolute;
+        top: 0;
+    }
+    #row_1{
+        flex-direction: column-reverse;
+        padding-top: 10vh;
+    }
+    #send{
+        width: 50%;
+        margin: auto;
+    }
+    select{
+        padding: 6px 12px;
+        height: fit-content !important;
+    }
+    .paddingr-10{
+        margin: 0;
+    }
+    .description_proveedores{
+        font-size: 1em;
+    }
+    #button_forma{
+        width: 100%;
+    }
+    .img_marca{
+        display: block !important;
+    }
+    .mapa{
+        width: 100%;
+        padding: 10%;
+
+    }
+    .vh100{
+        height: fit-content !important;
+    }
+    .img_marca{
+        padding: 10% 0;
+    }
+    legend{
+        margin-top: 10%;
+    }
+    .input-group{
+        margin-bottom: 5% !important;
+    }
+    input , select, textarea{
+        font-size: 1.2em !important;
+    }
+}

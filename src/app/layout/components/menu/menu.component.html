@@ -1,0 +1,40 @@
+
+<div class="row header-ingrup">
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 mx-auto pt-400 pb-400">
+            <h1 class="h1 text-ingrup my-auto text-center">
+                <span class="titulo-General">
+                   {{ 'Productos' | translate }}
+                </span>
+            </h1>
+        </div>
+
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 offset-xs-1 offset-sm-1 offset-md-1 offset-lg-1 menu-ingrup">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let slide of Table; let i = index" >
+              <ng-template carouselSlide>
+
+                <a style="list-style: none;text-decoration: none;" (mouseenter)="cambiarIMG(i,'01.svg',4,slide.foto)" (mouseleave)="cambiarIMG(i,'.svg',6,slide.foto)" (click)="FormComponent.cargarOfCate(slide.id,true);cargar(slide.id);" [routerLink]="['/productos',slide.id]" >
+                    <div class="panel-ingrup" [routerLinkActive]="['active']">
+                        <img [src]="slide.foto | translate" *ngIf="slide.id!=id" class="menu-item-ingrup" >
+                        <img [src]="slide.fotoActiva | translate" *ngIf="slide.id==id" class="menu-item-ingrup" >
+                        <!-- <div class="ingrup-content">
+                            <div class="panel-body-ingrup">
+                                <img [src]="slide.icono" class="menu-item-ingrup" >
+                            </div>
+                            <div class="panel-title-ingrup">
+                                <h3 [class.largo]="slide.nombre.length>20">{{slide.nombre}}</h3>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div [routerLinkActive]="['show']" class="downRow">
+                            <img src="./../../../../assets/images/Mercados/Modulo-1/flechaAb.png" class="m-auto" style="width: 22px">
+                    </div>
+                </a>
+
+              </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-xl-12">
+        <h2 class="page-header text-center">
+            <span class="titulo-General w-auto">
+                    {{data.titulo | translate}}
+            </span>
+        </h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                    <a href="Javascript:void(0)" [routerLink]="['/mercados']">     <div class="miniCard">
+                            <i class="fa fa-home"></i>
+                        </div>
+                 {{data.titulo | translate}}</a>
+            </li>
+            <li *ngFor="let dato of data.mercados" class="breadcrumb-item active">
+                <div class="miniCard">
+                    <img [src]="dato.icono">
+                </div>
+                {{dato.nombre | translate}}
+            </li>
+        </ol>
+    </div>
+</div>
+  

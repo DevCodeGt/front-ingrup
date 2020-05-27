@@ -1,0 +1,95 @@
+.no_pd{
+    padding: 0 !important;
+}
+.mb{
+    display: none;
+}
+
+.w-101
+{
+    position: absolute;
+    text-align: center;
+    top:30%;
+    /*background: red;*/
+    width: 39%;
+    height: 100%;
+
+}
+
+.CODIGO_CONDUCTA_PC
+{
+    font-family: 'Impact';
+    font-size: 5vw;
+    color:rgb(109,109,109);
+    line-height: 5vw;
+    margin-bottom: 4%;
+}
+
+.ICONO
+{
+    width: 2.5vw;
+    margin-right:2%;
+}
+
+.texto 
+{
+    text-align: left;
+    font-family: 'Roboto';
+    font-size: 2vw;
+    line-height: 100%;
+    color:rgb(109,109,109);
+}
+
+@media only screen and (max-width: 1000px){
+    .mb{
+        display: block;
+    }
+    .pc{
+        display: none; 
+    }
+
+    
+.w-101
+{
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+    text-align: center;
+    top:15%;
+    width: 80%;
+    height: 100%;
+
+}
+
+
+.CODIGO_CONDUCTA_PC
+{
+    font-family: 'Impact';
+    font-size: 10vw;
+    border: 1px solid rgb(109,109,109);
+    padding:3%;
+    color:rgb(109,109,109);
+    line-height: 10vw;
+    margin-bottom: 8%;
+}
+
+
+.ICONO
+{
+    width: 8vw;
+    margin-right:2%;
+}
+
+.texto 
+{
+    text-align: left;
+    font-family: 'Roboto';
+    font-size: 7vw;
+    line-height: 100%;
+    color:rgb(109,109,109);
+}
+
+}

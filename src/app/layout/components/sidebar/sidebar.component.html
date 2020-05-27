@@ -1,0 +1,350 @@
+<div class="navbar w-100 text-right menu_fixed " style="right:0px;">
+    
+    <div class="row w-100 nav_header add_roles_height">
+        
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left d-flex col-1-mb">
+            <a class="content_logo_mb" routerLink="/home" [routerLinkActive]="['router-link-active']"  >
+                <img  class="pointer w-25 logo_header" src="./../../../assets/images/logo-animado2.gif">
+            </a>
+            <a class="linkCov" target="_blank" class="linkCovid" style='text-decoration: none;' href="../../../../assets/pdf/Plan_de_contingencia_COVID_19.pdf" download="Plan_de_contingencia_COVID_19.pdf"> 
+                <div class="topBarCovid">
+                    <div class="covidText">
+                        {{ 'COVID-19 Protocolo INGRUP' | translate}}
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-1-mb d-flex ">
+            <div class="separador" style="width: 3px;height: 70%;">
+
+            </div>
+            <div class="m-auto w-50 add_center d-flex">
+                <p class="description_text">
+
+                    info@ingrup.com
+                </p>
+
+                <a href="https://www.facebook.com/pg/Ingrup-103428294520345/about/?ref=page_internal" target="_blank">
+                    <img class="logo logo_1" src="./../../../../assets/images/Nosotros/facebook1.svg">
+                </a>
+                <a href="https://www.instagram.com/ingruplatam/" target="_blank">
+                    <img class="logo logo_2" src="./../../../../assets/images/Nosotros/instagram1.svg">
+                </a>
+            </div>
+            
+            <button class="navbar-toggler ml-auto" type="button" (click)="openMenu()">
+                <img src="{{'./../../../../assets/images/Mercados/Modulo-1/Menu.png' | translate}}" style="height: 65px;width:55px;" >
+                <!-- <i class="fa fa-bars text-muted" aria-hidden="true"></i> -->
+            </button>
+        </div>
+    </div>
+    
+   
+    
+</div>
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+    <div class=" cerrarSide text-right">
+            <button class="navbar-toggler ml-auto" type="button" (click)="toggleSidebar();toggleCollapsed()">
+                <img src="./../../../../assets/images/menu/X.png" style="height: 65px;width:55px;" >
+                <!-- <i class="fa fa-bars text-muted" aria-hidden="true"></i> -->
+            </button>
+            
+
+            <div class="nested-menu pc" *ngIf="Nosotros_active">
+                <!-- <a class="list-group-item" (click)="addExpandClass('pages')">
+                    <i class="fa fa-fw " [class.fa-plus]="showMenu != 'pages'"  [class.fa-chevron-down]="showMenu === 'pages'"></i>&nbsp;
+                    <span>{{ 'Sostenibilidad' | translate }}</span>
+                </a> -->
+                <li class="nested" [class.expand]="showMenu === 'nosotros'">
+                    <ul class="submenu">
+                        <li class="list-group-item title_list">
+                           {{ 'Nosotros'  | translate }}
+                        </li>
+                        <li class="text-left">
+                            <a [routerLink]="['/nosotros']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                                <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                                <span>{{ 'Información' | translate }}</span>
+                            </a>
+                        </li>
+                        <li class="text-left">
+                            <a [routerLink]="['/CodigoDeConducta']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                                <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                                <span>{{ 'Código de Conducta' | translate }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            
+            <div class="nested-menu content_size pc" *ngIf="mercados_active">
+                <!-- <a class="list-group-item" (click)="addExpandClass('markets')">
+                    <i class="fa fa-fw " [class.fa-plus]="showMenu != 'markets'"  [class.fa-chevron-down]="showMenu === 'markets'"></i>&nbsp;
+                    <span>{{ 'Mercados' | translate }}</span>
+                </a> -->
+                <li class="nested" [class.expand]="showMenu === 'markets'">
+                    <ul class="submenu" *ngIf="Table">
+                        <li class="list-group-item title_list">
+                            {{ 'Mercados'  | translate }}
+                        </li>
+                        <li *ngFor="let data of Table">
+                            <a class="text-left" [routerLink]="['/mercados',data.id]" (click)="toggleSidebar();toggleCollapsed();" [routerLinkActive]="['router-link-active']" >
+                                    <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                                <span>{{ data.nombre | translate }}</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </li>
+            </div>
+
+
+            <div class="nested-menu content_size pc" *ngIf="productos_active">
+                <!-- <a class="list-group-item" (click)="addExpandClass('products')">
+                    <i class="fa fa-fw " [class.fa-plus]="showMenu != 'products'"  [class.fa-chevron-down]="showMenu === 'products'"></i>&nbsp;
+                    <span>{{ 'Productos' | translate }}</span>
+                </a> -->
+                <li class="nested" [class.expand]="showMenu === 'products'">
+                    <ul class="submenu" *ngIf="TableProds">
+                        <li class="list-group-item title_list">
+                            {{ 'Nuestros Productos'  | translate }}
+                        </li>
+                        <li *ngFor="let data of TableProds">
+                            <a class="text-left" [routerLink]="['/productos',data.id]" (click)="toggleSidebar();toggleCollapsed();" [routerLinkActive]="['router-link-active']" >
+                                <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                                <span>{{ data.nombre | translate }}</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </li>
+                <div class="conteiner_show_more" id="show_more" (click)="showMore()"  >
+                    <img class="w-100" src="./../../../../assets/images/mas.svg">
+                </div>
+            </div>
+
+
+            <div class="nested-menu pc" *ngIf="Sostenibilidad_active">
+                <!-- <a class="list-group-item" (click)="addExpandClass('pages')">
+                    <i class="fa fa-fw " [class.fa-plus]="showMenu != 'pages'"  [class.fa-chevron-down]="showMenu === 'pages'"></i>&nbsp;
+                    <span>{{ 'Sostenibilidad' | translate }}</span>
+                </a> -->
+                <li class="nested" [class.expand]="showMenu === 'pages'">
+                    <ul class="submenu">
+                        <li class="list-group-item title_list">
+                            {{ 'Sostenibilidad'  | translate }}
+                        </li>
+                        <li class="text-left">
+                            <a [routerLink]="['/medio-ambiente']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                                <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                                <span>{{ 'Medio Ambiente' | translate }}</span>
+                            </a>
+                        </li>
+                        <li class="text-left">
+                            <a [routerLink]="['/sostenibilidad']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                                <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                                <span>{{ 'Informe Sostenibilidad' | translate }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+
+
+            <div class="toggle-button pc" [ngClass]="{collapsed: collapsed}">
+                <div class="results w-100" *ngIf="TableProdsFind">
+                    <ul *ngIf="TableProdsFind.length>0">
+                            <li *ngFor="let data of TableProdsFind" (click)="recharge()" [routerLink]="['/'+data.pagina,data.id]">
+                                {{data.nombre  | translate }}
+                            </li>
+                    </ul>
+                    <ngb-alert *ngIf="TableProdsFind.length<=0 && buscado" type="danger" (close)="buscado = false">
+                            <strong> {{ 'No se ha encontrado nada ...'  | translate  }}</strong>
+                    </ngb-alert>
+        
+                </div>
+            </div>
+            
+    </div>
+    
+    <div class="list-group">
+        <div class="input-group mb-2 w-100 search-control ">
+            <div class="input-group-prepend">
+                <button class="input-group-text pointer" (click)="findByName(searchBar.value)">
+                        <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <input type="text" class="form-control " #searchBar id="inlineFormInputGroup" (change)="findByName(searchBar.value)"  placeholder="{{ 'Buscar' | translate }}">
+            <div class="input-group-prepend float_left" *ngIf="session">
+                <button class="input-group-text2 pointer" (click)="logout()">
+                        <i class="fa fa-sign-out"></i>
+                </button>
+            </div>
+            
+        </div>
+        
+
+        <a routerLink="/home" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw " [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+            <span>{{ 'Inicio' | translate }}</span>
+        </a>
+        
+        <!--
+        <a routerLink="/nosotros" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw " [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+            <span>{{ 'Nosotros' }}</span>
+        </a> -->
+
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('nosotros')">
+                <i class="fa fa-fw " [class.fa-plus]="showMenu != 'nosotros'"  [class.fa-chevron-down]="showMenu === 'nosotros'"></i>&nbsp;
+                <span>{{ 'Nosotros'  | translate  }}</span>
+            </a>
+            <li class="nested mb" [class.expand]="showMenu === 'nosotros'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/nosotros']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                            <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                            <span>{{ 'Información' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/CodigoDeConducta']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                            <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                            <span>{{ 'Código de Conducta' | translate }}</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a [routerLink]="['/social']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                            <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                            <span>{{ 'Social' | translate }}</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </li>
+        </div>
+        
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('markets')">
+                <i class="fa fa-fw " [class.fa-plus]="showMenu != 'markets'"  [class.fa-chevron-down]="showMenu === 'markets'"></i>&nbsp;
+                <span>{{ 'Mercados' | translate }}</span>
+            </a>
+            <li class="nested mb" [class.expand]="showMenu === 'markets'">
+                <ul class="submenu" *ngIf="Table">
+
+                    <li *ngFor="let data of Table">
+                        <a [routerLink]="['/mercados',data.id]" (click)="toggleSidebar();toggleCollapsed();" [routerLinkActive]="['router-link-active']" >
+                            <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                            <span>{{ data.nombre | translate }}</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        </div>
+        <!-- <a [routerLink]="['/productos']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw " [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+            <span>{{ 'Productos' | translate }}</span>
+        </a> -->
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('products')">
+                <i class="fa fa-fw " [class.fa-plus]="showMenu != 'products'"  [class.fa-chevron-down]="showMenu === 'products'"></i>&nbsp;
+                <span>{{ 'Productos' | translate }}</span>
+            </a>
+            <li class="nested mb" [class.expand]="showMenu === 'products'">
+                <ul class="submenu" *ngIf="TableProds">
+
+                    <li *ngFor="let data of TableProds">
+                        <a [routerLink]="['/productos',data.id]" (click)="toggleSidebar();toggleCollapsed();" [routerLinkActive]="['router-link-active']" >
+                            <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                            <span>{{ data.nombre | translate }}</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        </div>
+        <!-- <a [routerLink]="['/bs-element']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-desktop"></i>&nbsp;
+            <span>{{ 'Bootstrap Element' | translate }}</span>
+        </a> -->
+        <!-- <a routerLink="/medio-ambiente" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw " [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+            <span>{{ 'Sostenibilidad' | translate }}</span>
+        </a> -->
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('pages')">
+                <i class="fa fa-fw " [class.fa-plus]="showMenu != 'pages'"  [class.fa-chevron-down]="showMenu === 'pages'"></i>&nbsp;
+                <span>{{ 'Sostenibilidad' | translate }}</span>
+            </a>
+            <li class="nested mb" [class.expand]="showMenu === 'pages'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/medio-ambiente']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                            <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                            <span>{{ 'Medio Ambiente' | translate }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/sostenibilidad']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                            <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                            <span>{{ 'Informe Sostenibilidad' | translate }}</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a [routerLink]="['/social']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" >
+                            <i class="fa" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+                            <span>{{ 'Social' | translate }}</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </li>
+        </div>
+
+        <a [routerLink]="['/integrate']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+            <span>{{ 'Intégrate' | translate }}</span>
+        </a>
+        <a [routerLink]="['/contactenos']" (click)="toggleSidebar();toggleCollapsed()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw" [routerLinkActive]="['fa-chevron-right']"></i>&nbsp;
+            <span>{{ 'Contáctenos' | translate }}</span>
+        </a>
+        <div class="toggle-button mb w-90" [ngClass]="{collapsed: collapsed}">
+            <div class="results w-100" *ngIf="TableProdsFind">
+                <ul *ngIf="TableProdsFind.length>0">
+                        <li *ngFor="let data of TableProdsFind" (click)="recharge()" [routerLink]="['/'+data.pagina,data.id]">
+                            {{data.nombre  | translate }}
+                        </li>
+                </ul>
+                <ngb-alert *ngIf="TableProdsFind.length<=0 && buscado" type="danger" (close)="buscado = false">
+                        <strong> {{ 'No se ha encontrado nada ...'  | translate  }}</strong>
+                </ngb-alert>
+    
+            </div>
+        </div>
+
+        <!-- MENU PARA TRADUCCION ---------
+         <div class="nested-menu">
+                <a class="list-group-item" (click)="addExpandClass('languages')">
+                    <span><i class="fa  fa-fw fa-language"></i>&nbsp; {{ 'Language' | translate }} <b class="caret"></b></span>
+                </a>
+                <li class="nested" [class.expand]="showMenu === 'languages'">
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('es')">
+                                {{ 'Español' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="changeLang('en')">
+                                {{ 'Inglés' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div> 
+        -->
+    </div>
+    
+</nav>

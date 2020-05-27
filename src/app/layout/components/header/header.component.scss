@@ -1,0 +1,173 @@
+$topnav-background-color: #222;
+:host {
+    .navbar {
+        background-color: $topnav-background-color;
+        .navbar-brand {
+            color: #fff;
+        }
+        .nav-item > a {
+            color: #999;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    .messages {
+        width: 300px;
+        .media {
+            border-bottom: 1px solid #ddd;
+            padding: 5px 10px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .media-body {
+            h5 {
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .small {
+                margin: 0;
+            }
+            .last {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+}
+.header-ingrup{
+    display: flex;
+    // height: 70vh;
+    background-image: url(./../../../../assets/images/Mercados/Modulo-1/fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(242,242,242);
+}
+.panel-ingrup:hover{
+    // background-color: #44D62C;
+    // border: solid #ffffff 0.5rem;
+    list-style: none;
+    // box-shadow:  #44D62C 0px 0px 10px 5px ;
+    // border: solid 1px #ffffff;
+    cursor:pointer;
+}
+.panel-ingrup:hover .panel-title-ingrup h3{
+    color: #ffffff;
+    padding-left: -0.8rem;
+
+}
+.panel-ingrup.active img{
+    // box-shadow: #44D62C 0px 0px 10px 5px;
+
+}
+.panel-ingrup.active {
+    // background-color: #44D62C;
+    list-style: none;
+    width: 100%;
+    // box-shadow: #44D62C 0px 0px 10px 5px;
+    // border: solid 1px #ffffff;
+    cursor: pointer;
+    // padding-left: 0.5rem;
+    margin-top: 1rem;
+}
+.downRow{
+    display: none;
+    width:80%;
+    padding-top:5%;
+}
+.downRow.show{
+    display: flex;
+}
+
+.panel-ingrup.active .menu-item-ingrup{
+    // filter:brightness(1);
+}
+.panel-ingrup.active .panel-title-ingrup h3{
+    color: #ffffff;
+    padding-left: -0.8rem;
+
+}
+.pb-400{
+    padding-bottom: 4%;
+}
+.pt-400{
+    padding-top: 4%;
+}
+.panel-ingrup{
+    // padding: 2rem;
+    // height: 30vh;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    // background-color: rgba(255,255,255,0.9);
+}
+.ingrup-content{
+    // margin-top: 1.5rem;
+    margin-bottom: auto;
+    // width: 80%;
+}
+.panel-body-ingrup{
+    display: flex;
+    width: 80%;
+}
+.panel-title-ingrup{
+    text-align: left;
+    width: 70%;
+    // padding-left: 1rem;
+    display: block;
+    margin-top: 1rem;
+
+}
+.panel-title-ingrup h3{
+    font-size: 1.7rem;
+    color: #5E5B5C;
+}
+.panel-title-ingrup h3.largo{
+    font-size: 1rem;
+    color: #5E5B5C;
+}
+.menu-item-ingrup{
+    // filter:brightness(0.3);
+    // height: 5vh;
+    width: auto!important;
+    margin-left: 0px;
+    margin-right: auto;
+}
+.menu-ingrup{
+    height: 70%;
+    margin-top: auto;
+}
+.downRow img{
+    width: 22px !important;
+    max-width: 22px !important;
+}
+@media only screen and (max-width: 900px){
+    .panel-ingrup.active {
+        width: 100%!important;
+    }
+    .menu-ingrup{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50%;
+    }
+    .panel-title-ingrup h3{
+        font-size: 1rem!important;
+    }
+    .panel-title-ingrup h3.largo{
+        font-size: 0.7rem!important;
+        color: #5E5B5C;
+    }
+    .panel-ingrup{
+        // height: 30vh;
+        padding-left: 0px;
+    }
+    .panel-title-ingrup h3{
+        font-size: 1.5rem;
+        color: #5E5B5C;
+    }
+}

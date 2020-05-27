@@ -1,0 +1,14 @@
+.no_pd{
+    padding: 0 !important;
+}
+.mb{
+    display: none;
+}
+@media only screen and (max-width: 1000px){
+    .mb{
+        display: block;
+    }
+    .pc{
+        display: none;
+    }
+}

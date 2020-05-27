@@ -1,0 +1,7 @@
+<!-- <app-header></app-header> -->
+<block-ui  [template]="blockTemplate">
+<app-sidebar class="rtl" (collapsedEvent)="receiveCollapsed($event)"></app-sidebar>
+<section class="main-container" [ngClass]="{collapsed: collapedSideBar}">
+    <router-outlet></router-outlet>
+</section>
+</block-ui>

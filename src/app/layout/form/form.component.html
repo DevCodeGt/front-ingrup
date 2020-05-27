@@ -1,0 +1,438 @@
+<div [@routerTransition]>
+    <app-menu></app-menu>
+        <div class="row" id="content_data" *ngIf="Table" style="background-color: #f2f2f2;">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  d-flex colum_select" *ngIf="Table">
+            <ngb-accordion  class="p-20 filtrosAccordeon container_productos mt-5" #filtros="ngbAccordion" >
+                    <ngb-panel *ngFor="let data of Table">
+                        
+                        <ng-template ngbPanelTitle class="w-100">
+                        <h3 class="content_select_row" *ngIf="data.id != 4 || data_product">
+                            <!-- <img [src]="data.icono" alt=""> -->
+                            {{data.nombre | translate}}
+                            <i class="fa unlockable" *ngIf="session" [class.fa-lock]="abierto" [class.fa-edit]="!abierto" (click)="open(editModal,data.id,'categorias')"></i>
+                            <i class="fa ml-2 unlockable" *ngIf="session" [class.fa-lock]="abierto" [class.fa-plus]="!abierto" (click)="open(createModal,data.productos[0].id,'productosC')"></i>
+                            <i class="fa ml-2 unlockable" *ngIf="session" [class.fa-lock]="abierto" [class.fa-times]="!abierto" (click)="open(deleteModal,data.id,'categorias')"></i>
+                        </h3>
+                        </ng-template> 
+                        <ng-template ngbPanelContent>
+                        <ul *ngIf="selectedData">
+                            <li *ngFor="let prod of data.productos" (click)="cargarSingle(prod.id);" [class.active]="+selectedData.id==prod.id">
+                                {{prod.nombre | translate}} 
+
+                            <i class="fa unlockable" *ngIf="session" [class.fa-lock]="abierto" [class.fa-edit]="!abierto" (click)="open(editModal,prod.id,'productos')"></i>
+                            <i class="fa ml-2 unlockable" *ngIf="session" [class.fa-lock]="abierto" [class.fa-plus]="!abierto" (click)="open(createPresentacionModal,prod.id,'presentacionC')"></i>
+                            <i class="fa ml-2 unlockable" *ngIf="session" [class.fa-lock]="abierto" [class.fa-times]="!abierto" (click)="open(deleteModal,prod.id,'productos')"></i>
+                            </li>
+                        </ul>
+                        <ul *ngIf="!selectedData">
+                            <li *ngFor="let prod of data.productos" (click)="cargarSingle(prod.id);">
+                                {{prod.nombre | translate}} 
+                            <i class="fa unlockable" *ngIf="session" [class.fa-lock]="abierto" [class.fa-edit]="!abierto" (click)="open(editModal,prod.id,'productos')"></i>
+                            <i class="fa ml-2 unlockable" *ngIf="session" [class.fa-lock]="abierto" [class.fa-plus]="!abierto" (click)="open(createPresentacionModal,prod.id,'presentacionC')"></i>
+                            <i class="fa ml-2 unlockable" *ngIf="session" [class.fa-lock]="abierto" [class.fa-times]="!abierto" (click)="open(deleteModal,prod.id,'productos')"></i>
+                            </li>
+                        </ul>
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion> 
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <img class="w-100" [src]="imagen_selected">
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pr-5 d-none" id="finalPic"  *ngIf="selectedData">
+            <div (click)="ocultarModal()" class="return_in_modal"> {{ 'regresar' | translate }} <span class="ng-tns-c5-0"><i class="fa fa-angle-left" style="font-size:36px"></i></span></div>
+            
+            <div class="row style_background">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="galeria mt-3 d-flex" id="Galeria" *ngIf="selectedData && !selectedData.hasModel" onlyMyGallery>
+                        <i class="fa unlockable abstolute-unlockable" *ngIf="session && selectedData.id" [class.fa-lock]="abierto" [class.fa-edit]="!abierto" (click)="open(editGaleriaModal,selectedData.id,'galeria')"></i>
+                        <i class="fa unlockable abstolute-unlockable" *ngIf="session && !selectedData.id" [class.fa-lock]="abierto" [class.fa-edit]="!abierto" (click)="open(editGaleriaModal,null,'galeria')"></i>
+                        <img *ngIf="galleryImages.length>1" src="./../../../assets/images/PantallaCompleta.png" class="pantallaCompleta" (click)="openGallery2()">
+                        <div *ngIf="galleryImages.length>1">
+                            <ngx-gallery *ngIf="galleryImages.length>1" [options]="galleryOptions" [images]="galleryImages"  [class.ImagenesCant2]="selectedData.fotosCant==2" [class.ImagenesCant3]="selectedData.fotosCant==3" [class.ImagenesCant4]="selectedData.fotosCant>=4" [class.oscurece]="selectedData.categoria==2"></ngx-gallery>
+                        </div>
+                        <!-- <ngx-gallery class="contains_single_img" *ngIf="galleryImages.length<=1" [options]="galleryOptions2" [images]="galleryImages" style="margin:auto;"></ngx-gallery> -->
+                        <!-- <div *ngIf="galleryImages.length==1" class="uniqueImageContainer">
+                            <div class="contain_single_img">
+                                <img src="{{galleryImages[0].medium}}" class="uniqueImage">
+                            </div>
+
+                        </div> -->
+                        <img *ngIf="galleryImages.length==1" src="./../../../assets/images/PantallaCompleta.png" class="pantallaCompleta" (click)="openGallery2()">
+                        <div *ngIf="galleryImages.length==1" class="uniqueImageContainer ">
+                            <ngx-gallery class="contains_single_img" [options]="galleryOptions2" [images]="galleryImages" [class.ImagenesCant2]="selectedData.fotosCant==2" [class.ImagenesCant3]="selectedData.fotosCant==3" [class.ImagenesCant4]="selectedData.fotosCant>=4" [class.oscurece]="selectedData.categoria==2"></ngx-gallery>
+                            <!-- <div class="content_single_img">
+                                <img *ngFor="let image of galleryImages2; let i=index" class="uniqueImage" [class.ImagenesCant1]="selectedData.fotosCant==1" [class.oscurece]="selectedData.categoria==2"  [src]="image.thumb" (click)="openGallery(i)" />
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="w-90 d-block" id="tabla1" *ngIf="selectedData">
+
+                        <app-tables-prods [selectedData]="selectedData"></app-tables-prods>
+                        <div class="w-90 mx-auto text-left mt-3 content_cotizar" *ngIf="selectedData && selectedData.id>0">
+                            
+                        </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-5 sliderss" *ngIf="selectedData">
+                                <i class="fa unlockable abstolute-unlockable" *ngIf="session && selectedData.id" [class.fa-lock]="abierto" [class.fa-edit]="!abierto" (click)="open(editSlidesModal,selectedData.id,'slides')"></i>
+                                <!-- <i class="fa unlockable abstolute-unlockable" *ngIf="session && !selectedData.id" [class.fa-lock]="abierto" [class.fa-edit]="!abierto" (click)="open(editSlidesModal,null,'sliders')"></i> -->
+                                <div  id="slidesingrup" *ngIf="selectedData && selectedData.slides">
+                                    <owl-carousel-o [options]="customOptions2" *ngIf="selectedData.slides.length>0" class="banners">
+                                            <ng-container *ngFor="let slide of carouselData; let i = index" style="margin:auto;">
+                                                <ng-template carouselSlide>
+                                                <img [src]="slide.src" class="imagen1">
+                                                </ng-template>
+                                            </ng-container>
+
+                                    </owl-carousel-o>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="content_footer w-100">
+
+        <div class="row w-100">
+            
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 text-right">
+                <img class="logo_white" src="../../../assets/images/LogoIngrupBlanco.svg">
+            </div>
+            
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 d-flex text-left content_info_footer">
+                <div class="separador_footer" style="width: 3px;height: 80%;">
+                </div>
+                <p class="text_footer"> 
+                    © 2020 Ingrup<br>
+                    info@ingrup.com
+                </p>
+                <div>
+                    <a href="https://www.facebook.com/pg/Ingrup-103428294520345/about/?ref=page_internal" target="_blank">
+                        <img class="logo logo_1 logo_1_footer" src="./../../../../assets/images/facebookc.svg">
+                    </a>
+                    <a href="https://www.instagram.com/ingruplatam/" target="_blank">
+                        <img class="logo logo_2_footer" src="./../../../../assets/images/instagramc.svg">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        </div>
+    <div id="stinkyEnd"></div>
+</div>
+
+
+<ng-template #editModal let-c="dismiss" let-d="dismiss">
+    <div class="modal-header">
+            <h4 class="modal-title">Editar</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    <div class="modal-body">
+            <form class="form-signin" *ngIf="edition" >
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control shadow-input" name="editarVal" required
+                    ngModel #editarVal="ngModel" [(ngModel)]="edition.nombre">
+                </div>
+            </form>
+    </div>
+    <div class="modal-footer">
+            <button class="btn btn-lg btn-primary btn-block" type="button" (click)="update(edition);c('Close click');" >Guardar Cambios</button>
+
+    </div>
+
+</ng-template>
+
+<ng-template #createModal let-c="dismiss" let-d="dismiss">
+    <div class="modal-header">
+            <h4 class="modal-title">Crear</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    <div class="modal-body">
+            <form class="form-signin" *ngIf="edition" >
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control shadow-input" name="editarVal" required
+                    ngModel #editarVal="ngModel" [(ngModel)]="edition.nombre">
+                </div>
+                <div class="input-group mb-2" *ngIf="edition.tipos=='categoriasC'">
+
+                    <select name="editarVal1" id="editarVal1" class="form-control shadow-input" required
+                    ngModel #editarVal1="ngModel" [(ngModel)]="edition.categoria">
+                        <option *ngFor="let data of categoriasCombo" [value]="data.id">{{data.nombre}}</option>
+                    </select>
+                </div>
+            </form>
+    </div>
+    <div class="modal-footer">
+            <button class="btn btn-lg btn-primary btn-block" type="button" (click)="create(edition);c('Close click');" >Guardar Cambios</button>
+
+    </div>
+
+</ng-template>
+
+<ng-template #deleteModal let-c="dismiss" let-d="dismiss">
+    <div class="modal-header" *ngIf="edition">
+            <h4 class="modal-title">En verdad Desea eliminar este {{edition.tipos}}?</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    <div class="modal-body">
+            <form class="form-signin" *ngIf="edition" >
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control shadow-input" name="editarVal" required
+                    ngModel #editarVal="ngModel" [(ngModel)]="edition.nombre">
+                </div>
+            </form>
+    </div>
+    <div class="modal-footer">
+            <button class="btn btn-lg btn-primary btn-block" type="button" (click)="delete(edition);c('Close click');" >Deseo Eliminar</button>
+
+    </div>
+
+</ng-template>
+
+
+<ng-template #createPresentacionModal let-c="dismiss" let-d="dismiss">
+    <div class="modal-header">
+            <h4 class="modal-title">Crear Presentacion</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    <div class="modal-body">
+            <form class="form-signin" *ngIf="edition" >
+                <div class="form-group mb-2">
+                    <label class="w-100">Nombre
+                    <input type="text" class="form-control shadow-input" name="editarVal" required
+                    ngModel #editarVal="ngModel" [(ngModel)]="edition.nombre">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Cuello
+                    <input type="text" class="form-control shadow-input" name="editarVal2" required
+                    ngModel #editarVal2="ngModel" [(ngModel)]="edition.cuello">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Peso
+                    <input type="text" class="form-control shadow-input" name="editarVal3" required
+                    ngModel #editarVal3="ngModel" [(ngModel)]="edition.peso">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Altura
+                    <input type="text" class="form-control shadow-input" name="editarVal4" required
+                    ngModel #editarVal4="ngModel" [(ngModel)]="edition.altura">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Descripcion
+                    <input type="text" class="form-control shadow-input" name="editarVal5" required
+                    ngModel #editarVal5="ngModel" [(ngModel)]="edition.descripcion">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Calibres
+                    <input type="text" class="form-control shadow-input" name="editarVal6" required
+                    ngModel #editarVal6="ngModel" [(ngModel)]="edition.calibres">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Separador
+                    <input type="text" class="form-control shadow-input" name="editarVal7" required
+                    ngModel #editarVal7="ngModel" [(ngModel)]="edition.separador">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Material
+                    <input type="text" class="form-control shadow-input" name="editarVal8" required
+                    ngModel #editarVal8="ngModel" [(ngModel)]="edition.material">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Unidades
+                    <input type="text" class="form-control shadow-input" name="editarVal9" required
+                    ngModel #editarVal9="ngModel" [(ngModel)]="edition.unidades">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Largo
+                    <input type="text" class="form-control shadow-input" name="editarVal10" required
+                    ngModel #editarVal10="ngModel" [(ngModel)]="edition.largo">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Liner
+                    <input type="text" class="form-control shadow-input" name="editarVal11" required
+                    ngModel #editarVal11="ngModel" [(ngModel)]="edition.liner">
+                    </label>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="w-100">Hot Fill
+                    <input type="text" class="form-control shadow-input" name="editarVal12" required
+                    ngModel #editarVal12="ngModel" [(ngModel)]="edition.hotfill">
+                    </label>
+                </div>
+            </form>
+    </div>
+    <div class="modal-footer">
+            <button class="btn btn-lg btn-primary btn-block" type="button" (click)="create(edition);c('Close click');" >Guardar Cambios</button>
+
+    </div>
+
+</ng-template>
+
+<ng-template #editGaleriaModal let-c="dismiss" let-d="dismiss">
+    <div class="modal-header">
+            <h4 class="modal-title">Editar Galeria</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    <div class="modal-body" *ngIf="edition">
+
+            <div class="row" *ngIf="edition.id">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 px-3 row">
+                    <div class="shadow py-3 mt-3 profile-main">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                            <label for="uploadImagenComentario" class="text icon">Seleccionar archivo</label>
+                            <progress value="0" max="100" class="loader_img barra_de_progreso" id="barra_de_progreso"></progress>
+                            <input type="file" id="uploadImagenComentario" (change)="subirImagenes($event,{id:0},'uploadImagenComentario');blockUI.start()"/>
+                            <button type="button" (click)="blockUI.stop()" id="stopLoader" class="form-control border-morado  text icon d-none" placeholder="">Tomar Foto </button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="cuadro-img d-flex">
+                                <img src="http://placehold.it/500X500?text=X" style="max-height: 100%;" id="imagenComentario" class="img-thumbnail m-auto" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                            <div class="checkbox">
+                                <label>
+                                    Agregar a toda la categoria
+                                    <input type="checkbox" name="multiInsert" id="multiInsert">
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-3">
+                            <button type="button" style="padding: .1em 1em;" disabled class="btn btn-primary" id="guardarImagenes" (click)="guardarImg()">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pb-3">
+                    <div class="shadow p-3 mt-3 profile-main">
+                        <table class="table table-hover w-100" *ngIf="edition.imagenes" [mfData]="edition.imagenes" #mf="mfDataTable" [mfRowsOnPage]="6">
+                            <div class="w-100">
+                                <div class="row p-3" >
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 cuadro-img-min d-flex" *ngFor="let data of mf.data">
+                                        <img src="./../../../assets/images/menu/X.png" class="eliminarIMG" (click)="eliminarIMG(data.id)">
+                                    <img src="{{data.src}}" style="max-height: 100%;" class="img-thumbnail m-auto" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <mfBootstrapPaginator></mfBootstrapPaginator>
+                                </div>
+                            </div>
+                            </div>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <span *ngIf="!edition.id">
+                    Bienvenido a la galeria por defecto
+            </span>
+
+    </div>
+
+</ng-template>
+
+
+<ng-template #editSlidesModal let-c="dismiss" let-d="dismiss">
+    <div class="modal-header">
+            <h4 class="modal-title">Editar Galeria de Slides</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    <div class="modal-body" *ngIf="edition">
+
+            <div class="row" *ngIf="edition.id">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 px-3 row">
+                    <div class="shadow py-3 mt-3 profile-main">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                            <label for="uploadImagenComentarioSlide" class="text icon">Seleccionar archivo</label>
+                            <progress value="0" max="100" class="loader_img barra_de_progreso" id="barra_de_progreso2"></progress>
+                            <input type="file" id="uploadImagenComentarioSlide" (change)="subirSlides($event,{id:0},'uploadImagenComentarioSlide');blockUI.start()"/>
+                            <button type="button" (click)="blockUI.stop()" id="stopLoader2" class="form-control border-morado  text icon d-none" placeholder="">Tomar Foto </button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="cuadro-img d-flex">
+                                <img src="http://placehold.it/500X500?text=X" style="max-height: 100%;" id="imagenComentarioSlide" class="img-thumbnail m-auto" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                            <div class="checkbox">
+                                <label>
+                                    Agregar a toda la categoria
+                                    <input type="checkbox" name="multiInsertSliders" id="multiInsertSliders">
+                                </label>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-3">
+                            <button type="button" style="padding: .1em 1em;" disabled class="btn btn-primary" id="guardarImagenesSlide" (click)="guardarSlide()">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pb-3">
+                    <div class="shadow p-3 mt-3 profile-main">
+                        <table class="table table-hover w-100" *ngIf="edition.slides" [mfData]="edition.slides" #mf="mfDataTable" [mfRowsOnPage]="6">
+                            <div class="w-100">
+                                <div class="row p-3" >
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 cuadro-img-min d-flex" *ngFor="let data of mf.data">
+                                        <img src="./../../../assets/images/menu/X.png" class="eliminarIMG" (click)="eliminarSlides(data.id)">
+                                    <img src="{{data.src}}" style="max-height: 100%;" class="img-thumbnail m-auto" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <mfBootstrapPaginator></mfBootstrapPaginator>
+                                </div>
+                            </div>
+                            </div>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <span *ngIf="!edition.id">
+                    Bienvenido a la galeria por defecto
+            </span>
+
+    </div>
+
+</ng-template>

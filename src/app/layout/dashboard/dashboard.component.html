@@ -1,0 +1,336 @@
+
+
+<div [@routerTransition]>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mainCarousell first_slider"  *ngIf="sliders">
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let slide of sliders">
+                    <ng-template carouselSlide>
+                    <img [src]="slide.imagePath | translate">
+                    </ng-template>
+                </ng-container>
+
+            </owl-carousel-o>
+            <div class="transparentStyle">
+                <div class="contanter row">
+                    <div class="logo">
+                        <!-- <img src="./../../../assets/images/Home/Modulo-1/logo.png"  alt=""> -->
+                        <!-- <img src="./../../../assets/images/logo-animado2.gif" class="pointer"  alt=""> -->
+                    </div>
+
+                    <!-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 d-grid" style="height: 60%;">
+                        <div class="w-100 my-auto d-block">
+                            <a href="https://www.instagram.com/ingruplatam/" target="_blank">
+                                <img src="./../../../assets/images/Home/Modulo-1/Instagram.png" style="cursor:pointer;">
+                            </a>
+                        </div>
+                        <div class="w-100 my-auto d-block">
+                            <a href="https://www.facebook.com/pg/Ingrup-103428294520345/about/?ref=page_internal" target="_blank">
+                                <img src="./../../../assets/images/Home/Modulo-1/Facebook.png" style="cursor:pointer;">
+                            </a>
+                        </div>
+
+                    </div> -->
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 d-flex">
+                        <!-- <h1 class="title my-auto"> <div style="font-family: 'robotoCon'!important; color: #44D62C;font-size: 2em;text-shadow: #ffffff 4px 2px 5px;">IN<span style="color: #383838">GRUP </span></div> <span style="font-size: 0.5em;"> Primera empresa en la región en firmar el <h3>Compromiso Global para una Nueva Economia Circular.</h3> </span></h1> -->
+
+                    </div>
+
+
+                </div>
+                <div class="preview">
+                    <div class="row h-100">
+                        <a target="_blank" class="linkCovid" style='text-decoration: none;' href="../../../assets/pdf/Plan_de_contingencia_COVID_19.pdf" download="Plan_de_contingencia_COVID_19.pdf"> 
+                       
+                            <div class="covidItem" style="background-color: #44D62C;"> 
+                                <div class="covidSquare">
+                                    {{ 'COVID-19 Protocolo INGRUP' | translate}}
+                                </div>
+                            </div>
+
+                        </a>
+                        <!-- 
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 h-100 d-flex" style="padding-right: 0;">
+                            <h3 class="m-auto hashtag">
+                                {{ 'Comprometidos con el Planeta' | translate}}
+                            </h3>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 h-100 d-flex">
+                            <img src="./../../../assets/images/Home/Modulo-1/Imagen-circulo3.png" class="h-75 w-auto m-auto" alt="">
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="mainStyle">
+                <div class="contanter row h-100">
+
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 offset-xs-2 offset-sm-2 offset-md-2 offset-lg-2 m-auto text-right title_home">
+                            <!-- <h2 class="first_part">
+                                Apoyamos el cuidado
+                            </h2>
+                            <h3 class="secont_part">
+                                del <span class="h1 sub_part"> medio ambiente</span>
+                            </h3> -->
+
+                    </div>
+                    <!-- <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 offset-xs-1 offset-sm-1 offset-md-1 offset-lg-1 videoCarousell mt-auto text-right second_new">
+                        <owl-carousel-o [options]="customOptions3">
+                                <ng-container *ngFor="let slide of alerts">
+                                    <ng-template carouselSlide>
+                                        <img *ngIf="slide.message" [src]="slide.type" >
+                                        <iframe *ngIf="!slide.message" class="img" [src]="slide.type" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </ng-template>
+                                </ng-container>
+
+                        </owl-carousel-o>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <a target="_blank" class="linkCovidMobil" style='text-decoration: none;' href="../../../assets/pdf/Plan_de_contingencia_COVID_19.pdf" download="Plan_de_contingencia_COVID_19.pdf"> 
+        <div class="covidMobil">
+            <div class="covidSquareMobil">
+                {{ 'COVID-19 Protocolo INGRUP' | translate}}
+            </div>
+        </div>
+    </a>
+
+    <div class="row d-flex new_row nn-height content_height">
+
+            <div style="background-color:#f3f3f3"  class="col-xs-8 col-sm-8 col-md-8 col-lg-8 content_all_videos m-auto ">
+                <!-- customOptions3 -->
+                <owl-carousel-o class="{{ 'yy-video_ESP_A' | translate }}"  [options]="customOptions33">
+                    <ng-container *ngFor="let slide of alerts">
+                        <ng-template carouselSlide>
+                            <iframe class="yy-video"  *ngIf="!slide.message"  [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+
+                <owl-carousel-o class="{{ 'yy-video_ING_A' | translate }}" [options]="customOptions33">
+                    <ng-container *ngFor="let slide of alerts_INGLES">
+                        <ng-template carouselSlide>
+                            <iframe class="yy-video"  *ngIf="!slide.message"  [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+
+            <!-- <div  class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col_comprometidos">
+                <p>INGRUP</p>
+                <p>Comprometidos</p>
+                <p>con el Medio Ambiente</p>
+            </div> -->
+    </div>
+
+    <div class="nn-container">
+        <img class="nn-img-desktop" src="./assets/images/Home/Modulo-1/PropositoD.png"/>
+        <img class="nn-img-mobile" src="./assets/images/Home/Modulo-1/Proposito.png"/>
+    </div>
+
+    <div class="nn-container">
+        <img class="nn-img-desktop" src="./assets/images/Home/Modulo-1/ValoresD.png"/>
+        <img class="nn-img-mobile" src="./assets/images/Home/Modulo-1/Valores.png"/>
+    </div>
+
+
+<!--
+    <div class="row contenedor1">
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 row content_img mt-5 mb">
+            <ngb-carousel class="w-100">
+                <ng-template ngbSlide class="w-100">
+                    <div class="w-100 ">
+                        <img src="../../../assets/images/cuadros/mision.svg"  class="w-100 h-auto" />
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide class="w-100">
+                        <div class="w-100 ">
+                            <img src="../../../assets/images/cuadros/vision.svg"  class="w-100 h-auto" />
+                        </div>
+                </ng-template>
+                <ng-template ngbSlide class="w-100">
+                        <div class="w-100 ">
+                            <img src="../../../assets/images/cuadros/proposito.svg"  class="w-100 h-auto" />
+                        </div>
+                </ng-template>
+                <ng-template ngbSlide class="w-100">
+                    <div class="w-100 ">
+                        <img src="../../../assets/images/cuadros/valores.svg"  class="w-100 h-auto" />
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+    </div>
+    </div>
+-->
+
+
+<!--
+    <div class="row contenedor1 dato_only_pc">
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 row content_img mt-5">
+
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 padding-0 ml-auto mb-2">
+
+                <img src="../../../assets/images/cuadros/mision.svg"  class="w-100 h-auto" />
+
+            </div>
+
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 padding-0 mb-2">
+                <img src="../../../assets/images/cuadros/vision.svg" class="w-100 h-auto" />
+            </div>
+
+
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 padding-0 ml-auto mb-2">
+                <img src="../../../assets/images/cuadros/proposito.svg" class="w-100 h-auto" />
+            </div>
+
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 padding-0 mb-2">
+                <img src="../../../assets/images/cuadros/valores.svg" class="w-100 h-auto" />
+            </div>
+
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 text-center ml-auto container_button">
+                <img class="conoce" src="./assets/images/Home/Modulo-2/Conoce-mas.png" alt="" [routerLink]="['/nosotros']" class="pointer button_mas" />
+                <div class="logoI">
+                  <img src="./assets/images/logo-simple-animado.gif" alt="" />
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 d-flex bottela_logo">
+            <img  src="./assets/images/Home/Modulo-2/Botella-con-logo.png" class="w-100" />
+
+        </div>
+
+
+    </div>
+
+    --->
+
+
+<!--
+
+      <div class="row contain_img_row">
+
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 mx-auto pt-400 pb-400">
+                <h1 class="h1 text-ingrup my-auto text-center">
+                    <span class="titulo-General">
+                        Soluciones de empaques para
+                    </span>
+                </h1>
+            </div>
+
+          
+    
+    </div>
+
+-->
+
+
+
+<div class="row nn-header">
+
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 mx-auto pt-400 pb-400">
+            <h1 class="h1 text-ingrup my-auto text-center" style="padding-bottom: 10%;">
+                <span class="titulo-General general_text_mb">
+                    {{ 'Soluciones de empaques para' | translate}}
+                </span>
+            </h1>
+        </div>
+        
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 m-auto menu-ingrup">
+            <owl-carousel-o [options]="customOptions0">
+                <ng-container *ngFor="let slide of Table;let i = index">
+                    <ng-template carouselSlide>
+                            <a class="w-100" style="list-style: none;text-decoration: none;" (mouseenter)="cambiarIMG(i,'01.svg',4,slide.foto)" (mouseleave)="cambiarIMG(i,'.svg',6,slide.foto)" (click)="TablesComponent.cargarOfCate(slide.id,true)" [routerLink]="['/mercados',slide.id]" >
+                                <div class="panel-ingrup" [routerLinkActive]="['active']">
+                                    <img [src]="slide.foto" *ngIf="slide.id!=id" class="menu-item-ingrup" >
+                                    <img [src]="slide.fotoActiva" *ngIf="slide.id==id" class="menu-item-ingrup" >
+                                </div>
+                            </a>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+
+        </div>
+        
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-auto menu-ingrup no-padding">
+    <owl-carousel-o [options]="customOptionsn">
+        <ng-container *ngFor="let slide of carouselData;let i = index">
+            <ng-template carouselSlide>
+                    <img [src]="slide.src">
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+
+</div>
+
+
+
+        <!--puntos-->
+        <div class="puntos12">
+          <img src="./assets/images/Home/Modulo-3/Puntos-cuadro-2.png" alt="" />
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container_data">
+                    <img width="240" src="./../../../assets/images/logo-animado2.gif" class="logo-completo-titulo">
+                    <h1 class="texto_proposito ml-3 hashtag" style="color: #44D62C"> {{ 'Comprometidos con el Planeta' | translate}} <div class="line-title"></div></h1>
+            </div>
+        </div>
+
+
+      <footer class="footer">
+        <div class="DescargaApp">
+          <h1> {{ 'Descargar' | translate }} <br> Ingrup {{ 'Visualizador' | translate }}</h1>
+          <p>
+                {{ 'Ahora cuentas con acceso directo a nuestros productos' | translate}}<br>
+                {{ 'Descarga la aplicación y mantente informado' | translate }}.
+          </p>
+        </div>
+        <div class="phone">
+          <img src="./assets/images/Home/Modulo-1/celular2.png" alt="" />
+        </div>
+        <div class="contain_img">
+         <a href="https://apps.apple.com/us/app/ingrup-visualizador/id1349062714?l=es"  target="_blank">   <img class="appStore img_apps"src="./assets/images/Home/Modulo-4/Apple-store-cuadro-completo.png" alt="" /></a>
+         <a href="https://play.google.com/store/apps/details?id=com.bot.ingrupvisualizador&hl=es"  target="_blank">  <img class="img_apps" src="./assets/images/Home/Modulo-4/Playstore-cuadro-completo.png" alt="" /></a>
+        </div>
+      </footer>
+
+<div class="content_footer w-100">
+
+<div class="row w-100">
+    
+    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 text-right">
+        <img class="logo_white" src="../../../assets/images/LogoIngrupBlanco.svg">
+    </div>
+    
+    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 d-flex text-left content_info_footer">
+        <div class="separador_footer" style="width: 3px;height: 80%;">
+        </div>
+        <p class="text_footer"> 
+            © 2020 Ingrup<br>
+            info@ingrup.com
+        </p>
+        <div>
+            <a href="https://www.facebook.com/pg/Ingrup-103428294520345/about/?ref=page_internal" target="_blank">
+                <img class="logo logo_1 logo_1_footer" src="./../../../../assets/images/facebookc.svg">
+            </a>
+            <a href="https://www.instagram.com/ingruplatam/" target="_blank">
+                <img class="logo logo_2_footer" src="./../../../../assets/images/instagramc.svg">
+            </a>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+</div>

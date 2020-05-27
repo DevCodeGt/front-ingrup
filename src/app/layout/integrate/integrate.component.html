@@ -1,0 +1,234 @@
+<div [@routerTransition]>
+
+        <div class="row first_row">
+            <div class="row pt-10 p-5">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="title_page">
+                        <span class="titulo-General">
+                                {{ 'Intégrate' | translate }}
+                        </span> 
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row galery">
+            
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-padding1">
+                <img class="w-100" src="../../../assets/images/integrate/g1.png">
+                <p class="titulo_equipo color1">
+                    {{'EQUIPO ÍNTEGRO' | translate }}
+                </p>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-padding1">
+                <img class="w-100" src="../../../assets/images/integrate/g2.png">
+                <p class="titulo_equipo color2">
+                    {{'COMPETENTE' | translate }}
+                </p>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-padding1">
+                <img class="w-100" src="../../../assets/images/integrate/g3.png">
+                <p class="titulo_equipo color3">
+                    {{'COMPROMISO' | translate }}
+                </p>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-padding1">
+                <img class="w-100" src="../../../assets/images/integrate/g4.png">
+                <p class="titulo_equipo color4">
+                    {{'CONFIANZA' | translate }}
+                </p>
+            </div>
+            
+        </div>
+        <div class="row conteiner_data">
+
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 proposito">
+                <div class="content-proposito">
+                    <h1>
+                        {{'SOLICITUD DE EMPLEO' | translate }}
+                    </h1>
+                </div>
+                <div class="container_form">
+                    <form id="contact" #contactForm="ngForm">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 content_form m d-flex">
+                        
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <input [(ngModel)]="selectedData.nombre" class="input_d" type="text" name="nombre" id="nombre" placeholder="{{'Nombre' | translate }}">
+                            <input [(ngModel)]="selectedData.emailSend" class="input_d" type="email" name="mail" id="mail" placeholder="{{'Correo Electrónico' | translate }}">
+                            <select name="Pais" id="input" class="form-control" required="required" >
+                                <option value="null" disabled="true" [selected]="true">{{'País de Residencia' | translate }}</option>
+                                <option value="Guatemala">Guatemala</option>
+                                <option value="El Salvador">El Salvador</option>
+                                <option value="Honduras">Honduras</option>
+                                <option value="Nicaragua">Nicaragua</option>
+                                <option value="Costa Rica">Costa Rica</option>
+                                <option value="Panamá">{{'Panamá' | translate }}</option>
+                            </select>
+                            
+                            <input [(ngModel)]="selectedData.telefono" class="input_d" type="text" name="phone" id="phone" placeholder="{{'Teléfono' | translate }}">
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 flex-column">
+                            <img class="upload" id="upload-img" src="{{'../../../assets/images/integrate/cv.png' | translate}}">
+                            <br>
+                            <button (click)="contact(selectedData)" >{{'Enviar' | translate }}</button>
+                        </div>
+                        
+                    </div>
+                    </form>
+                </div>
+                
+                
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 no-padding1 ">
+                <img src="./../../../assets/images/integrate/lateral.png" class="h-100 w-100">
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        <!--
+        <div class="row vh-100">
+
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 contain_img h-100 padding-0">
+                    <iframe class="video" src="https://www.youtube.com/embed/Yl8jaxlKnWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col_green h-100">
+
+            </div>
+
+        </div>
+        <div class="row padding-h-5 padding-w-5 row_mvp">
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 d-flex center">
+                <div class="container_data">
+                    <p class="title_card">Misión</p>
+                    <p class="description_card">Proveemos soluciones de empaque a nivel regional, mediante tecnología de punta y un equipo humano competente y comprometido, generando beneficios para nuestros clientes, inversionistas y colaboradores.</p>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 d-flex center">
+                <div class="container_data">
+                    <p class="title_card">Visión</p>
+                    <p class="description_card">Ser el proveedor más confiable e innovador de empaques.</p>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 d-flex center">
+                <div class="container_data">
+                    <p class="title_card">Propósito</p>
+                    <p class="description_card">Agregar valor a las marcas de nuestros clientes con soluciones de empaque confiables, innovadores y amigables con el ambiente.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="row">
+                <h3 class="title_valores">Valores</h3>
+            </div>
+
+            <div class="row padding-w-5">
+
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="img_valores">
+                        <img class="w-100" src="../../../assets/images/Nosotros/Modulo-2/Integridad-cuadro.png">
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="img_valores">
+                        <img class="w-100" src="../../../assets/images/Nosotros/Modulo-2/Confianza-cuadro.png">
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="img_valores">
+                        <img class="w-100" src="../../../assets/images/Nosotros/Modulo-2/Compromiso-cuadro.png">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row vh-100">
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 img_personas">
+
+            </div>
+
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 politicas_calidad">
+                <h2 class="title_politica">Política de Calidad</h2>
+                <p class="sub_title">POLÍTICA DE GESTIÓN DE MEJORA</p>
+                <p class="description_politica">Debemos buscar continuamente la excelencia en el negocio de empaques. Utilizando sistemas de gestión eficaces de calidad, inocuidad, salud y seguridad ocupacional, medio ambiente y responsabilidad social, con recurso humano altamente competente y comunicación efectiva, para obtener la confianza y la satisfacción de nuestros clientes y de las partes interesadas, respetando el marco legal y cumpliendo los compromisos acordados.</p>
+            </div>
+
+        </div>
+
+        <div class="row padding-w-15 padding-h-5 row_mvp hieght_row">
+
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="card_producto">
+                    <img class="logo_card" src="../../../assets/images/Nosotros/Modulo-4/calidad_e_inocuidad.png">
+                    <h4 class="title_1">Calidad e Inocuidad</h4>
+                    <p class="description_card">La inocuidad de nuestros empaques y cumplimiento con la calidad acordada</p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="card_producto">
+                    <img class="logo_card" src="../../../assets/images/Nosotros/Modulo-4/salud_y_seguridad.png">
+                    <h4 class="title_2">Salud y Seguridad Ocupacional</h4>
+                    <p class="description_card">Prevenir, controlar y eliminar los riesgos para nuestros colaboradores.</p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="card_producto">
+                    <img class="logo_card" src="../../../assets/images/Nosotros/Modulo-4/medio_ambiente.png">
+                    <h4 class="title_3">Medio Ambiente</h4>
+                    <p class="description_card">Prevenir, minimizar y controlar los riesgos de impacto ambiental y fomentar las 4R's (Reducir, Reutilizar, Reciclar y Reforestar).</p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="card_producto">
+                    <img class="logo_card" src="../../../assets/images/Nosotros/Modulo-4/social.png">
+                    <h4 class="title_4">Responsabilidad Social</h4>
+                    <p class="description_card">Cumplir y fomentar los principios de responsabilidad social por medio de la transparencia y comportamiento honesto y ético, cumpliendo nuestros valores de compromiso, integridad y confianza.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row footer">
+
+        </div>
+         -->
+    </div>
+    <div class="content_footer w-100">
+
+        <div class="row w-100">
+            
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 text-right">
+                <img class="logo_white" src="../../../assets/images/LogoIngrupBlanco.svg">
+            </div>
+            
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 d-flex text-left content_info_footer">
+                <div class="separador_footer" style="width: 3px;height: 80%;">
+                </div>
+                <p class="text_footer"> 
+                    © 2020 Ingrup<br>
+                    info@ingrup.com
+                </p>
+                <div>
+                    <a href="https://www.facebook.com/pg/Ingrup-103428294520345/about/?ref=page_internal" target="_blank">
+                        <img class=" logo_1 logo_1_footer" src="./../../../../assets/images/facebookc.svg">
+                    </a>
+                    <a href="https://www.instagram.com/ingruplatam/" target="_blank">
+                        <img class=" logo_2_footer" src="./../../../../assets/images/instagramc.svg">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        </div>

@@ -1,0 +1,234 @@
+.row1{
+    background-image: url(../../../assets/images/Sostenibilidad/fondo1.png);
+    background-size: cover;
+    background-position: center;
+}
+.v100{
+    height: 100vh;
+    
+}
+.text_strong{
+    color: #44D62C;
+}
+.container_text{
+    color: #5E5B5C;
+    height: fit-content;
+    margin: auto;
+    font-size: 4em;
+    padding: 14%;
+    line-height: 1;
+}
+.no-padding,
+.content_slides_full{
+    padding: 0 !important;
+    
+}
+.de-middle2 {
+    top: 50% !important;
+    right: 1% !important;
+    height: 40px !important;
+    width: 40px !important;
+    position: absolute !important;
+}
+.row_image{
+    background-color: white;
+}
+.col-1-row1{
+    background-color: #ffffffd4;
+}
+.logo_header{
+    height: 100% !important;
+}
+.logo {
+    height: 5rem;
+    width: 100%;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.col-2-row2{
+    box-shadow: inset 0 0 101px 38px #10401b;
+    box-shadow: 
+    inset 0 0px 0px transparent,
+    0 0 0 0px transparent,
+    0 0 0 0 transparent,
+     inset 0 -108px 225px  1px #10401b;
+}
+.contain_img{
+    text-align: right;
+    margin-top: auto;
+    margin-bottom: 2%;
+}
+.contain_img img{
+    margin-right: 3%;
+}
+.text_apoyamos{
+    color: #44D62C;
+    font-size: 3em;
+    line-height: 1;
+}
+.text_reciclamos{
+    color:#5E5B5C;
+    font-size: 2.5em;
+}
+.row2{
+    padding-top: 5%;
+}
+.text_row{
+    padding-right: 25%;
+}
+.mundo{
+    margin-left: auto;
+    display: block;
+    margin-right: 20%;
+}
+.container_all_img{
+    text-align: center;
+}
+.container_img{
+    width: 28%;
+}
+.col_img_slide{
+    background-image: url(../../../assets/images/Sostenibilidad/enero.png);
+    background-size: cover;
+}
+.col_img_slide2{
+    background-image: url(../../../assets/images/Sostenibilidad/febrero.png);
+    background-size: cover;
+}
+.active{
+    display: flex !important;
+}
+.description_data{
+    background-color: #44D62C;
+    color: white;
+    height: 100vh;
+    display: flex;
+}
+.contain_data{
+    height: auto;
+    width: auto;
+    margin: auto;
+
+}
+.description_slide {
+    font-size: 3em;
+    line-height: 1;
+    text-align: center;
+}
+.title_slide{
+    font-size: 3em;
+    text-align: center;
+}
+.last_title {
+    color: #44D62C;
+    font-size: 5em;
+    line-height: 1;
+}
+.comprometidos_img{
+    height: 115px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 0%;
+    padding-right: 2%;
+}
+.last_row{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+}
+.img_numbers{
+    margin-top: 10% !important;
+    margin-bottom: 10% !important; 
+}
+.last_section{
+    background-image: url(../../../assets/images/Sostenibilidad/fondo_comprometidos.png);
+    background-size: cover;
+}
+.section_img{
+    background-image: url(../../../assets/images/Sostenibilidad/ambiente.png);
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1500px){
+    .container_text{
+        font-size: 3em;
+    }
+    .text_reciclamos{
+        font-size: 2em;
+    }
+    .description_slide{
+        font-size: 2em;
+    }
+    .last_title{
+        font-size: 3em;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .container_text{
+        font-size: 2.5em;
+    }
+    .text_apoyamos{
+        font-size: 2.5em;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .mundo{
+        margin-left: auto;
+        margin-right: auto
+    }
+    .text_row{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .text_apoyamos{
+        font-size: 2em;
+        line-height: 1.3;
+    }
+    .text_reciclamos{
+        font-size: 1.5em;
+    }
+    .container_img{
+        width: 100%;
+    }
+    .active{
+        display: inline !important;
+    }
+    .col_img_slide{
+        height: 50vh !important;
+    }
+    .description_data{
+        height: 50vh !important;
+    }
+    .last_row{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .last_title{
+        font-size: 2em;
+    }
+    .comprometidos_img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .row2{
+        padding-top: 10%;
+    }
+    .section_img{
+        background-size: 260%;
+    }
+    .last_row{
+        padding-top: 10%;
+    }
+    .last_section{
+        background-size: 260%;
+    }
+    .last_row{
+        background-color: white;
+    }
+}
+.col-2-row2{
+    background-size: cover;
+    background-position: center;
+}
