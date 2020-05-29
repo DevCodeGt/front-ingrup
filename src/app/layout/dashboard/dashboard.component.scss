@@ -16,6 +16,35 @@ $rosado: #E06B70;
 }
 
 
+//video home
+
+.content_all_videos{
+  background:transparent !important;
+}
+.content_all_videos .row{
+  justify-content: space-between;
+}
+
+
+.content_all_videos .row .Vide1Lateral{
+  height: 535px;
+  max-width: 49%;
+  flex: 49%;
+  overflow: hidden;
+}
+
+.content_all_videos .row .Vide1Lateral iframe{
+  height: 535px;
+}
+
+.content_all_videos .row .Vide2Lateral{
+  height:600px;
+  max-width: 49%;
+  flex: 49%;
+}
+
+
+
 .outer-link{
   display: block;
   border: 1px solid #000;

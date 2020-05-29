@@ -99,9 +99,46 @@
 
     <div class="row d-flex new_row nn-height content_height">
 
-            <div style="background-color:#f3f3f3"  class="col-xs-8 col-sm-8 col-md-8 col-lg-8 content_all_videos m-auto ">
+            <div style="background-color:#f3f3f3"  class="col-xs-8 col-sm-8 col-md-10 col-lg-10 content_all_videos m-auto ">
+
+                <div class='row'>
+                
+                    <!--Section 1-->
+                    <div class='col-12 col-md-6 col-lg-6 Vide1Lateral {{ "yy-video_ESP_A" | translate }}'>
+                        <ng-container *ngFor="let slide of alerts">
+                            <iframe class="yy-video"   [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
+                        </ng-container>
+                    </div>
+                    <!--/Section 1-->
+
+                    <!--Section 2-->
+                    <div class='col-12 col-md-6 col-lg-6 Vide2Lateral {{ "yy-video_ESP_A" | translate }}'>
+                        <ng-container *ngFor="let slide of alerts2">
+                            <iframe class="yy-video"    [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
+                        </ng-container>
+                    </div>
+                    <!--/Section 2-->
+
+                    <!--Section 1-->
+                    <div class='col-12 col-md-6 col-lg-6 Vide1Lateral {{ "yy-video_ING_A" | translate }}'>
+                        <ng-container *ngFor="let slide of alerts_INGLES">
+                            <iframe class="yy-video"   [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
+                        </ng-container>
+                    </div>
+                    <!--/Section 1-->
+
+                    <!--Section 2-->
+                    <div class='col-12 col-md-6 col-lg-6 Vide2Lateral {{ "yy-video_ING_A" | translate }}'>
+                        <ng-container *ngFor="let slide of alerts_2_INGLES">
+                            <iframe class="yy-video"    [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
+                        </ng-container>
+                    </div>
+                    <!--/Section 2-->
+
+                </div>
+                
                 <!-- customOptions3 -->
-                <owl-carousel-o class="{{ 'yy-video_ESP_A' | translate }}"  [options]="customOptions33">
+                <!--owl-carousel-o class="{{ 'yy-video_ESP_A' | translate }}"  [options]="customOptions33">
                     <ng-container *ngFor="let slide of alerts">
                         <ng-template carouselSlide>
                             <iframe class="yy-video"  *ngIf="!slide.message"  [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
@@ -115,7 +152,8 @@
                             <iframe class="yy-video"  *ngIf="!slide.message"  [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
                         </ng-template>
                     </ng-container>
-                </owl-carousel-o>
+                </owl-carousel-o-->
+
             </div>
 
             <!-- <div  class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col_comprometidos">

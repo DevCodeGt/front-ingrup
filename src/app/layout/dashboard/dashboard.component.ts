@@ -23,7 +23,9 @@ export class CarouselData {
 })
 export class DashboardComponent implements OnInit {
     public alerts: Array<any> = [];
+    public alerts2: Array<any> = [];
     public alerts_INGLES: Array<any> = [];
+    public alerts_2_INGLES: Array<any> = [];
     public sliders: Array<any> = [];
     public items: Array<any> = [];
     public slider_cards = [];
@@ -365,74 +367,37 @@ export class DashboardComponent implements OnInit {
             { name: 'Resinas Recicladas', src: 'assets/images/Mercados/Modulo-1/menu-principal/Resinas-recicladas.svg',index: 5, dataHash: 'five'}
         )
         
+        /*
         this.alerts.push(
             { id: 0, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/XfZeoOWjQgU")},
             { id: 1, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/e0VYQTuQMVA")},
             { id: 2, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/dgqhM6H-vyo")},
             { id: 3, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/R3pe8_1r3Z4")},
-            
-            
-            // { id: 2, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/e19T_RO8qa8?controls=1&autoplay=0&loop=1")},
-
-            // {
-            //     id: 1,
-            //     type: 'assets/images/Home/Modulo-1/Imagen-video-1.png',
-            //     message: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            //     Voluptates est animi quibusdam praesentium quam, et perspiciatis,
-            //     consectetur velit culpa molestias dignissimos
-            //     voluptatum veritatis quod aliquam! Rerum placeat necessitatibus, vitae dolorum`
-            // }, 
-            // {
-            //     id: 2,
-            //     type: 'assets/images/Home/Modulo-1/imagen-video-2.png',
-            //     message: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            //     Voluptates est animi quibusdam praesentium quam, et perspiciatis,
-            //     consectetur velit culpa molestias dignissimos
-            //     voluptatum veritatis quod aliquam! Rerum placeat necessitatibus, vitae dolorum`
-            // },
-            // {
-            //     id: 2,
-            //     type: 'assets/images/Home/Modulo-1/imagen-video-2.png',
-            //     message: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            //     Voluptates est animi quibusdam praesentium quam, et perspiciatis,
-            //     consectetur velit culpa molestias dignissimos
-            //     voluptatum veritatis quod aliquam! Rerum placeat necessitatibus, vitae dolorum`
-            // },
-            // {
-            //     id: 2,
-            //     type: 'assets/images/Home/Modulo-1/imagen-video-2.png',
-            //     message: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            //     Voluptates est animi quibusdam praesentium quam, et perspiciatis,
-            //     consectetur velit culpa molestias dignissimos
-            //     voluptatum veritatis quod aliquam! Rerum placeat necessitatibus, vitae dolorum`
-            // },
-            // {
-            //     id: 2,
-            //     type: 'assets/images/Home/Modulo-1/imagen-video-2.png',
-            //     message: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            //     Voluptates est animi quibusdam praesentium quam, et perspiciatis,
-            //     consectetur velit culpa molestias dignissimos
-            //     voluptatum veritatis quod aliquam! Rerum placeat necessitatibus, vitae dolorum`
-            // },
-            // {
-            //     id: 2,
-            //     type: 'assets/images/Home/Modulo-1/imagen-video-2.png',
-            //     message: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            //     Voluptates est animi quibusdam praesentium quam, et perspiciatis,
-            //     consectetur velit culpa molestias dignissimos
-            //     voluptatum veritatis quod aliquam! Rerum placeat necessitatibus, vitae dolorum`
-            // },
-            // {
-            //     id: 2,
-            //     type: 'assets/images/Home/Modulo-1/imagen-video-2.png',
-            //     message: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            //     Voluptates est animi quibusdam praesentium quam, et perspiciatis,
-            //     consectetur velit culpa molestias dignissimos
-            //     voluptatum veritatis quod aliquam! Rerum placeat necessitatibus, vitae dolorum`
-            // }
         );
 
         this.alerts_INGLES.push(
+            { id: 0, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/zGsbbkoKQUE")},
+        );*/
+
+
+        ///Vide1Lateral ESP
+        this.alerts.push(
+            { id: 0, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/XfZeoOWjQgU")},
+        );
+
+        ///Vide2Lateral ESP
+        this.alerts2.push(
+            { id: 0, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/e0VYQTuQMVA")},
+        );
+
+
+        ///Vide1Lateral Ing
+        this.alerts_INGLES.push(
+            { id: 0, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/zGsbbkoKQUE")},
+        );
+
+        ///Vide2Lateral Ing
+        this.alerts_2_INGLES.push(
             { id: 0, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/zGsbbkoKQUE")},
         );
     }
