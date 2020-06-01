@@ -802,49 +802,107 @@ export class TablesComponent implements OnInit {
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/biPd3Z97Fg7TznroehPqfHqrHEGu2SIsm7iwLOmE.jpeg',EN:'./../../assets/images/Custom/Tapas/Sport/Sport-3-piezas-1881-B.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/v9MTbOcfKLNiEAgv0nuBUvHN3uDFoKBe6FIvqPPS.jpeg',EN:'./../../assets/images/Custom/Tapas/Sport/Sport-3-piezas-1881-C.jpg'},
 
-        ];;
+        ];
 
           //OBTENER EL ARRAY DE LAS IMAGENES
-        console.log('Lenguaje cambiado!', L);
-        console.log('IMAGENES BK:',this.BK_ORIGIN_IMGS)
+        //console.log('Lenguaje cambiado!', L);
+        //console.log('IMAGENES BK:',this.BK_ORIGIN_IMGS)
         //console.log('ARREGLO:',IMAGENES_TRANSLATE)
         let FIX = [];
 
         if (L == 'en'){
-        A = this.galleryImages;
-        
-        for(var i=0; i<A.length;i++)
-        {
-            //console.log('1');
-            var img = A[i].small;
-            FIX.push(img);
+            A = this.galleryImages;
+            
+            for(var i=0; i<A.length;i++)
+            {
+                //console.log('1');
+                var img = A[i].small;
+                FIX.push(img);
 
-            //console.log('OPT',IMAGENES_TRANSLATE.find(x => x.ES === img));
-            if (IMAGENES_TRANSLATE.find(x => x.ES === img)){
-                img = IMAGENES_TRANSLATE.find(x => x.ES === img).EN;
+                //console.log('OPT',IMAGENES_TRANSLATE.find(x => x.ES === img));
+                if (IMAGENES_TRANSLATE.find(x => x.ES === img)){
+                    img = IMAGENES_TRANSLATE.find(x => x.ES === img).EN;
+                }
+                //console.log('2');
+                B.push({'small':img,'medium':img,'big':img});
             }
-            //console.log('2');
-            B.push({'small':img,'medium':img,'big':img});
-        }
-        this.galleryImages = B;
+            this.galleryImages = B;
 
-        console.log('FIX:',FIX)
+            console.log('FIX:',FIX)
 
-        if (IMAGENES_TRANSLATE.find(x => x.ES === this.imagen_selected)){
-            this.imagen_selected = IMAGENES_TRANSLATE.find(x => x.ES === this.imagen_selected).EN;
-        }
+            if (IMAGENES_TRANSLATE.find(x => x.ES === this.imagen_selected)){
+                this.imagen_selected = IMAGENES_TRANSLATE.find(x => x.ES === this.imagen_selected).EN;
+            }
         
-    }
-    else
-    {
+        }else{
         //REGRESAR A ESP
-        A = this.BK_ORIGIN_IMGS;
-        this.galleryImages = A;
-        this.imagen_selected = this.imagen_selected_bk;
+            A = this.BK_ORIGIN_IMGS;
+            this.galleryImages = A;
+            this.imagen_selected = this.imagen_selected_bk;
+        }
+
+        //console.log('NUEVA SALIDA',this.galleryImages);
     }
 
-    console.log('NUEVA SALIDA',this.galleryImages);
+    CambiarNombrePresentaciones(lang){
+        let L = lang;
+        console.log('Lenguaje: ', L);
+        let Presentaciones = this.selectedData['presentaciones'];
+
+        let PresentacionTranslate = [
+            //Botellas - Carbonatadas
+            
+            {ES: "Preforma 1816", EN: 'Preform 1816'},
+            {ES: "Preforma 1881", EN: 'Preform 1881'},
+            {ES: "Envase PET 500 ml", EN: '500ml PET Bottle' },
+            {ES: "Envase PET 600 ml", EN: 'PET Bottle 600ml'},
+            {ES: "Envase PET 1.50 litros", EN: 'PET Bottle 1.50 Lts'},
+            {ES: "Envase PET 2 litros", EN: 'PET Bottle 2 Lts'},
+            {ES: "Envase PET 3 litros", EN: 'PET Bottle 3 Lts'},
+            {ES: "Envase PET  3.3 litros", EN: 'PET Bottle 3.3 Lts'},
+            {ES: "Envase PET 2.5 litros", EN: 'PET Bottle 2.5 Lts'},
+            {ES: "12 Botellas Litro", EN: '12 Bottles 1 Lt '},
+
+            //Carbonatadas
+            {ES: "Envase PET 500 ml", EN: 'PET Bottle 500 ml'},
+            {ES: "Envase PET 3 litros", EN: 'PET Bottle 3 Lts'},
+            {ES: "Envase PET  3.3 litros", EN: 'PET Bottle 3.3 Lts'},
+            {ES: "Envase PET 2.5 litros", EN: 'PET Bottle 2.5 Lts'},
+            {ES: "Tapa dosificadora Lateral con Foil", EN: "Lateral dosing cap with Foil"},
+            
+            //No carbonatadas
+            {ES: "24 Botellas Medio Litro alta", EN: '24 Bottles Half Liter Tall'}
+        ];
+
+        if(lang == 'en'){
+            for(var i=0; i< Presentaciones.length ;i++){
+
+                var nombre = Presentaciones[i].nombre;
+                var separador = Presentaciones[i].separador;
+                var material = Presentaciones[i].material;
+                var descripcion = Presentaciones[i].descripcion;
+
+                console.log('Descripcion: ', descripcion);
+                console.log('typeof: ', typeof descripcion);
+                if (PresentacionTranslate.find(x => x.ES == descripcion)){
+                    console.log('Descripcion: ', descripcion);
+                    descripcion = PresentacionTranslate.find(x => x.ES == descripcion).EN;
+                    console.log('Nueva Descripcion: ', descripcion);
+                    this.selectedData['presentaciones'][i].descripcion = descripcion;
+                }
+
+                if (PresentacionTranslate.find(x => x.ES === nombre)){
+                    nombre = PresentacionTranslate.find(x => x.ES === nombre).EN;
+                    this.selectedData['presentaciones'][i].nombre = nombre;
+                }
+
+                console.log('Contador: ', i);
+            }
+            
+        }
+        console.log('presentaciones Markets: ', this.selectedData['presentaciones']);
     }
+
     galleryOptions: NgxGalleryOptions[];
     galleryOptions2: NgxGalleryOptions[];
     gallery: NgxGalleryOptions[];
@@ -1087,7 +1145,7 @@ export class TablesComponent implements OnInit {
         filter:'evento'
       };
     //   console.log('antes:'+this.selectedData.id+' Ahora'+id);
-    this.scrollMyDiv('Galeria');
+        this.scrollMyDiv('Galeria');
 
 
     // $(".finalPic").addClass("d-none");
@@ -1154,6 +1212,11 @@ export class TablesComponent implements OnInit {
                                 this.resetCarousel();
                             }
                             this.selectedData=response;
+
+                            //--- cambiar descripciones----------
+                            //console.log('data para traducir: ', this.selectedData);
+                            this.CambiarNombrePresentaciones(this.translate.currentLang);
+
                             $('.ngx-gallery-preview-top .ngx-gallery-preview-icons .ngx-gallery-icon').html('<div class="lb-dataContainer" style="animation-duration: 0.7s; width: 877px;"><div class="lb-data"><div class="lb-details"><span class="lb-caption animation fadeIn" style="animation-duration: 0.7s;">https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/EFuuA51ZYMwKp5PF07uP2zCfYcwOrA4JDP77iA9A.png</span><span class="lb-number animation fadeIn" hidden="" style="animation-duration: 0.7s;"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div>')
 
                             if(response.slides && response.slides.length>0){

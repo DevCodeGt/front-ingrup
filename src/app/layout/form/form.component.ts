@@ -805,7 +805,7 @@ export class FormComponent implements OnInit {
         console.log('IMAGENES BK:',this.BK_ORIGIN_IMGS);
         console.log('this.galleryImages:',this.galleryImages);
         console.log('this.selectedData', this.selectedData);
-        //console.log('ARREGLO:',IMAGENES_TRANSLATE)
+        console.log('imagen_selected: ',this.imagen_selected);
         let FIX = [];
 
         if (L == 'en'){
@@ -839,9 +839,10 @@ export class FormComponent implements OnInit {
         A = this.BK_ORIGIN_IMGS;
         this.galleryImages = A;
         this.imagen_selected = this.imagen_selected_bk;
+        console.log('this.imagen_selected_bk: ', this.imagen_selected_bk);
     }
 
-    console.log('NUEVA SALIDA',this.galleryImages);
+    //console.log('NUEVA SALIDA',this.galleryImages);
     }
 
     CambiarNombrePresentaciones(lang){
@@ -850,6 +851,7 @@ export class FormComponent implements OnInit {
         //let presentaciones = SelecData[]
         let PresentacionTranslate = [
             //Botellas - Carbonatadas
+            
             { ES: "Envase PET 500 ml", EN: '500ml PET Bottle' },
             { ES: "500 ml", EN: "500ml"}, // volumen -> JSON: separador
             { ES: "Envase PET 600 ml", EN: '600ml PET Bottle' },
@@ -974,7 +976,7 @@ export class FormComponent implements OnInit {
             { ES: "Vaso Bebida Fría 22 onzas", EN: "Cold Drink Cup 22oz"},
             { ES: "Vaso Bebida Fría  30 a 32 onzas", EN: "Cold Drink Cup 30oz to 32oz"},
 
-            { ES: "Vaso Bebida Caliente  5 onzas", EN: "5oz Hot Drink cup"},
+            { ES: "Vaso Bebida Caliente  5 onzas", EN: "5oz Hot Drink Cup"},
             { ES: "Vaso Bebida Caliente 8 onzas", EN: "8oz Hot Drink Cup"},
             { ES: "Vaso Bebida Caliente  10 onzas", EN: "10oz Hot Drink Cup"},
             { ES: "Vaso Bebida Caliente 12 onzas", EN: "12oz Hot Drink Cup"},
@@ -1079,46 +1081,13 @@ export class FormComponent implements OnInit {
             { ES: "Preforma 55mm", EN: "Preform 55mm"},
             { ES: "Preforma 55 mm", EN: "Preform 55mm"},
             { ES: "Preforma 55mm", EN: "Preform 55mm"},
-            
-            
+
+            {ES: "Envase PET 500 ml", EN: "500ml PET Bottle"}
             
 
-            
-            
-            
-            
-            
-            
-            
-
-
-
-            
-            
-
-            
-            
-
-            
-
-            
-            
-            
-
-            
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
         ]
 
-        console.log('Presentaciones: ', Presentaciones);
+        console.log('Presentaciones dentro CambiarNombrePresentaciones: ', Presentaciones);
         if(lang == 'en'){
             for(var i=0; i< Presentaciones.length ;i++){
 
@@ -1133,6 +1102,14 @@ export class FormComponent implements OnInit {
                     this.selectedData['presentaciones'][i].nombre = nombre;
                 }
 
+                
+                if (PresentacionTranslate.find(x => x.ES === descripcion)){
+                    console.log('Descripcion: ', descripcion);
+                    descripcion = PresentacionTranslate.find(x => x.ES === descripcion).EN;
+                    console.log('Nueva Descripcion: ', descripcion);
+                    this.selectedData['presentaciones'][i].descripcion = descripcion;
+                }
+
                 //
                 if (PresentacionTranslate.find(x => x.ES === separador)){
                     separador = PresentacionTranslate.find(x => x.ES === separador).EN;
@@ -1144,10 +1121,7 @@ export class FormComponent implements OnInit {
                     this.selectedData['presentaciones'][i].material = material;
                 }
 
-                if (PresentacionTranslate.find(x => x.ES === descripcion)){
-                    descripcion = PresentacionTranslate.find(x => x.ES === descripcion).EN;
-                    this.selectedData['presentaciones'][i].descripcion = descripcion;
-                }
+                
             }
         }
 
@@ -1478,13 +1452,13 @@ export class FormComponent implements OnInit {
         id:1,
         state:'0',
         filter:'evento'
-    };
+        };
     //   console.log('antes:'+this.selectedData.id+' Ahora'+id);
-    this.scrollMyDiv('Galeria');
+        this.scrollMyDiv('Galeria');
     //   console.log(this.idF)
-      const datas = this.selectedData;
+        const datas = this.selectedData;
         this.selectedData=null;
-      this.ProductosService.getSingle(id)
+        this.ProductosService.getSingle(id)
                           .then(response => {
                             console.log('getSingle Response: ', response);
                             this.customOptions2.nav = true
@@ -1520,7 +1494,7 @@ export class FormComponent implements OnInit {
                             response.hasModel = +response.hasModel;
                             response.material = response.model.replace('.obj','.mtl');
 
-                            if(response.imagenes && response.imagenes.length>0){
+                            if(response.imagenes && response.imagenes.length>0){ /// lugar para cambiar imagenes a ingles
                                 let data = []
                                 let data2 = []
                                 response.imagenes.forEach(element => {
@@ -1548,7 +1522,7 @@ export class FormComponent implements OnInit {
                             this.selectedData=response;
                             // funcion para cambiar de nombre de presentacion de productos con this.selectedData
                             this.CambiarNombrePresentaciones(this.translate.currentLang);
-                            console.log('selectedData F: ', this.selectedData);
+                            console.log('selectedData luego de traduccion: ', this.selectedData);
 
                             $('.ngx-gallery-preview-top .ngx-gallery-preview-icons .ngx-gallery-icon').html('<div class="lb-dataContainer" style="animation-duration: 0.7s; width: 877px;"><div class="lb-data"><div class="lb-details"><span class="lb-caption animation fadeIn" style="animation-duration: 0.7s;">https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/EFuuA51ZYMwKp5PF07uP2zCfYcwOrA4JDP77iA9A.png</span><span class="lb-number animation fadeIn" hidden="" style="animation-duration: 0.7s;"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div>')
                             if(response.slides && response.slides.length>0){
