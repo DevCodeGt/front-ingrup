@@ -802,6 +802,11 @@ export class TablesComponent implements OnInit {
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/biPd3Z97Fg7TznroehPqfHqrHEGu2SIsm7iwLOmE.jpeg',EN:'./../../assets/images/Custom/Tapas/Sport/Sport-3-piezas-1881-B.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/v9MTbOcfKLNiEAgv0nuBUvHN3uDFoKBe6FIvqPPS.jpeg',EN:'./../../assets/images/Custom/Tapas/Sport/Sport-3-piezas-1881-C.jpg'},
 
+            //Infografias
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/EFuuA51ZYMwKp5PF07uP2zCfYcwOrA4JDP77iA9A.png', EN:'./../../assets/images/infografias/5-Transparent-BOPP-Film-Metallized-BOPP-Film.png'},
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/1whpOp80qxshdvbZ9aefgdhqjCjOAT6s9OrsJJst.png', EN:'./../../assets/images/infografias/2-Transparent-BOPP-Film.png'},
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/VZPKi2mpF8QKrCXgFKFv7V6dn4ZhtZPomdqUaVir.png', EN:'./../../assets/images/infografias/1-PE-Film.png'},
+            
         ];
 
           //OBTENER EL ARRAY DE LAS IMAGENES
@@ -875,6 +880,7 @@ export class TablesComponent implements OnInit {
         ];
 
         if(lang == 'en'){
+
             for(var i=0; i< Presentaciones.length ;i++){
 
                 var nombre = Presentaciones[i].nombre;
@@ -884,6 +890,13 @@ export class TablesComponent implements OnInit {
 
                 console.log('Descripcion: ', descripcion);
                 console.log('typeof: ', typeof descripcion);
+
+                if(descripcion === "Envase PET 500 ml"){
+                    console.log('Entro: ', descripcion);
+                    this.selectedData['presentaciones'][i].descripcion = "PET Bottle 500ml";
+                    console.log('Nueva descrp: ', this.selectedData['presentaciones'][i].descripcion);
+                }
+
                 if (PresentacionTranslate.find(x => x.ES == descripcion)){
                     console.log('Descripcion: ', descripcion);
                     descripcion = PresentacionTranslate.find(x => x.ES == descripcion).EN;

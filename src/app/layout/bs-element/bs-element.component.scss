@@ -18,6 +18,10 @@
     padding: 14%;
     line-height: 1;
 }
+.pngCompr{
+    width: 25vw;
+}
+
 .no-padding,
 .content_slides_full{
     padding: 0 !important;
@@ -231,4 +235,10 @@
 .col-2-row2{
     background-size: cover;
     background-position: center;
+}
+
+@media only screen and (max-width: 512px){
+    .pngCompr{
+        width: 50vw;
+    }
 }

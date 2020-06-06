@@ -284,7 +284,7 @@
 "Peso":"Weight",
 "Altura":"Height",
 "Unidades":"Units",
-"Peso (Gr)":"Weight (Gr)",
+"Peso (Gr)":"Weight (g)",
 "Unidades / Tarima":"Qty per pallet",
 "Dimensiones":"Dimensions",
 "Base-Alto (m)":"Base-Height (m)",
@@ -384,9 +384,10 @@
     "Plegadizas":"Folding",
     "Cajillas de Comida" : "Food Boxes",
 
-    "PET Transparente - BOPP Metalizado HB-PE" : "Transparent BOPP film - High Barrier Metallized BOPP Film - PE Film",
-    "PET Transparente - PET Metalizado PE" : "Transparent  PET Film -Metallized PET Film - PE Film",
+    "PET Transparente - BOPP Metalizado HB-PE" : "Transparent PET film- High Barrier Metallized PET Film-PE FILM",
+    "PET Transparente - PET Metalizado PE" : "Transparent  PET Film -Metallized PET Film - PE Film ",
     "PET Transparente - Aluminio-PE" : "Transparent  PET film-Foil Film-PE Film",
+    "PET Transparente PE" : "Transparent  PET film-PE Film",
     "BOPP Transparente-BOPP Metalizado Alta Barrera-PE" : "Transparent BOPP film - High Barrier Metallized BOPP Film - PE Film",
     "PET Metalizado PE" : "Metallized  PET Fim - PE Film",
     "PET Transparente BOPP Metalizado PE" : "Transparent  PET Film -Metallized PET Film - PE Film",
@@ -399,6 +400,7 @@
     "BOPP Transparente -BOPP Metalizado- PE" : "Transparent BOPP film -Metallized BOPP Film -PE Film",
     "BOPP Transparente -PE Polietileno" : "BOPP Transparent-PE Polyethylene",
     "BOPP Transparente -BOPP Metalizado-  PE" : "BOPP Transparent-BOPP Metallized-PE",
+    "BOPP Transparente- BOPP Metalizado Alta Barrera PE" : "Transparent BOPP film - High Barrier Metallized BOPP Film - PE Film",
     "PET Transparente -BOPP Metalizado HB-PE" : "PET Transparent-BOPP Metallized HB-PE",
 
     "Caja Agricola #  1 Calada" :"Agricultural Harvesting # 1",
@@ -408,5 +410,6 @@
 
 
 
-    "Diámetro Interior (m)" : "Interior Diameter (m)"
+    "Diámetro Interior (m)" : "Interior Diameter (m)",
+    "../../../assets/images/Sostenibilidad/4rs.png" : "../../../assets/images/Sostenibilidad/LOGO_4Rs_ingles.png"
 }

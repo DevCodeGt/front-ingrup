@@ -300,12 +300,20 @@ export class FormComponent implements OnInit {
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/ljljAqCZyIWgehC4oT3kqO6xEFVaRMccHamsPRJU.jpeg',EN:'./../../assets/images/Custom/Envase/PET/PET/PET-1-litro.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/Uu854dsVPlPARI3n8mzQHctCEDvNuiY89bgwFcIJ.jpeg',EN:'./../../assets/images/Custom/Envase/PET/PET/PET-1-litro-B.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/mPQsz6isO96cVHU74wvb6DaEh9BF2SnmiGINqQ0g.jpeg',EN:'./../../assets/images/Custom/Envase/PET/PET/PET-1-litro-C.jpg'},
+            // SAUCES AND DRESSINGS  - BOTTLES
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/cEdXeygLOvyv6sFldDpZMp134SkPoHfAbc6KDpLb.jpeg', EN: './../../assets/images/Custom/Envase/PET/ANILLOS/500-ml-anillos.jpg'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/oimXz1dd6tXeQom20LsjCNftAo7pvrUe59tvfP1N.jpeg',EN: './../../assets/images/Custom/Envase/PET/ANILLOS/500-ml-anillos-B.jpg'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/NJfIYzYWf87DnUbyUDRzwBDSFGQZvA7Wlreu6Sta.jpeg',EN: './../../assets/images/Custom/Envase/PET/ANILLOS/500-ml-anillos-C.jpg'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/oSq3DmLoRBsGtm6lWNjjUQx22Bf1g4fC8B1FZCDb.jpeg',EN:'./../../assets/images/Custom/Envase/PET/ANILLOS/600-ml-anillos.jpg'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/hsyK88XmARNhEwy0IYcn6L150IG0ow2PjF2BD8ql.jpeg', EN: './../../assets/images/Custom/Envase/PET/ANILLOS/600-ml-anillos-B.jpg'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/7WL5JTRKDVA91v9ys5S5FmRwSovr6jDNaK36V3tX.jpeg', EN: './../../assets/images/Custom/Envase/PET/ANILLOS/600-ml-anillos-C.jpg'},
 
             //PET - Lacteos y embutidos
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/WwYLSYjTEMeHoDL0koei6jCjikx1xfVZnzvviQkD.jpeg',EN:'./../../assets/images/Custom/Envase/PET/PET/PET-1-litro.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/wlystbaEbHGoks18nsIAMshKwlbopoeJwqZQppPl.jpeg',EN:'./../../assets/images/Custom/Envase/PET/PET/PET-1-litro-B.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/CbMP54qDy3UkekjBF1H3d6HoPTahwiFKPy1GEs0h.jpeg',EN:'./../../assets/images/Custom/Envase/PET/PET/PET-1-litro-C.jpg'},
-
+            
+            
             //PET - Miel
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/KIwmDsTN0H4SojViBrNem5vxYXtsiFPCL7oFHgt0.jpeg',EN:'./../../assets/images/Custom/Envase/PET/PET/PET-1-litro.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/OES973rPMKhkFbPrzLiwI3rgNJQPU2ofojLqiBzW.jpeg',EN:'./../../assets/images/Custom/Envase/PET/PET/PET-1-litro-B.jpg'},
@@ -493,6 +501,10 @@ export class FormComponent implements OnInit {
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/dR21OvyC9f5GukqHwXBdVKu0l6T5yNzAXk5zdobm.jpeg',EN:'./../../assets/images/Custom/Preformas/1881/Preforma-1881-J.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/LldXYw79tQLEtZ5ZJnBxmnEAnbL4IaHW5386PGc6.jpeg',EN:'./../../assets/images/Custom/Preformas/1881/Preforma-1881-K.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/F0Q5sF8vFapD4EeW93Jg6cUReueeJxPDG3pm2ixh.jpeg',EN:'./../../assets/images/Custom/Preformas/1881/Preforma-1881-L.jpg'},
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/y9KrPUuUcjBVVGhgyam5Tl7Cs8uTiyP25JklCkWj.jpeg',EN:'./../../assets/images/Custom/Envase/Carafes/garrafa1.jpeg' },
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/zNgzhPlWNex00R1sg0ZeDc8qBknJ8NYOQSxdcqKh.jpeg',EN:'./../../assets/images/Custom/Envase/Carafes/garrafa2.jpeg' },
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/k9qnSPUvMmdOTIhXRn0qNVJE1EYl3cfrm7h0pZfy.jpeg',EN:'./../../assets/images/Custom/Envase/Carafes/garrafa3.jpeg' },
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/10TLxLEFYfbFsOxrgdczTbMdrhganKKtFvkxQtGh.jpeg',EN:'./../../assets/images/Custom/Envase/Carafes/garrafa4.jpeg' },
 
             //PREFORMS 1816 - carbo
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/PBDpaxUwN6OKijzQoLYatWSmVRIjnycx3a9ukVPS.jpeg',EN:'./../../assets/images/Custom/Preformas/1816/Preforma-1816.jpg'},
@@ -797,6 +809,26 @@ export class FormComponent implements OnInit {
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/biPd3Z97Fg7TznroehPqfHqrHEGu2SIsm7iwLOmE.jpeg',EN:'./../../assets/images/Custom/Tapas/Sport/Sport-3-piezas-1881-B.jpg'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/v9MTbOcfKLNiEAgv0nuBUvHN3uDFoKBe6FIvqPPS.jpeg',EN:'./../../assets/images/Custom/Tapas/Sport/Sport-3-piezas-1881-C.jpg'},
 
+            //infografias
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/EFuuA51ZYMwKp5PF07uP2zCfYcwOrA4JDP77iA9A.png', EN: './../../assets/images/infografias/5-Transparent-BOPP-Film-Metallized-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/1whpOp80qxshdvbZ9aefgdhqjCjOAT6s9OrsJJst.png', EN: './../../assets/images/infografias/2-Transparent-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/VZPKi2mpF8QKrCXgFKFv7V6dn4ZhtZPomdqUaVir.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/5icsQQWKw1UNisj5Zj4R7rapZ84TGfwGEUNj3qyq.png', EN: './../../assets/images/infografias/2-Transparent-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/DTuKuZeBgg1nbqJNhCSkbwYG0tAHfktMTYCAaLAI.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/OSBLDqz2mCSxscSivSkWqCK9rTPrhgFqfkLHrmew.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/JJ2f8ZptzOq1NCyiidDOyTkY2PlHpFljteiEK6mo.png', EN: './../../assets/images/infografias/12-Transparent-PET-Film-Metallized-PET-Film-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/ux8lYX2MjFZjLRkt7RdycabuPyiGThggtfrn7vEU.png', EN: './../../assets/images/infografias/14-Coextruded-Film-UHT.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/ua3K4wzkZupwzkaVU90sokGjuOg0DCiFPmFdK72s.png', EN: './../../assets/images/infografias/8-Transparent-PET-Film-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/hpCGWh7btrOvGqYHbuomHekTA5WyDiihUQIdB3v4.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/OEwMmj7t4xssAk0ljyPefRPib2rqoEvF1izD3QBs.png', EN: './../../assets/images/infografias/3-Transparent-BOPP-Film-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/p02xu9mNVw68VUZBcc3xo7P1vmn03oCJTnHlVCRH.png', EN: './../../assets/images/infografias/2-Transparent-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/bc1b2ItDF9bGgQDzuTTaFJWJnzmN1KlTI9q4T0kR.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/bc1b2ItDF9bGgQDzuTTaFJWJnzmN1KlTI9q4T0kR.png', EN: './../../assets/images/infografias/4-Transparent-BOPP-Film-Transparent-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/bc1b2ItDF9bGgQDzuTTaFJWJnzmN1KlTI9q4T0kR.png', EN: './../../assets/images/infografias/5-Transparent-BOPP-Film-Metallized-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/UXANwtRNcrhJIxMkwJIBUJ10GAzilvHdfmkQFkMH.png', EN: './../../assets/images/infografias/7-Transparent-BOPP-Film-Metallized-BOPP-Film-High-Barrier-Metallized-BOPP-Film-PE.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/jSrHiynOne4YpyNV3r35iPKk0PrpDHfqaro3S3Z6.png', EN: './../../assets/images/infografias/6-Transparent-BOPP-Film-Metallized-BOPP-Film-PE.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/GQJsOlgSH5bho1XJaC2p0syLkvfGOqASk9Z9fU2J.png', EN: './../../assets/images/infografias/3-Transparent-BOPP-Film-PE-Film.png'},
+
         ];
 
         
@@ -851,10 +883,10 @@ export class FormComponent implements OnInit {
         //let presentaciones = SelecData[]
         let PresentacionTranslate = [
             //Botellas - Carbonatadas
-            
+
             { ES: "Envase PET 500 ml", EN: '500ml PET Bottle' },
             { ES: "500 ml", EN: "500ml"}, // volumen -> JSON: separador
-            { ES: "Envase PET 600 ml", EN: '600ml PET Bottle' },
+            { ES: "Envase PET 600 ml", EN: '600 ml PET Bottle' },
             { ES: "600 ml", EN: "600ml"},
             { ES: "Envase PET 1.50 litros", EN: '1.5LT PET Bottle' },
             { ES: "1.50 litros", EN: "1.5 liters"},
@@ -918,14 +950,18 @@ export class FormComponent implements OnInit {
             { ES: "Envase 1000 ml", EN: '1000ml Bottle' },
             
             //Home care
-            { ES: "Galón Industrial", EN: 'Industrial Galon' },
+            { ES: "Galón Industrial", EN: 'Industrial Gallon' },
             { ES: "1 Galón", EN: '1 Galon' },
             { ES: "Litro Industrial", EN: 'Industrial Liter' },
             { ES: "1Litro", EN: '1 Liter' },
+            { ES: "Envase  600 ml Anillos ",EN: '600 ml Bottle with Rings'},
+            { ES: "Envase 500 ml Anillos ",EN: '500 ml Bottle with Rings'},
+            { ES: "Envase 1000 ml Anillos ",EN: '1000 ml Bottle with Rings'},
 
             //caps
             { ES: "Retornable", EN: 'Returnable' },
             { ES: "Lamina", EN: 'Metal' },
+            { ES: "Lamina ", EN: 'Metal'},
             { ES: "Retornable", EN: 'Returnable' },
             { ES: "Retornable", EN: 'Returnable' },
 
@@ -935,6 +971,7 @@ export class FormComponent implements OnInit {
             { ES: "Tapa dosificadora Lateral con Foil", EN: "Lateral dosing cap with Foil"},
 
             { ES: "38 mm Presion GT", EN: "38mm Pressure GT"},
+            {ES: "38 mm Rosca  PE", EN: '38mm Screw PE'},
             { ES: "38 mm Rosca PE CP2", EN: "38mm Screw PE CP2"},
             { ES: "38 mm Rosca  PE", EN: "38mm Screw PE"},
             { ES: "38 mm Rosca  PE Liner", EN: "38mm Screw  PE Liner"},
@@ -1027,15 +1064,15 @@ export class FormComponent implements OnInit {
             { ES: "Dos Lavaderos", EN: "Two Buddles"},
             { ES: "Dos lavaderos", EN: "Two Buddles"},
 
-            { ES: "Contenedor industrial", EN: "Industrial Container"},
+            { ES: "Contenedor industrial", EN: "Trash Bins"},
 
-            { ES: "Hielera", EN: "Ice Chest"},
+            { ES: "Hielera", EN: "Coolers"},
             { ES: "Negro / rojo / azul", EN: "Black / Red / Blue"}, 
 
             { ES: 'Casillero 36"', EN: 'Locker 36"'},
             { ES: 'Casillero 18"', EN: 'Locker 36"'},
 
-            { ES: "Letrina Plástica", EN: 'Plastic Latrine'},
+            { ES: "Letrina Plástica", EN: 'Toilet Plastic'},
 
             { ES: "Tarima", EN: 'Pallet'},
             { ES: "Negro y Azul", EN: 'Black & Blue'},
@@ -1045,18 +1082,18 @@ export class FormComponent implements OnInit {
             { ES: "Caja de transporte cerrada baja", EN: "Short closed transport box"},
             { ES: "Tapadera de caja de transporte", EN: "Transport box cover"},
 
-            { ES: "Caja ordenadora 1", EN: "Sorting Case 1"},
-            { ES: "Caja ordenadora 2", EN: "Sorting Case 2"},
-            { ES: "Caja ordenadora 3", EN: "Sorting Case 3"},
-            { ES: "Caja ordenadora 4", EN: "Sorting Case 4"},
-            { ES: "Caja ordenadora 5", EN: "Sorting Case 5"},
+            { ES: "Caja ordenadora 1", EN: "Plastic Organizer Box 1"},
+            { ES: "Caja ordenadora 2", EN: "Plastic Organizer Box 2"},
+            { ES: "Caja ordenadora 3", EN: "Plastic Organizer Box 3"},
+            { ES: "Caja ordenadora 4", EN: "Plastic Organizer Box 4"},
+            { ES: "Caja ordenadora 5", EN: "Plastic Organizer Box 5"},
 
             { ES: "Cubeta 1 Galón", EN: "1 Galon Bucket"},
             { ES: "Cubeta 5 Galones", EN: "5 Galons Bucket"},
             { ES: "Tapa Cubeta  1 Galón", EN: "1 Galon Bucket Cover"},
             { ES: "Tapa Cubeta 5 Galones", EN: "5 Galon Bucket Cover"},
 
-            { ES: "Canasto", EN: "Basket"},
+            { ES: "Canasto", EN: "Plastic Basket"},
 
             { ES: "Tambo Vial", EN: "Tambo Vial"},
             { ES: "Tapadera de caja de transporte", EN: "Transport box cover"},
@@ -1522,7 +1559,7 @@ export class FormComponent implements OnInit {
                             this.selectedData=response;
                             // funcion para cambiar de nombre de presentacion de productos con this.selectedData
                             this.CambiarNombrePresentaciones(this.translate.currentLang);
-                            console.log('selectedData luego de traduccion: ', this.selectedData);
+                            console.log('selectedData luego de llamar funcion traduccion : ', this.selectedData);
 
                             $('.ngx-gallery-preview-top .ngx-gallery-preview-icons .ngx-gallery-icon').html('<div class="lb-dataContainer" style="animation-duration: 0.7s; width: 877px;"><div class="lb-data"><div class="lb-details"><span class="lb-caption animation fadeIn" style="animation-duration: 0.7s;">https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/EFuuA51ZYMwKp5PF07uP2zCfYcwOrA4JDP77iA9A.png</span><span class="lb-number animation fadeIn" hidden="" style="animation-duration: 0.7s;"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div>')
                             if(response.slides && response.slides.length>0){
