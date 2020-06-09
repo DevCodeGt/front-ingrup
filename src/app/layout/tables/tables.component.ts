@@ -806,7 +806,31 @@ export class TablesComponent implements OnInit {
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/EFuuA51ZYMwKp5PF07uP2zCfYcwOrA4JDP77iA9A.png', EN:'./../../assets/images/infografias/5-Transparent-BOPP-Film-Metallized-BOPP-Film.png'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/1whpOp80qxshdvbZ9aefgdhqjCjOAT6s9OrsJJst.png', EN:'./../../assets/images/infografias/2-Transparent-BOPP-Film.png'},
             {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/VZPKi2mpF8QKrCXgFKFv7V6dn4ZhtZPomdqUaVir.png', EN:'./../../assets/images/infografias/1-PE-Film.png'},
-            
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/5icsQQWKw1UNisj5Zj4R7rapZ84TGfwGEUNj3qyq.png',EN:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/5icsQQWKw1UNisj5Zj4R7rapZ84TGfwGEUNj3qyq.png'},
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/DTuKuZeBgg1nbqJNhCSkbwYG0tAHfktMTYCAaLAI.png',EN:'./../../assets/images/infografias/1-PE-Film.png'},
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/OSBLDqz2mCSxscSivSkWqCK9rTPrhgFqfkLHrmew.png',EN:'./../../assets/images/infografias/1-PE-Film.png'},
+
+            //Infografias copiadas de Products
+            //infografias
+            {ES:'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/EFuuA51ZYMwKp5PF07uP2zCfYcwOrA4JDP77iA9A.png', EN: './../../assets/images/infografias/5-Transparent-BOPP-Film-Metallized-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/1whpOp80qxshdvbZ9aefgdhqjCjOAT6s9OrsJJst.png', EN: './../../assets/images/infografias/2-Transparent-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/VZPKi2mpF8QKrCXgFKFv7V6dn4ZhtZPomdqUaVir.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/5icsQQWKw1UNisj5Zj4R7rapZ84TGfwGEUNj3qyq.png', EN: './../../assets/images/infografias/2-Transparent-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/DTuKuZeBgg1nbqJNhCSkbwYG0tAHfktMTYCAaLAI.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/OSBLDqz2mCSxscSivSkWqCK9rTPrhgFqfkLHrmew.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/JJ2f8ZptzOq1NCyiidDOyTkY2PlHpFljteiEK6mo.png', EN: './../../assets/images/infografias/12-Transparent-PET-Film-Metallized-PET-Film-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/ux8lYX2MjFZjLRkt7RdycabuPyiGThggtfrn7vEU.png', EN: './../../assets/images/infografias/14-Coextruded-Film-UHT.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/ua3K4wzkZupwzkaVU90sokGjuOg0DCiFPmFdK72s.png', EN: './../../assets/images/infografias/8-Transparent-PET-Film-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/hpCGWh7btrOvGqYHbuomHekTA5WyDiihUQIdB3v4.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/OEwMmj7t4xssAk0ljyPefRPib2rqoEvF1izD3QBs.png', EN: './../../assets/images/infografias/3-Transparent-BOPP-Film-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/p02xu9mNVw68VUZBcc3xo7P1vmn03oCJTnHlVCRH.png', EN: './../../assets/images/infografias/2-Transparent-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/bc1b2ItDF9bGgQDzuTTaFJWJnzmN1KlTI9q4T0kR.png', EN: './../../assets/images/infografias/1-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/bc1b2ItDF9bGgQDzuTTaFJWJnzmN1KlTI9q4T0kR.png', EN: './../../assets/images/infografias/4-Transparent-BOPP-Film-Transparent-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/bc1b2ItDF9bGgQDzuTTaFJWJnzmN1KlTI9q4T0kR.png', EN: './../../assets/images/infografias/5-Transparent-BOPP-Film-Metallized-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/UXANwtRNcrhJIxMkwJIBUJ10GAzilvHdfmkQFkMH.png', EN: './../../assets/images/infografias/7-Transparent-BOPP-Film-Metallized-BOPP-Film-High-Barrier-Metallized-BOPP-Film-PE.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/jSrHiynOne4YpyNV3r35iPKk0PrpDHfqaro3S3Z6.png', EN: './../../assets/images/infografias/6-Transparent-BOPP-Film-Metallized-BOPP-Film-PE.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/GQJsOlgSH5bho1XJaC2p0syLkvfGOqASk9Z9fU2J.png', EN: './../../assets/images/infografias/3-Transparent-BOPP-Film-PE-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/5icsQQWKw1UNisj5Zj4R7rapZ84TGfwGEUNj3qyq.png', EN: './../../assets/images/infografias/2-Transparent-BOPP-Film.png'}
         ];
 
           //OBTENER EL ARRAY DE LAS IMAGENES
@@ -860,23 +884,80 @@ export class TablesComponent implements OnInit {
             {ES: "Preforma 1816", EN: 'Preform 1816'},
             {ES: "Preforma 1881", EN: 'Preform 1881'},
             {ES: "Envase PET 500 ml", EN: '500ml PET Bottle' },
-            {ES: "Envase PET 600 ml", EN: 'PET Bottle 600ml'},
-            {ES: "Envase PET 1.50 litros", EN: 'PET Bottle 1.50 Lts'},
-            {ES: "Envase PET 2 litros", EN: 'PET Bottle 2 Lts'},
-            {ES: "Envase PET 3 litros", EN: 'PET Bottle 3 Lts'},
-            {ES: "Envase PET  3.3 litros", EN: 'PET Bottle 3.3 Lts'},
-            {ES: "Envase PET 2.5 litros", EN: 'PET Bottle 2.5 Lts'},
-            {ES: "12 Botellas Litro", EN: '12 Bottles 1 Lt '},
+            {ES: "Envase PET 600 ml", EN: '600ml PET Bottle'},
+            {ES: "Envase PET 1.50 litros", EN: '1.50 Lts PET Bottle'},
+            {ES: "Envase PET 2 litros", EN: '2 Lts PET Bottle'},
+            {ES: "Envase PET 3 litros", EN: '3 Lts PET Bottle'},
+            {ES: "Envase PET  3.3 litros", EN: '3.3 Lts PET Bottle'},
+            {ES: "Envase PET 2.5 litros", EN: '2.5 Lts PET Bottle'},
+            {ES: "12 Botellas Litro", EN: '12 Bottles of 1 Lt '},
 
             //Carbonatadas
-            {ES: "Envase PET 500 ml", EN: 'PET Bottle 500 ml'},
-            {ES: "Envase PET 3 litros", EN: 'PET Bottle 3 Lts'},
-            {ES: "Envase PET  3.3 litros", EN: 'PET Bottle 3.3 Lts'},
-            {ES: "Envase PET 2.5 litros", EN: 'PET Bottle 2.5 Lts'},
-            {ES: "Tapa dosificadora Lateral con Foil", EN: "Lateral dosing cap with Foil"},
+            {ES: "Envase PET 500 ml", EN: '500 ml PET Bottle'},
+            {ES: "Envase PET 3 litros", EN: '3 Lts PET Bottle'},
+            {ES: "Envase PET  3.3 litros", EN: '3.3 Lts PET Bottle'},
+            {ES: "Envase PET 2.5 litros", EN: '2.5 Lts PET Bottle'},
+            {ES: "Tapa dosificadora Lateral con Foil", EN: "Lateral Dosing Cap with Foil"},
             
             //No carbonatadas
-            {ES: "24 Botellas Medio Litro alta", EN: '24 Bottles Half Liter Tall'}
+            {ES: "24 Botellas Medio Litro alta", EN: '24 Bottles Half Liter Tall'},
+
+            //caps
+            { ES: "Retornable", EN: 'Returnable' },
+            { ES: "Lamina", EN: 'Metal' },
+            { ES: "Lamina ", EN: 'Metal'},
+            { ES: "Retornable", EN: 'Returnable' },
+            { ES: "Retornable", EN: 'Returnable' },
+            { ES: "1 a 8 colores", EN: "1 up to 8 colors"},
+            { ES: "1 a 8 colores", EN: "1 up to 8 colors"},
+
+            { ES: "Panal recto", EN: "Honeycomb Straight"},
+            { ES: "Panal Recto", EN: "Honeycomb Straight"},
+            { ES: "24 Botellas  12 Oz", EN: "24 Bottles  12 Oz"},
+            { ES: "24 Botellas  12  Oz", EN: "24 Bottles  12 Oz"},
+            { ES: "Panal en Diagonal", EN: "Honeycomb in Diagonal"},
+            { ES: "24 Botellas 12 Oz  baja ", EN: "24 Bottles  12 Oz low"},
+            { ES: "24 Botellas  12 Onzas  baja ", EN: "24 Bottles  12 Oz low"},
+            { ES: "24 Botellas Medio Litro alta", EN: "24 Half Liter Bottles Tall"},
+            { ES: "30 Botellas  7/8 Onzas ", EN: "30 Bottles 7/8 oz"},
+
+            { ES: "Preforma 1881", EN: "Preform 1881"},
+            { ES: "Envase PET 3 litros", EN: "3 Lts PET Bottle"},
+            { ES: "Envase PET  3.3 litros", EN: "3.3 Lts PET Bottle"},
+            { ES: "Envase PET 2.5 litros", EN: "2.5 Lts PET Bottle"},
+            { ES: "Preforma 1816", EN: "Preform 1816"},
+            { ES: "24 Botellas 12 Oz  baja", EN: "24 Short 12oz Bottles "},
+            { ES: "Preforma 33mm", EN: "Preform 33mm"},
+            { ES: "Preforma 38mm", EN: "Preform 38mm"},
+            { ES: "Preforma 38 mm", EN: "Preform 38mm"},
+            { ES: "Preforma 48mm", EN: "Preform 48mm"},
+            { ES: "Preforma 48 mm", EN: "Preform 48mm"},
+            { ES: "Preforma 55mm", EN: "Preform 55mm"},
+            { ES: "Preforma 55 mm", EN: "Preform 55mm"},
+            { ES: "Preforma 55mm", EN: "Preform 55mm"},
+            {ES:"Para Botellas o Latas", EN: 'For Bottles or Cans'},
+            {ES: "Botella Industrial", EN: 'Industrial Bottle'},
+            {ES: "5 colores por paso", EN: '5 Colors per Step'},
+            {ES: "Fabricación de envases para refrescos, agua, leche, jugos, bebidas carbonatadas y no carbonatadas y otras aplicaciones industriales como detergentes, textiles y embalajes", EN: "Manufacture of packaging for soft drinks, water, milk, juices, carbonated and non-carbonated beverages and other industrial applications such as detergents, textiles and packaging"},
+            {ES: "Resinas Recicladas", EN: "Recycled resins"},
+            {ES: "Industria textil y del embalaje.", EN : "Textile and packaging industry."},
+            {ES: "Fibras textiles para la elaboración de ropa y alfombras, bandejas para el empaque de frutas y verduras, láminas, cerdas para escobas y cepillos.", EN: "Textile fibers for making clothes and rugs, trays for packing fruits and vegetables, sheets, bristles for brooms and brushes."},
+            {ES: "Molido", EN: "Ground"},
+            {ES: "Hojuela lavada en caliente - SustainPet 780", EN: "Hot Washed Flake - SustainPet 780"},
+            {ES: "Polietileno de alta densidad soplado", EN: "Blown high-density polyethylene"},
+            {ES: "Polietileno de baja densidad", EN : "Low density polyethylene"},
+            {ES: "Nuevas cajillas y canastos plásticos, cubetas.", EN: "New plastic boxes and baskets, buckets."},
+            {ES: "Pulverizado y Peletizado", EN: "Pulverized and Pelletized"},
+            {ES: "Envases de aceite para carros, envases para lubricantes.", EN: "Oil containers for cars, containers for lubricants."},
+            {ES: "Tapaderas, bolsas negras para basura y otros usos.", EN: "Lids, black garbage bags and other uses."},
+            {ES: "Polietileno de alta densidad inyectado", EN: "Injected high-density polyethylene"},
+            {ES: "Polipropileno", EN: "Polypropylene"},
+            {ES: "Superficie lisa, semirígida, flota en el agua, olor químico durante la combustión además de pegarse y dilatarse.", EN : "Smooth, semi-rigid surface, floats in water, chemical odor during combustion in addition to sticking and expanding."},
+            {ES: "Peletizado", EN: "Pelletized"},
+            {ES: "Polipropileno", EN: "Polypropylene"},
+            {ES: "Policarbonato", EN: "Polycarbonate"},
+            {ES: "Dispositivos electrónicos para computadoras, partes para automóviles, discos compactos y láminas.", EN: "Electronic devices for computers, auto parts, compact discs and foils."}
+      
         ];
 
         if(lang == 'en'){
@@ -888,19 +969,11 @@ export class TablesComponent implements OnInit {
                 var material = Presentaciones[i].material;
                 var descripcion = Presentaciones[i].descripcion;
 
-                console.log('Descripcion: ', descripcion);
-                console.log('typeof: ', typeof descripcion);
-
-                if(descripcion === "Envase PET 500 ml"){
-                    console.log('Entro: ', descripcion);
-                    this.selectedData['presentaciones'][i].descripcion = "PET Bottle 500ml";
-                    console.log('Nueva descrp: ', this.selectedData['presentaciones'][i].descripcion);
-                }
 
                 if (PresentacionTranslate.find(x => x.ES == descripcion)){
-                    console.log('Descripcion: ', descripcion);
+                    //console.log('Descripcion: ', descripcion);
                     descripcion = PresentacionTranslate.find(x => x.ES == descripcion).EN;
-                    console.log('Nueva Descripcion: ', descripcion);
+                    //console.log('Nueva Descripcion: ', descripcion);
                     this.selectedData['presentaciones'][i].descripcion = descripcion;
                 }
 
@@ -909,7 +982,31 @@ export class TablesComponent implements OnInit {
                     this.selectedData['presentaciones'][i].nombre = nombre;
                 }
 
-                console.log('Contador: ', i);
+                if (PresentacionTranslate.find(x => x.ES === separador)){
+                    separador = PresentacionTranslate.find(x => x.ES === separador).EN;
+                    this.selectedData['presentaciones'][i].separador = separador;
+                }
+
+                if (PresentacionTranslate.find(x => x.ES === material)){
+                    material = PresentacionTranslate.find(x => x.ES === material).EN;
+                    this.selectedData['presentaciones'][i].material = material;
+                }
+
+                //console.log('Contador: ', i);
+                switch(this.selectedData['presentaciones'][i].id){
+                    case 1284:
+                        this.selectedData['presentaciones'][i].descripcion = "500ml PET Bottle";
+                        this.selectedData['presentaciones'][i].nombre = "500ml PET Bottle";
+                        break;
+                    case 1324:
+                        this.selectedData['presentaciones'][i].descripcion = "3.3 Lts PET Bottle";
+                        this.selectedData['presentaciones'][i].nombre = "3.3 Lts PET Bottle";
+                        break;
+                    case 1332:
+                        this.selectedData['presentaciones'][i].descripcion = "2.5 Lts PET Bottle";
+                        this.selectedData['presentaciones'][i].nombre = "2.5 Lts PET Bottle";
+                        break;
+                }
             }
             
         }

@@ -174,7 +174,7 @@ export class FormComponent implements OnInit {
 
         }
     cambiarValor(valor){
-        console.log('This SelectData', this.selectedData);
+        //console.log('This SelectData', this.selectedData);
         let data = this.selectedData
         this.selectedData=null
         if(valor==1){
@@ -833,11 +833,11 @@ export class FormComponent implements OnInit {
 
         
         //OBTENER EL ARRAY DE LAS IMAGENES
-        console.log('Lenguaje cambiado!', L);
+        /*console.log('Lenguaje cambiado!', L);
         console.log('IMAGENES BK:',this.BK_ORIGIN_IMGS);
         console.log('this.galleryImages:',this.galleryImages);
         console.log('this.selectedData', this.selectedData);
-        console.log('imagen_selected: ',this.imagen_selected);
+        console.log('imagen_selected: ',this.imagen_selected);*/
         let FIX = [];
 
         if (L == 'en'){
@@ -858,7 +858,7 @@ export class FormComponent implements OnInit {
         }
         this.galleryImages = B;
 
-        console.log('FIX:',FIX)
+        //console.log('FIX:',FIX)
 
         if (IMAGENES_TRANSLATE.find(x => x.ES === this.imagen_selected)){
             this.imagen_selected = IMAGENES_TRANSLATE.find(x => x.ES === this.imagen_selected).EN;
@@ -871,7 +871,7 @@ export class FormComponent implements OnInit {
         A = this.BK_ORIGIN_IMGS;
         this.galleryImages = A;
         this.imagen_selected = this.imagen_selected_bk;
-        console.log('this.imagen_selected_bk: ', this.imagen_selected_bk);
+        //console.log('this.imagen_selected_bk: ', this.imagen_selected_bk);
     }
 
     //console.log('NUEVA SALIDA',this.galleryImages);
@@ -884,6 +884,11 @@ export class FormComponent implements OnInit {
         let PresentacionTranslate = [
             //Botellas - Carbonatadas
 
+            { ES: "Envase PET&nbsp;3 litros", EN: "3LT PET Bottle" },
+            { ES: "Envase PET 3 litros", EN: "3.3LT PET Bottle"},
+            { ES: "Envase PET  3.3 litros", EN: "3.3LT PET Bottle" },
+            { ES: "Envase PET 2.5 litros", EN: "2.5LT PET Bottle" },
+            { ES: "Envase PET 500 ml", EN: "500ml PET Bottle"},
             { ES: "Envase PET 500 ml", EN: '500ml PET Bottle' },
             { ES: "500 ml", EN: "500ml"}, // volumen -> JSON: separador
             { ES: "Envase PET 600 ml", EN: '600 ml PET Bottle' },
@@ -892,19 +897,20 @@ export class FormComponent implements OnInit {
             { ES: "1.50 litros", EN: "1.5 liters"},
             { ES: "Envase PET 2 litros", EN: '2LT PET Bottle' },
             { ES: "2 litros", EN: "2 liters"},
-            { ES: "Envase PET 3 litros", EN: '3LT PET Bottle' },
+            
             { ES: "3 litros", EN: "3 liters"},
-            { ES: "Envase PET  3.3 litros", EN: '3.3LT PET Bottle' },
+            
             { ES: "3.3 litros", EN: "3.3 liters"},
-            { ES: "Envase PET 2.5 litros", EN: '2.5LT PET Bottle' },
+            
             { ES: "2.5 litros", EN: "2.5 liters"},
 
             //NOCARBONATED
             //PET Bottles
             { ES: "Envase 300 ml", EN: '300ml Bottle' },
             { ES: "Envase 750 ml", EN: '750ml Bottle' },
-            { ES: "Envase 500 ml  anillos", EN: '500ml Bottle' },
-            { ES: "Envase 600 ml   anillos", EN: '600ml Bottle Rings' },
+            { ES: "Envase  500 ml", EN: '500ml Bottle' },
+            { ES: "Envase 500 ml  anillos", EN: '500ml Bottle with Rings' },
+            { ES: "Envase 600 ml   anillos", EN: '600ml Bottle with Rings' },
             { ES: "Envase 1L", EN: '1L Bottle' },
             { ES: "Envase 1L anillos", EN: '1L Bottle Rings' },
             { ES: "Envase 1.5 L", EN: '1.5L Bottle' },
@@ -921,7 +927,8 @@ export class FormComponent implements OnInit {
             { ES: "Envase 240ml", EN: '240ml Bottle' },
             { ES: "Envase  500 ml", EN: '500ml Bottle' },
             { ES: "Envase 1 LT", EN: '1L Bottle' },
-            { ES: "Envase 1/2 Galón", EN: '1/2 Galon Bottle' },
+            { ES: "Envase 1/2 Galón", EN: '1/2 Gallon Bottle' },
+            { ES: "1/2 Galón", EN: '1/2 Gallon' },
 
             //Carafes & carafe
             { ES: "Garrafa", EN: 'Carafe' },
@@ -951,7 +958,7 @@ export class FormComponent implements OnInit {
             
             //Home care
             { ES: "Galón Industrial", EN: 'Industrial Gallon' },
-            { ES: "1 Galón", EN: '1 Galon' },
+            { ES: "1 Galón", EN: '1 Gallon' },
             { ES: "Litro Industrial", EN: 'Industrial Liter' },
             { ES: "1Litro", EN: '1 Liter' },
             { ES: "Envase  600 ml Anillos ",EN: '600 ml Bottle with Rings'},
@@ -968,7 +975,7 @@ export class FormComponent implements OnInit {
             { ES: "Sport Cap 3 Piezas ", EN: 'Sport Cap 3 Pieces' },
             { ES: "Sport Cap 2 Piezas ", EN: 'Sport Cap 2 Pieces' },
 
-            { ES: "Tapa dosificadora Lateral con Foil", EN: "Lateral dosing cap with Foil"},
+            { ES: "Tapa dosificadora Lateral con Foil", EN: "Lateral Dosing Cap with Foil"},
 
             { ES: "38 mm Presion GT", EN: "38mm Pressure GT"},
             {ES: "38 mm Rosca  PE", EN: '38mm Screw PE'},
@@ -977,7 +984,7 @@ export class FormComponent implements OnInit {
             { ES: "38 mm Rosca  PE Liner", EN: "38mm Screw  PE Liner"},
             { ES: "Tapa  55 mm Con Vertedero", EN: "55mm Cap ..."},
             { ES: "Tapa 55 mm Plana Clip", EN: "55mm Flat Cap Clip"},
-            { ES: "Tapa 53 mm Plana Faldón Corto", EN: "Tapa 53 mm Plana Faldón Corto"},
+            { ES: "Tapa 53 mm Plana Faldón Corto", EN: "Top 53mm Flat Short Skirt"},
 
             { ES: "No Retornables", EN: 'No Returnable'},
 
@@ -1119,19 +1126,29 @@ export class FormComponent implements OnInit {
             { ES: "Preforma 55 mm", EN: "Preform 55mm"},
             { ES: "Preforma 55mm", EN: "Preform 55mm"},
 
-            {ES: "Envase PET 500 ml", EN: "500ml PET Bottle"}
+            {ES: "Envase PET 500 ml", EN: "500ml PET Bottle"},
+            {ES: "Envase PET 3 litros", EN: "PET Bottle 3 Lts"},
+            {ES: "Envase PET 3.3 litros", EN: "PET Bottle 3.3 Lts"},
+            {ES: "Envase PET 2.5 litros", EN: "PET Bottle 2.5 Lts"}
             
 
         ]
 
-        console.log('Presentaciones dentro CambiarNombrePresentaciones: ', Presentaciones);
+        
         if(lang == 'en'){
-            for(var i=0; i< Presentaciones.length ;i++){
+            console.log('Presentaciones dentro CambiarNombrePresentaciones: ', this.selectedData['presentaciones']);
+
+            for(var i=0 ; i< Presentaciones.length ;i++){
 
                 var nombre = Presentaciones[i].nombre;
                 var separador = Presentaciones[i].separador;
                 var material = Presentaciones[i].material;
                 var descripcion = Presentaciones[i].descripcion;
+
+                if(Presentaciones[i].descripcion == "Envase PET 500 ml"){
+                    console.log("Entro a :", Presentaciones[i].descripcion);
+                    Presentaciones[i].descripcion = "500ml PET Bottle";
+                }
 
                 //DropDown
                 if (PresentacionTranslate.find(x => x.ES === nombre)){
@@ -1139,11 +1156,10 @@ export class FormComponent implements OnInit {
                     this.selectedData['presentaciones'][i].nombre = nombre;
                 }
 
-                
                 if (PresentacionTranslate.find(x => x.ES === descripcion)){
-                    console.log('Descripcion: ', descripcion);
+                    //console.log('Descripcion: ', descripcion);
                     descripcion = PresentacionTranslate.find(x => x.ES === descripcion).EN;
-                    console.log('Nueva Descripcion: ', descripcion);
+                    //console.log('Nueva Descripcion: ', descripcion);
                     this.selectedData['presentaciones'][i].descripcion = descripcion;
                 }
 
@@ -1158,8 +1174,49 @@ export class FormComponent implements OnInit {
                     this.selectedData['presentaciones'][i].material = material;
                 }
 
-                
+                // por alguna razon estos productos no se traducen como los demas
+                //deben de traducirse por medio de id y no buscando en un diccionario
+                switch(this.selectedData['presentaciones'][i].id){
+                    case 1316:
+                        this.selectedData['presentaciones'][i].descripcion = "3Lts PET Bottle";
+                        this.selectedData['presentaciones'][i].nombre = "3Lts PET Bottle";
+                        break;
+                    case 1324:
+                        this.selectedData['presentaciones'][i].descripcion = "3.3Lts PET Bottle";
+                        this.selectedData['presentaciones'][i].nombre = "3.3Lts PET Bottle";
+                        break;
+                    case 1332:
+                        this.selectedData['presentaciones'][i].descripcion = "2.5Lts PET Bottle";
+                        this.selectedData['presentaciones'][i].nombre = "2.5Lts PET Bottle";
+                        break;
+                    case 1848:
+                        this.selectedData['presentaciones'][i].descripcion = "500ml Bottle";
+                        this.selectedData['presentaciones'][i].nombre = "500ml Bottle";
+                        break;
+                    case 2202:
+                        this.selectedData['presentaciones'][i].descripcion = "500ml Bottle";
+                        this.selectedData['presentaciones'][i].nombre = "500ml Bottle";
+                        break;
+                    case 808:
+                        this.selectedData['presentaciones'][i].descripcion = "38mm Screw PE";
+                        this.selectedData['presentaciones'][i].nombre = "38mm Screw PE";
+                        break;
+                    case 813:
+                        this.selectedData['presentaciones'][i].descripcion = "38mm Screw PE Liner";
+                        this.selectedData['presentaciones'][i].nombre = "38mm Screw PE Liner";
+                        break;
+                    
+                        
+                    default:
+                        break;
+                }
+                /*if(this.selectedData['presentaciones'][i].id == 1316){
+                    this.selectedData['presentaciones'][i].descripcion = "3Lts PET Bottle";
+                    this.selectedData['presentaciones'][i].nombre = "3Lts PET Bottle";
+                }*/
+                //console.log(`Descripcion Nueva ${i} : ${Presentaciones[i].descripcion}`);
             }
+            //console.log('\n Presentaciones Traducidas: ', this.selectedData['presentaciones']);
         }
 
     }
@@ -1477,13 +1534,13 @@ export class FormComponent implements OnInit {
         }
     }
     cargarSingle(id:number){
-        console.log('Id: ',id);
+       //console.log('Id: ',id);
         this.resetCarousel();
-        console.log("Show on selectedData");
+        //console.log("Show on selectedData");
         this.imagen_selected = this.setImg(this.route.snapshot.paramMap.get('id'));
         this.imagen_selected_bk = this.imagen_selected;
 
-        console.log('this.imagen_selected: ',this.imagen_selected);
+        //console.log('this.imagen_selected: ',this.imagen_selected);
         this.blockUI.start();
         const data = {
         id:1,
@@ -1497,7 +1554,7 @@ export class FormComponent implements OnInit {
         this.selectedData=null;
         this.ProductosService.getSingle(id)
                           .then(response => {
-                            console.log('getSingle Response: ', response);
+                            //console.log('getSingle Response: ', response);
                             this.customOptions2.nav = true
                             // console.log(response);
                             response.pX = +response.pX;
@@ -1559,7 +1616,7 @@ export class FormComponent implements OnInit {
                             this.selectedData=response;
                             // funcion para cambiar de nombre de presentacion de productos con this.selectedData
                             this.CambiarNombrePresentaciones(this.translate.currentLang);
-                            console.log('selectedData luego de llamar funcion traduccion : ', this.selectedData);
+                            //console.log('selectedData luego de llamar funcion traduccion : ', this.selectedData);
 
                             $('.ngx-gallery-preview-top .ngx-gallery-preview-icons .ngx-gallery-icon').html('<div class="lb-dataContainer" style="animation-duration: 0.7s; width: 877px;"><div class="lb-data"><div class="lb-details"><span class="lb-caption animation fadeIn" style="animation-duration: 0.7s;">https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/EFuuA51ZYMwKp5PF07uP2zCfYcwOrA4JDP77iA9A.png</span><span class="lb-number animation fadeIn" hidden="" style="animation-duration: 0.7s;"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div>')
                             if(response.slides && response.slides.length>0){
@@ -1622,8 +1679,8 @@ export class FormComponent implements OnInit {
                                 console.clear; 
                                 this.blockUI.stop();
                               });
-                              console.log('this TABLE');
-        console.log(this.Table);
+                              //console.log('this TABLE');
+        //console.log(this.Table);
                 
         
     }
@@ -1669,8 +1726,8 @@ export class FormComponent implements OnInit {
                                 }
 
                                 this.Table = response;
-                                console.log('THIS TABLE 2');
-                                console.log(this.Table);
+                                //console.log('THIS TABLE 2');
+                                //console.log(this.Table);
                                 this.reset_img();
                                 
                                 this.ocultarModal();
@@ -1685,9 +1742,9 @@ export class FormComponent implements OnInit {
 
 
     cargarOfMarca(id: number, changeUrl: boolean= false) {
-        console.log("Show on selectedData2");
-        console.log(this.selectedData);
-        console.log(id);
+        //console.log("Show on selectedData2");
+        //console.log(this.selectedData);
+        //console.log(id);
         this.resetCarousel();
         if (changeUrl) {
             this.id = id;

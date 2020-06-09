@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="190" viewBox="0 0 160 190">
+  <defs>
+    <filter id="Rectángulo_2917" x="-2" y="2" width="164" height="191" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#44d62c" flood-opacity="0.651"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-CajillasPlegadizas01EN">
+      <rect width="160" height="190"/>
+    </clipPath>
+  </defs>
+  <g id="CajillasPlegadizas01EN" clip-path="url(#clip-CajillasPlegadizas01EN)">
+    <g id="Grupo_1633" data-name="Grupo 1633">
+      <g id="Grupo_1630" data-name="Grupo 1630">
+        <g id="Grupo_1563" data-name="Grupo 1563" transform="translate(-4211 -328.66)">
+          <g transform="matrix(1, 0, 0, 1, 4211, 328.66)" filter="url(#Rectángulo_2917)">
+            <g id="Rectángulo_2917-2" data-name="Rectángulo 2917" transform="translate(16 18)" fill="#44d62c" stroke="#fff" stroke-width="1" opacity="0.93">
+              <rect width="128" height="155" rx="14" stroke="none"/>
+              <rect x="0.5" y="0.5" width="127" height="154" rx="13.5" fill="none"/>
+            </g>
+          </g>
+          <text id="Folding_Carton" data-name="Folding Carton" transform="translate(4291 484.66)" fill="#fff" font-size="14" font-family="RobotoCondensed-Bold, Roboto" font-weight="700"><tspan x="-40.161" y="0">Folding Carton</tspan></text>
+        </g>
+        <g id="sandwich" transform="translate(35.174 65.948)">
+          <path id="Trazado_9417" data-name="Trazado 9417" d="M189.216,172a1.458,1.458,0,1,0,0,2.915h18.31a1.458,1.458,0,1,0,0-2.915Zm0,0" transform="translate(-153.545 -140.659)" fill="#fff"/>
+          <path id="Trazado_9418" data-name="Trazado 9418" d="M88.194,16.217h-4.06l-5.022-11.1A8.734,8.734,0,0,0,71.14,0H18.512A8.734,8.734,0,0,0,10.54,5.121l-5.022,11.1H1.458a1.458,1.458,0,0,0,0,2.915H5.349L11,41.527a8.712,8.712,0,0,0,8.481,6.579H70.169a8.711,8.711,0,0,0,8.481-6.579L84.3,19.133h3.891a1.458,1.458,0,1,0,0-2.915Zm-75-9.9a5.814,5.814,0,0,1,5.315-3.4H71.14a5.814,5.814,0,0,1,5.315,3.4l4.48,9.9H53.473a1.458,1.458,0,0,0-1.458,1.458,7.214,7.214,0,1,1-14.428,0,1.458,1.458,0,0,0-1.458-1.458H8.717ZM75.822,40.813a5.8,5.8,0,0,1-5.654,4.378H19.483a5.8,5.8,0,0,1-5.654-4.377L8.355,19.133H34.771a10.132,10.132,0,0,0,20.06,0H81.3Zm0,0" transform="translate(0 0)" fill="#fff"/>
+          <path id="Trazado_9419" data-name="Trazado 9419" d="M147.758,206.458a1.458,1.458,0,0,0,1.458,1.458H182.1a1.458,1.458,0,0,0,0-2.915H149.216A1.458,1.458,0,0,0,147.758,206.458Zm0,0" transform="translate(-120.834 -167.645)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -164,13 +164,13 @@
     </div>
 
     <div class="nn-container">
-        <img class="nn-img-desktop" src="./assets/images/Home/Modulo-1/PropositoD.png"/>
-        <img class="nn-img-mobile" src="./assets/images/Home/Modulo-1/Proposito.png"/>
+        <img class="nn-img-desktop" src="{{'./assets/images/Home/Modulo-1/PropositoD.png' | translate}}"/>
+        <img class="nn-img-mobile" src="{{'./assets/images/Home/Modulo-1/Proposito.png' | translate}}"/>
     </div>
 
     <div class="nn-container">
-        <img class="nn-img-desktop" src="./assets/images/Home/Modulo-1/ValoresD.png"/>
-        <img class="nn-img-mobile" src="./assets/images/Home/Modulo-1/Valores.png"/>
+        <img class="nn-img-desktop" src="{{'./assets/images/Home/Modulo-1/ValoresD.png' | translate}}"/>
+        <img class="nn-img-mobile" src="{{'./assets/images/Home/Modulo-1/Valores.png' | translate}}"/>
     </div>
 
 
@@ -281,7 +281,7 @@
                 </span>
             </h1>
         </div>
-        
+        <!-- Carousel de Soluciones de Empaques Home  -->
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 m-auto menu-ingrup">
             <owl-carousel-o [options]="customOptions0">
                 <ng-container *ngFor="let slide of Table;let i = index">
@@ -289,6 +289,7 @@
                             <a class="w-100" style="list-style: none;text-decoration: none;" (mouseenter)="cambiarIMG(i,'01.svg',4,slide.foto)" (mouseleave)="cambiarIMG(i,'.svg',6,slide.foto)" (click)="TablesComponent.cargarOfCate(slide.id,true)" [routerLink]="['/mercados',slide.id]" >
                                 <div class="panel-ingrup" [routerLinkActive]="['active']">
                                     <img [src]="slide.foto" *ngIf="slide.id!=id" class="menu-item-ingrup" >
+                                    
                                     <img [src]="slide.fotoActiva" *ngIf="slide.id==id" class="menu-item-ingrup" >
                                 </div>
                             </a>
@@ -303,7 +304,7 @@
     <owl-carousel-o [options]="customOptionsn">
         <ng-container *ngFor="let slide of carouselData;let i = index">
             <ng-template carouselSlide>
-                    <img [src]="slide.src">
+                    <img [src]="slide.src | translate">
             </ng-template>
         </ng-container>
     </owl-carousel-o>

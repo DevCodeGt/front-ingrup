@@ -100,10 +100,10 @@ export class TablesProdsComponent implements OnInit {
     this.fichapdf2 = linkpdf(this.nombre , this.selected.peso , this.selected.altura);
   }
   this.fichapdf = this.pathpdf + this.fichapdfname;
-  console.log("Fichapdfname:");
-  console.log(this.fichapdfname);
-  console.log("fichapdf:");
-  console.log(this.fichapdf);
+  //console.log("Fichapdfname:");
+  //console.log(this.fichapdfname);
+  //console.log("fichapdf:");
+  //console.log(this.fichapdf);
 
 
   }
@@ -208,25 +208,30 @@ function formatearNumero(nStr) {
   return x1 + x2;
 }
 function formatearNumero2(nStr) {
-  nStr += '';
-  var x = nStr.split('.');
-  var x2 = "";
-  if(x[1]){
-    x[1] = x[1] + "0";
-    x2 = "." + x[1];
+  console.log('Funcion formatearNumero2: ', nStr);
+  if(nStr != undefined){
+    nStr += '';
+    var x = nStr.split('.');
+    var x2 = "";
+    if(x[1]){
+      x[1] = x[1] + "0";
+      x2 = "." + x[1];
+    }
+    var x1 = x[0];
+    var converted: any;
+    try {
+      converted = (parseFloat(x1 + x2)).toFixed(2);
+      throw new Error('Something bad happened');
+    } catch (e) {
+      console.log(e)
+    }
+    console.log("-----------------");
+    console.log(converted);
+    console.log("-----------------");
+    return converted;
+  }else{
+    return '';
   }
-  var x1 = x[0];
-  var converted: any;
-  try {
-    converted = (parseFloat(x1 + x2)).toFixed(2);
-    throw new Error('Something bad happened');
-  } catch (e) {
-    console.log(e)
-  }
-  console.log("-----------------");
-  console.log(converted);
-  console.log("-----------------");
-  return converted;
 }
 function linkpdf(name , peso , altura){
   if(name === "Preforma 33mm"){

@@ -64,7 +64,7 @@
                             <ng-template carouselSlide>
                                 <div class="row w-100 ">
                                     <div class="w-100 no-padding">
-                                        <img [src]="slide.src"  class="slider_img_sos w-100">
+                                        <img [src]="slide.src | translate"  class="slider_img_sos w-100">
                                     </div>
                                     
                                 <!-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 v100 no-padding description_data">
@@ -175,9 +175,9 @@
     <section class="last_section">
         
         <div class="row w-100">
-            <img class="w-100" src="../../../assets/images/Sostenibilidad/medio_ambiente/Grupo 1779.png">
-            <img class="w-100" src="../../../assets/images/Sostenibilidad/medio_ambiente/Grupo 1754.svg">
-            <img class="w-80 m-auto img_numbers" src="../../../assets/images/Sostenibilidad/medio_ambiente/Grupo 1759.svg">
+            <img class="w-100 mover15px" src="{{ '../../../assets/images/Sostenibilidad/medio_ambiente/Grupo 1779.png' | translate}}">
+            <img class="w-100 mover15px" src="{{ '../../../assets/images/Sostenibilidad/medio_ambiente/Grupo 1754.svg' | translate}}">
+            <img class="w-80 m-auto img_numbers commitments mover15px" src="{{ '../../../assets/images/Sostenibilidad/medio_ambiente/Grupo 1759.svg' | translate}}">
             
         </div>
         

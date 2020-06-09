@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MarcasService } from "./../../shared/services/marcas.service";
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 declare var $: any
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
@@ -51,7 +52,7 @@ export class DashboardComponent implements OnInit {
     ];
   Table:any = null
   carouselData2: CarouselData[] = [
-    { text: 'Bebidas', src: 'assets/images/Mercados/Modulo-1/menu-principal/Bebidas.png', dataHash: 'one'},
+    { text: 'Bebidas', src: 'assets/images/Mercados/Modulo-1/menu-principal/Beverages1.svg', dataHash: 'one'},
     { text: 'Alimentos', src: 'assets/images/Mercados/Modulo-1/menu-principal/Alimentos.png', dataHash: 'two'},
     { text: 'Home Care', src: 'assets/images/Mercados/Modulo-1/menu-principal/Home-care.png', dataHash: 'three'},
     { text: 'Food Service', src: 'assets/images/Mercados/Modulo-1/menu-principal/Food-service.png', dataHash: 'four'},
@@ -285,7 +286,8 @@ export class DashboardComponent implements OnInit {
 }
     constructor(
         private _sanitizer: DomSanitizer,
-        private MarcasService:MarcasService
+        private MarcasService:MarcasService,
+        public translate: TranslateService,
     ) {
         if(window.innerWidth < 992){
             this.sliders.push(
@@ -360,12 +362,19 @@ export class DashboardComponent implements OnInit {
             );
         }
         this.items.push(
-            { name: 'Bebidas', src: 'assets/images/Mercados/Modulo-1/menu-principal/Bebidas.svg',index: 1, dataHash: 'one'},
+            { name: 'Bebidas', src: 'assets/images/Mercados/Modulo-1/menu-principal/Beverages1.svg',index: 1, dataHash: 'one'},
             { name: 'Alimentos', src: 'assets/images/Mercados/Modulo-1/menu-principal/Alimentos.svg',index: 2 , dataHash: 'two'},
             { name: 'Home Care', src: 'assets/images/Mercados/Modulo-1/menu-principal/Home-care.svg',index: 3, dataHash: 'three'},
             { name: 'Food Service', src: 'assets/images/Mercados/Modulo-1/menu-principal/Food-service01.svg',index: 4, dataHash: 'four'},
             { name: 'Resinas Recicladas', src: 'assets/images/Mercados/Modulo-1/menu-principal/Resinas-recicladas.svg',index: 5, dataHash: 'five'}
         )
+
+        //console.log('Items dash: ', this.items);
+        //console.log('Idioma del hOME: ',this.translate.currentLang);
+
+        translate.onLangChange.subscribe((event: LangChangeEvent) => {
+            this.cambiarImgHome(event.lang);
+        });
         
         /*
         this.alerts.push(
@@ -400,6 +409,58 @@ export class DashboardComponent implements OnInit {
         this.alerts_2_INGLES.push(
             { id: 0, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/zGsbbkoKQUE")},
         );
+    }
+
+    cambiarImgHome(lang){
+        // this.tables lleva las cards de "SOLUCIONES DE EMPAQUES PARA" en el home
+        let A = this.Table;
+
+        let IMAGENES_TRANSLATE =
+        [ 
+            //{ES: 'assets/images/Mercados/Modulo-1/menu-principal/Bebidas01.svg', EN: 'assets/images/Mercados/Modulo-1/menu-principal/Beverages01.svg'},
+            {ES: 'assets/images/Mercados/Modulo-1/menu-principal/Bebidas.svg', EN: 'assets/images/Mercados/Modulo-1/menu-principal/Beverages.svg'},
+            {ES: 'assets/images/Mercados/Modulo-1/menu-principal/Alimentos.svg', EN: 'assets/images/Mercados/Modulo-1/menu-principal/Foods.svg'},
+            {ES: 'assets/images/Mercados/Modulo-1/menu-principal/Linea-Agro-Industrial.svg', EN: 'assets/images/Mercados/Modulo-1/menu-principal/Industrial-products.svg'},
+            {ES: 'assets/images/Mercados/Modulo-1/menu-principal/Linea-Vial.svg', EN: 'assets/images/Mercados/Modulo-1/menu-principal/Road-markers.svg'},
+            {ES: 'assets/images/Mercados/Modulo-1/menu-principal/Soluciones-de-almacenamiento-de-agua.svg', EN: 'assets/images/Mercados/Modulo-1/menu-principal/Water-storage.svg'},
+            {ES: 'assets/images/Mercados/Modulo-1/menu-principal/Resinas-recicladas.svg', EN: 'assets/images/Mercados/Modulo-1/menu-principal/Recycled-Resins.svg'},
+        ];
+
+        let IMAGENES_TRANSLATE_ES =
+        [
+            {EN: 'assets/images/Mercados/Modulo-1/menu-principal/Beverages.svg', ES: 'assets/images/Mercados/Modulo-1/menu-principal/Bebidas.svg'},
+            {EN: 'assets/images/Mercados/Modulo-1/menu-principal/Foods.svg', ES: 'assets/images/Mercados/Modulo-1/menu-principal/Alimentos.svg'},
+            {EN: 'assets/images/Mercados/Modulo-1/menu-principal/Industrial-products.svg', ES: 'assets/images/Mercados/Modulo-1/menu-principal/Linea-Agro-Industrial.svg'},
+            {EN: 'assets/images/Mercados/Modulo-1/menu-principal/Road-markers.svg', ES: 'assets/images/Mercados/Modulo-1/menu-principal/Linea-Vial.svg'},
+            {EN: 'assets/images/Mercados/Modulo-1/menu-principal/Water-storage.svg', ES: 'assets/images/Mercados/Modulo-1/menu-principal/Soluciones-de-almacenamiento-de-agua.svg'},
+            {EN: 'assets/images/Mercados/Modulo-1/menu-principal/Recycled-Resins.svg', ES: 'assets/images/Mercados/Modulo-1/menu-principal/Resinas-recicladas.svg'},
+        ];
+        
+        
+        if(lang === "en"){
+            // traduce de español a ingles 
+            for(var i=0; i<A.length;i++){
+                var img = this.Table[i].foto;
+                var imgDeRemplazo = "";
+
+                if (IMAGENES_TRANSLATE.find(x => x.ES == img)){
+                    imgDeRemplazo = IMAGENES_TRANSLATE.find(x => x.ES === img).EN;
+                    this.Table[i].foto = imgDeRemplazo;
+                }
+            }
+            
+        }else{
+            // traduce de ingles a español 
+            for(var i=0; i<A.length;i++){
+                var img = this.Table[i].foto;
+                var imgDeRemplazo = "";
+
+                if (IMAGENES_TRANSLATE_ES.find(x => x.EN == img)){
+                    imgDeRemplazo = IMAGENES_TRANSLATE_ES.find(x => x.EN === img).ES;
+                    this.Table[i].foto = imgDeRemplazo;
+                }
+            }
+        }
     }
 
    
@@ -454,7 +515,7 @@ export class DashboardComponent implements OnInit {
         }
         this.Table[index].foto = this.Table[index].foto.substring(0,this.Table[index].foto.length-cant)+text
 
-        //console.log(this.Table[index].foto);
+        //console.log('Foto: ', this.Table[index].foto);
 
     }
     
@@ -475,7 +536,8 @@ export class DashboardComponent implements OnInit {
                               //   let foto = response[response.findIndex(element => { element.id ==id })].foto
                               // response[response.findIndex(element => { element.id ==id })].foto = foto.substring(0,foto.length-4)+"01.svg"
                               this.Table=response
-                              console.log(this.Table)
+                              //console.log('This Table dentro de cargarAll: ', this.Table)
+                              this.cambiarImgHome(this.translate.currentLang);
                               
                           }).catch(error => {
                               console.clear
