@@ -1129,3 +1129,13 @@ body{
       }
     }
 }
+@media only screen and (max-width: 512px){
+  .carousel{
+    height: 100vw;
+    background-color: #43d62c;
+  }
+  
+  #imagenesCarousel{
+    width: 100vw !important;
+  }
+}

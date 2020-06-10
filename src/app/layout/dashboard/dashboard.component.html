@@ -6,7 +6,7 @@
             <owl-carousel-o [options]="customOptions">
                 <ng-container *ngFor="let slide of sliders">
                     <ng-template carouselSlide>
-                    <img [src]="slide.imagePath | translate">
+                    <img [src]="slide.imagePath | translate" class="carousel" id="imagenesCarousel">
                     </ng-template>
                 </ng-container>
 
@@ -300,11 +300,11 @@
         </div>
         
 </div>
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-auto menu-ingrup no-padding">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-auto menu-ingrup no-padding ">
     <owl-carousel-o [options]="customOptionsn">
         <ng-container *ngFor="let slide of carouselData;let i = index">
             <ng-template carouselSlide>
-                    <img [src]="slide.src | translate">
+                    <img [src]="slide.src | translate" class="carousel">
             </ng-template>
         </ng-container>
     </owl-carousel-o>

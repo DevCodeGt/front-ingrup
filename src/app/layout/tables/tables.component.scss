@@ -494,3 +494,24 @@
         height: fit-content;
     }
 }
+
+@media only screen and (max-width: 512px){
+    .modal-header{
+        transform: translateY(75px);
+    }
+    .pantallaCompleta{
+        margin: 0;
+        left: 0;
+        right: 0;
+        width: 45px;
+        top: -5% !important;
+    }
+
+    .movilModal{
+        top: 15vw;
+    }
+
+    .contains_single_img{
+        height: 300px !important;
+    }
+}

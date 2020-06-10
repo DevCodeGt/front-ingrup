@@ -440,3 +440,29 @@
         height: fit-content;
     }
 }
+
+@media only screen and (max-width: 512px){
+
+    .style_background{
+        padding-left: 0;
+        margin-right: 15px;
+    }
+    
+    .return_in_modal{
+        width: 45px;
+        left: -5px;
+        top: -2%;
+        height: 200px;
+    }
+
+    .hv-100{
+        height: 135vh !important;
+    }
+    /*.w-90{
+        height: 100%;
+    }
+    #tabla{
+        overflow-x: hidden !important;
+        height: 50% !important;
+    }*/
+}

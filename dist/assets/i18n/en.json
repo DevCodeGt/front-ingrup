@@ -139,9 +139,9 @@
     "Depositos de Agua Tricapa":"Trilayer water storage tank ",
     "Depositos de Agua Bicapa":"Bilayer water storage tank",
 
-    "POLICARBONATO": "Polycarbonate",
-    "POLIPROPILENO": "Polypropylene",
-    "POLIETILENO DE ALTA DENSIDAD INYECTADO":"Injected high density polyethylene",
+    "Policarbonato": "Polycarbonate",
+    "Polipropileno": "Polypropylene",
+    "Polietileno de alta densidad inyectado":"Injected high density polyethylene",
 
     "Tapa Bebida Fría":"Cold drink cover",
     "Tapa Bebida Caliente":"Hot drink cap",
@@ -216,7 +216,7 @@
 
 
 "Descripción":"Description",
-"Cuello":"Neck Finish",
+"Cuello":"Neck finish",
 "Unidades por caja":"Qty per carton",
 "Material":"Raw material",
 "Liner":"Liner",
@@ -427,7 +427,8 @@
     "assets/images/Home/slides/slide5.jpg" : "assets/images/Home/slides/5.jpg",
     "../../../assets/images/Sostenibilidad/medio_ambiente/Grupo 1754.svg" : "../../../assets/images/Sostenibilidad/medio_ambiente/Screen global commitment.jpg",
     "../../../assets/images/Sostenibilidad/medio_ambiente/Grupo 1759.svg" : "../../../assets/images/Sostenibilidad/medio_ambiente/Screen commitments.jpg",
-    "assets/images/Productos/Modulo-1/Iconos/Cajas-agricolas.svg":"assets/images/Productos/Modulo-1/Iconos/Cajas-agricolas.svg",
+    "assets/images/Productos/Modulo-1/Iconos/Cajas-agricolas.svg":"assets/images/Productos/Modulo-1/Iconos/Cajas-agricolasEN.svg",
+    "assets/images/Productos/Modulo-1/Iconos/Cajas-agricolas01.svg": "assets/images/Productos/Modulo-1/Iconos/Cajas-agricolasEN01.svg",
     "assets/images/Mercados/Modulo-1/iconos/Soluciones-de-almacenamiento-de-agua/Depositos-de-agua.svg" : "assets/images/Mercados/Modulo-1/iconos/Soluciones-de-almacenamiento-de-agua/Depositos-deEN.svg",
     "assets/images/Mercados/Modulo-1/iconos/Soluciones-de-almacenamiento-de-agua/Depositos-de-agua01.svg" : "assets/images/Mercados/Modulo-1/iconos/Soluciones-de-almacenamiento-de-agua/Depositos-deEN01.svg",
     "assets/images/Mercados/Modulo-1/iconos/Soluciones-de-almacenamiento-de-agua/Cisternas.svg":"assets/images/Mercados/Modulo-1/iconos/Soluciones-de-almacenamiento-de-agua/CisternasEN.svg",
@@ -469,5 +470,13 @@
     "assets/images/Mercados/Modulo-1/iconos/Alimentos/Cafe-y-condimentos.svg" : "assets/images/Mercados/Modulo-1/iconos/Alimentos/Cafe-y-condimentosEN.svg",
     "assets/images/Mercados/Modulo-1/iconos/Alimentos/Cafe-y-condimentos01.svg" : "assets/images/Mercados/Modulo-1/iconos/Alimentos/Cafe-y-condimentosEN01.svg",
     "assets/images/Mercados/Modulo-1/menu-principal/cajasp.svg" : "assets/images/Mercados/Modulo-1/menu-principal/CajillasPlegadizasEN.svg",
-    "assets/images/Mercados/Modulo-1/menu-principal/cajasp01.svg" : "assets/images/Mercados/Modulo-1/menu-principal/CajillasPlegadizasEN01.svg"
+    "assets/images/Mercados/Modulo-1/menu-principal/cajasp01.svg" : "assets/images/Mercados/Modulo-1/menu-principal/CajillasPlegadizasEN01.svg",
+    "assets/images/Mercados/Modulo-1/iconos/Food-service/Vasos.svg" : "assets/images/Mercados/Modulo-1/iconos/Food-service/VasosEN.svg",
+    "assets/images/Mercados/Modulo-1/iconos/Food-service/Vasos01.svg" : "assets/images/Mercados/Modulo-1/iconos/Food-service/VasosEN01.svg",
+    "assets/images/Mercados/Modulo-1/iconos/Food-service/Cajillas-plegadizas.svg":"assets/images/Mercados/Modulo-1/iconos/Food-service/Cajillas-plegadizasEN.svg",
+    "assets/images/Mercados/Modulo-1/iconos/Food-service/Cajillas-plegadizas01.svg" : "assets/images/Mercados/Modulo-1/iconos/Food-service/Cajillas-plegadizasEN01.svg",
+    "../../../assets/images/Sostenibilidad/informe/cover.png" : "../../../assets/images/Sostenibilidad/informe/Informe SosteniblidadEN.jpg",
+    "../../../assets/images/Sostenibilidad/informe/covermb.png" : "../../../assets/images/Sostenibilidad/informe/Informe SosteniblidadENM.jpg",
+    "Descargar Forma" : "Download Form"
+    
 }

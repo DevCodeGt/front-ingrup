@@ -830,7 +830,13 @@ export class TablesComponent implements OnInit {
             {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/UXANwtRNcrhJIxMkwJIBUJ10GAzilvHdfmkQFkMH.png', EN: './../../assets/images/infografias/7-Transparent-BOPP-Film-Metallized-BOPP-Film-High-Barrier-Metallized-BOPP-Film-PE.png'},
             {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/jSrHiynOne4YpyNV3r35iPKk0PrpDHfqaro3S3Z6.png', EN: './../../assets/images/infografias/6-Transparent-BOPP-Film-Metallized-BOPP-Film-PE.png'},
             {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/GQJsOlgSH5bho1XJaC2p0syLkvfGOqASk9Z9fU2J.png', EN: './../../assets/images/infografias/3-Transparent-BOPP-Film-PE-Film.png'},
-            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/5icsQQWKw1UNisj5Zj4R7rapZ84TGfwGEUNj3qyq.png', EN: './../../assets/images/infografias/2-Transparent-BOPP-Film.png'}
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/5icsQQWKw1UNisj5Zj4R7rapZ84TGfwGEUNj3qyq.png', EN: './../../assets/images/infografias/2-Transparent-BOPP-Film.png'},
+            {ES: 'https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/ecA9qzQmoHMhDKlUSytPNNglFNCae1j3rsmf2jzu.png', EN: './../../assets/fotos/cup21_22oz.jpg'},
+            {ES: "https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/sKxwfxFJbl5DlXqDGw4CWIgVsNlwc6BzGgA3Os1W.png", EN: './../../assets/fotos/cup5oz.jpg'},
+            {ES: "https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/hfbpGfUEWF4YfXj0u57hNfcHoPNe1LmzKvS0T7Yl.png", EN :"./../../assets/fotos/cup8oz.jpg"},
+            {ES: "https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/cTuMBJOn96nPwn6ETDDtyFsBjzOwSOHDeiFZ4gx0.png", EN: "./../../assets/fotos/cup12oz.jpg"},
+            {ES: "https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/n9RGk8nglmAJdDioSKZXNzjU53YNwC6Ncgy18gr9.png", EN: "./../../assets/fotos/cup16oz.jpg"},
+            {ES: "https://p2p-encuestas.s3.amazonaws.com/ProductosIngrup/of9VynTYbWKUzDaGTuhDldHAP8R0vEcQMIOyZNgN.png", EN: "./../../assets/fotos/cup32oz.jpg"},
         ];
 
           //OBTENER EL ARRAY DE LAS IMAGENES
@@ -956,8 +962,179 @@ export class TablesComponent implements OnInit {
             {ES: "Peletizado", EN: "Pelletized"},
             {ES: "Polipropileno", EN: "Polypropylene"},
             {ES: "Policarbonato", EN: "Polycarbonate"},
-            {ES: "Dispositivos electrónicos para computadoras, partes para automóviles, discos compactos y láminas.", EN: "Electronic devices for computers, auto parts, compact discs and foils."}
+            {ES: "Dispositivos electrónicos para computadoras, partes para automóviles, discos compactos y láminas.", EN: "Electronic devices for computers, auto parts, compact discs and foils."},
       
+            //markets
+            {ES: "Envase 365 ml", EN: "365 ml Bottle"},
+            {ES: "Envase 750 ml", EN: "750 ml Bottle"},
+            {ES: "Envase 1L", EN: "1Lt Bottle"},
+            {ES: "Envase365 ml", EN: "365ml Bottle"},
+
+            { ES: "Envase  600 ml Anillos", EN: '600ml Bottle Rings' },
+            { ES: "Envase 500 ml Anillos", EN: '500ml Bottle Rings' },
+            { ES: "Envase 1000 ml Anillos", EN: '1000ml Bottle Rings' },
+
+            //Sauce and dressings
+            { ES: "Envase 500ml", EN: '500ml Bottle' },
+            { ES: "Envase 600ml", EN: '600ml Bottle' },
+
+            //Dairy and Sausages
+            //Honey
+            { ES: "Envase 500 ml", EN: '500ml Bottle' },
+            { ES: "Envase 600 ml", EN: '600ml Bottle' },
+            { ES: "Envase 1000 ml", EN: '1000ml Bottle' },
+            
+            //Home care
+            { ES: "Galón Industrial", EN: 'Industrial Gallon' },
+            { ES: "1 Galón", EN: '1 Gallon' },
+            { ES: "Litro Industrial", EN: 'Industrial Liter' },
+            { ES: "1Litro", EN: '1 Liter' },
+            { ES: "Envase  600 ml Anillos ",EN: '600 ml Bottle with Rings'},
+            { ES: "Envase 500 ml Anillos ",EN: '500 ml Bottle with Rings'},
+            { ES: "Envase 1000 ml Anillos ",EN: '1000 ml Bottle with Rings'},
+            { ES: "Garrafa", EN: "Carafe"},
+            { ES: "Sport Cap 3 Piezas ", EN: 'Sport Cap 3 Pieces' },
+            { ES: "Sport Cap 2 Piezas ", EN: 'Sport Cap 2 Pieces' },
+
+            //PE BOTTLES 
+            { ES: "Envase 1 Galón PE", EN: '300ml Bottle' },
+            { ES: "Envase 200ml", EN: '200ml Bottle' },
+            { ES: "Envase 250ml", EN: '250ml Bottle' },
+            { ES: "Envase 240ml", EN: '240ml Bottle' },
+            { ES: "Envase  500 ml", EN: '500ml Bottle' },
+            { ES: "Envase 1 LT", EN: '1L Bottle' },
+            { ES: "Envase 1/2 Galón", EN: '1/2 Gallon Bottle' },
+            { ES: "1/2 Galón", EN: '1/2 Gallon' },
+
+            //Caja agricola
+            { ES: "Caja Agricola #  1 Calada", EN: "Agricultural harvesting #1 openwork"},
+            { ES: "Caja Agricola #1 Calada", EN: "Agricultural harvesting #1 openwork"},
+            { ES: "Caja Agricola Cerrada", EN: "Closed Agricultural container"},
+            { ES: "Caja agricola #2", EN: "Agricultural harvesting #2"}, 
+            { ES: "Caja para Lacteos", EN: "Dairy box"},
+
+            {ES: "Envase  500 ml", EN: "500ml Bottle"},
+            {ES: "Envase 300 ml", EN: "300ml Bottle"},
+
+            //Caps & closures
+            { ES: "38 mm Presion GT", EN: "38mm Pressure GT"},
+            { ES: "38 mm Rosca  PE", EN: '38mm Screw PE'},
+            { ES: "38 mm Rosca PE CP2", EN: "38mm Screw PE CP2"},
+            { ES: "38 mm Rosca  PE", EN: "38mm Screw PE"},
+            { ES: "38 mm Rosca  PE Liner", EN: "38mm Screw  PE Liner"},
+            { ES: "Tapa  55 mm Con Vertedero", EN: "55mm Cap ..."},
+            { ES: "Tapa 55 mm Plana Clip", EN: "55mm Flat Cap Clip"},
+            { ES: "Tapa 53 mm Plana Faldón Corto", EN: "Top 53mm Flat Short Skirt"},
+
+            { ES: "Bandejas de pan", EN: "Bread Trays"},
+
+            { ES: "Tapa Bebida Fría 12 Onz", EN: "12 oz Cold Drink Cover" },
+            { ES: "Tapa Bebida Fría 16-21 Onz",EN: "16-21 oz Cold Drink Cover"},
+            { ES: "Tapa Bebida Fria  30 -32 Onz" ,EN: "30-32 oz Cold Drink Cover"},
+            { ES: "Tapa  Bebida Fría  12 Onz",EN: "12 oz Cold Drink Cover"},
+            { ES: "Tapa Bebida Fría  16-21 Onz",EN: "16-21 oz Cold Drink Cover"},
+            { ES: "Tapa  Bebida Fría 30-32 Onz",EN: "30-32 oz Cold Drink Cover"},
+            { ES: "Poliestireno", EN: "Polystyrene"},
+            { ES: "Tapa BC 8 oz", EN: "BC Cover 8 oz."},
+            { ES: "Tapa BC 12/16 onzas", EN: "12/16 oz BC Cover"},
+            { ES: "Vaso para helado 12 Onzas", EN: "Ice Cream Cup 12oz"},
+
+            { ES: "Vaso Bebida Fría 5 onzas", EN: "5oz Cold Drink Cup"},
+            { ES: "Vaso Bebida Fría 8 onzas", EN: "8oz Cold Drink Cup"},
+            { ES: "Vaso Bebida Fria  12 onzas Boca Ancha", EN: "12oz Wide Mouth Cold Drink Cup"},
+            { ES: "Vaso Bebida Fría  16 onzas", EN: "16oz Cold Drink Cup"},
+            { ES: "Vaso Bebida Fría 22 onzas", EN: "22oz Cold Drink Cup"},
+            { ES: "Vaso Bebida Fría  30 a 32 onzas", EN: "30oz - 32oz Cold Drink Cup"},
+
+            { ES: "Vaso Bebida Caliente  5 onzas", EN: "5oz Hot Drink Cup"},
+            { ES: "Vaso Bebida Caliente 8 onzas", EN: "8oz Hot Drink Cup"},
+            { ES: "Vaso Bebida Caliente  10 onzas", EN: "10oz Hot Drink Cup"},
+            { ES: "Vaso Bebida Caliente 12 onzas", EN: "12oz Hot Drink Cup"},
+            { ES: "Vaso Bebida Caliente 16 onzas", EN: "16oz Hot Drink Cup"},
+
+            { ES: "Vaso Bebida Fría 5 onzas", EN:  "5oz Cold Drink Cup"},
+            { ES: "Vaso Bebida Fría 8 onzas", EN: "8oz Cold Drink Cup"},
+            { ES: "Vaso Bebida  Fría 12 onzas", EN: "12oz Cold Drink Cup"},
+            { ES: "Vaso Bebida Fria  12 onzas Boca Ancha", EN: "12oz Wide Mouth Cold Drink Cup"},
+            { ES: "Vaso Bebida Fría  16 onzas", EN: "16oz Cold Drink Cup"},
+            { ES: "Vaso Bebida Fría 22 onzas", EN: "16oz Cold Drink Cup"},
+            { ES: "Vaso Bebida Fría  30 a 32 onzas", EN: "30oz - 32oz Cold Drink Cup"},
+            { ES: "Recubrimiento PLA", EN: "PLA coating"},
+
+            //water Storage
+            { ES: "450 Litros", EN: "450 Liters"},
+            { ES: '3/4" Fundido', EN: '3/4" Molten'},
+            { ES: "Azul", EN: "Blue"},
+            { ES: "Negro", EN: "Black"},
+            { ES: "600 Litros", EN: "600 Liters"},
+            { ES: "650 Litros", EN: "650 Liters"},
+            { ES: "750 Litros", EN: "750 Liters"},
+            { ES: "990 Litros", EN: "900 Liters"},
+            { ES: "1250 Litros", EN: "1250 Liters"},
+            { ES: "1750 Litros", EN: "1750 Liters"},
+            { ES: "1750", EN: "1750 Liters"},
+            { ES: "2500 Litros", EN: "2500 Liters"},
+            { ES: "2500", EN: "2500 Liters"},
+            { ES: "3200 Litros", EN: "3200 Liters"},
+            { ES: "3200", EN: "3200 Liters"},
+
+            { ES: "4100 Lts Negro", EN: "4100 Lts Black"},
+            { ES: '2" Fundido', EN: '2" Molten'},
+            { ES: '2" Roscado', EN: '2" Screw'},
+            { ES: "5000 Lts Negro", EN: "5000 Lts Black"},
+            { ES: "6000 Lts Negro", EN: "6000 Lts Black"},
+            { ES: "7000 Lts Negro", EN: "7000 Lts Black"},
+
+            { ES: " Fosas Septicas 1250Lt", EN: "Septic Tank 1250 Lt"},
+            { ES: "Fosas Septicas 1700Lt", EN: "Septic Tank 1700 Lt"},
+            { ES: "Fosas Septicas 2500Lt", EN: "Septic Tank 2500 Lt"},
+            { ES: "Fosas Septicas 3200Lt", EN: "Septic Tank 3200 Lt"},
+            { ES: "Fosas Septicas 4100Lt", EN: "Septic Tank 4100 Lt"},
+            { ES: "Fosas Septicas 6000Lt", EN: "Septic Tank 6000 Lt"},
+            { ES: " Fosas Septicas 750Lt", EN: "Septic Tank 750 Lt"},
+
+            { ES: "Un lavadero izquierdo o derecho", EN: "One Left or Right Buddle"},
+            { ES: "Dos Lavaderos", EN: "Two Buddles"},
+            { ES: "Dos lavaderos", EN: "Two Buddles"},
+
+            { ES: "Contenedor industrial", EN: "Trash Bins"},
+
+            { ES: "Hielera", EN: "Coolers"},
+            { ES: "Negro / rojo / azul", EN: "Black / Red / Blue"}, 
+
+            { ES: 'Casillero 36"', EN: 'Locker 36"'},
+            { ES: 'Casillero 18"', EN: 'Locker 36"'},
+
+            { ES: "Letrina Plástica", EN: 'Toilet Plastic'},
+
+            { ES: "Tarima", EN: 'Pallet'},
+            { ES: "Negro y Azul", EN: 'Black & Blue'},
+
+            { ES: "Caja de transporte abierta baja", EN: "Short open transport box"},
+            { ES: "Caja de transporte cerrada alta", EN: "Tall closed transport box"},
+            { ES: "Caja de transporte cerrada baja", EN: "Short closed transport box"},
+            { ES: "Tapadera de caja de transporte", EN: "Transport box cover"},
+
+            { ES: "Caja ordenadora 1", EN: "Plastic Organizer Box 1"},
+            { ES: "Caja ordenadora 2", EN: "Plastic Organizer Box 2"},
+            { ES: "Caja ordenadora 3", EN: "Plastic Organizer Box 3"},
+            { ES: "Caja ordenadora 4", EN: "Plastic Organizer Box 4"},
+            { ES: "Caja ordenadora 5", EN: "Plastic Organizer Box 5"},
+
+            { ES: "Cubeta 1 Galón", EN: "1 Galon Bucket"},
+            { ES: "Cubeta 5 Galones", EN: "5 Galons Bucket"},
+            { ES: "Tapa Cubeta  1 Galón", EN: "1 Galon Bucket Cover"},
+            { ES: "Tapa Cubeta 5 Galones", EN: "5 Galon Bucket Cover"},
+
+            { ES: "Canasto", EN: "Plastic Basket"},
+
+            { ES: "Tambo Vial", EN: "Traffic barrels"},
+            { ES: "Tapadera de caja de transporte", EN: "Transport box cover"},
+            { ES: "Separador vial", EN: "Road separator"},
+            { ES: "Delineador vial", EN: "Road Liner"},
+            { ES: "Tope vial", EN: "Road Stop"},
+            { ES: "Separador Anidable", EN: "Nestable Separator"},
+
         ];
 
         if(lang == 'en'){
@@ -1006,6 +1183,20 @@ export class TablesComponent implements OnInit {
                         this.selectedData['presentaciones'][i].descripcion = "2.5 Lts PET Bottle";
                         this.selectedData['presentaciones'][i].nombre = "2.5 Lts PET Bottle";
                         break;
+                    case 2202:
+                        this.selectedData['presentaciones'][i].descripcion = "500ml Bottle";
+                        this.selectedData['presentaciones'][i].nombre = "500ml Bottle";
+                        break;
+                    case 1226:
+                        this.selectedData['presentaciones'][i].descripcion = "38mm Screw PE";
+                        this.selectedData['presentaciones'][i].nombre = "38mm Screw PE";
+                        break;
+                    case 1231:
+                        this.selectedData['presentaciones'][i].descripcion = "38mm Screw  PE Liner";
+                        this.selectedData['presentaciones'][i].nombre = "38mm Screw  PE Liner";
+                        break;
+
+
                 }
             }
             

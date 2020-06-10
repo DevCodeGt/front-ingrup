@@ -100,7 +100,7 @@
 
                         </div> -->
                         <img *ngIf="galleryImages.length==1" src="./../../../assets/images/PantallaCompleta.png" class="pantallaCompleta" (click)="openGallery2()">
-                        <div *ngIf="galleryImages.length==1" class="uniqueImageContainer ">
+                        <div *ngIf="galleryImages.length==1" id="id1" class="uniqueImageContainer ">
                             <ngx-gallery class="contains_single_img" [options]="galleryOptions2" [images]="galleryImages" [class.ImagenesCant2]="selectedData.fotosCant==2" [class.ImagenesCant3]="selectedData.fotosCant==3" [class.ImagenesCant4]="selectedData.fotosCant>=4" [class.oscurece]="selectedData.categoria==2"></ngx-gallery>
                             <!-- <div class="content_single_img">
                                 <img *ngFor="let image of galleryImages2; let i=index" class="uniqueImage" [class.ImagenesCant1]="selectedData.fotosCant==1" [class.oscurece]="selectedData.categoria==2"  [src]="image.thumb" (click)="openGallery(i)" />
@@ -184,11 +184,11 @@
 <ng-template #viewModal let-c="dismiss" let-d="dismiss">
         <div class="modal-header"  *ngIf="selectedData">
                 <h4 class="modal-title">{{selectedData.nombre | translate}}</h4>
-                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <button style="z-index: 100;" type="button" class="close" aria-label="Close" (click)="d('Cross click')">
                     <span aria-hidden="true">&times;</span>
                 </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body movilModal">
                 <form class="row w-100" *ngIf="selectedData" >
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 galeria mt-3 d-flex" id="Galeria" *ngIf="selectedData && !selectedData.hasModel" onlyMyGallery>
                         <i class="fa unlockable abstolute-unlockable" *ngIf="session && selectedData.id" [class.fa-lock]="abierto" [class.fa-edit]="!abierto" (click)="open(editGaleriaModal,selectedData.id,'galeria')"></i>
@@ -205,7 +205,7 @@
 
                         </div> -->
                         <img *ngIf="galleryImages.length==1" src="./../../../assets/images/PantallaCompleta.png" class="pantallaCompleta" (click)="openGallery2()">
-                        <div *ngIf="galleryImages.length==1" class="uniqueImageContainer ">
+                        <div *ngIf="galleryImages.length==1" id="id2" class="uniqueImageContainer ">
                             <ngx-gallery class="contains_single_img" [options]="galleryOptions2" [images]="galleryImages" [class.ImagenesCant2]="selectedData.fotosCant==2" [class.ImagenesCant3]="selectedData.fotosCant==3" [class.ImagenesCant4]="selectedData.fotosCant>=4" [class.oscurece]="selectedData.categoria==2"></ngx-gallery>
                             <!-- <div class="content_single_img">
                                 <img *ngFor="let image of galleryImages2; let i=index" class="uniqueImage" [class.ImagenesCant1]="selectedData.fotosCant==1" [class.oscurece]="selectedData.categoria==2"  [src]="image.thumb" (click)="openGallery(i)" />
@@ -234,7 +234,7 @@
 <ng-template #editModal let-c="dismiss" let-d="dismiss">
     <div class="modal-header">
             <h4 class="modal-title">Editar</h4>
-            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <button  type="button" class="close" aria-label="Close" (click)="d('Cross click')">
                 <span aria-hidden="true">&times;</span>
             </button>
     </div>

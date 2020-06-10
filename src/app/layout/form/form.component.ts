@@ -1006,10 +1006,10 @@ export class FormComponent implements OnInit {
             { ES: "30 Botellas  7/8 Onzas ", EN: "30 Bottles 7/8 oz"},
 
             //Caja agricola
-            { ES: "Caja Agricola #  1 Calada", EN: "Agricultural Box #1 Openwork"},
-            { ES: "Caja Agricola #1 Calada", EN: "Agricultural Box #1 Openwork"},
-            { ES: "Caja Agricola Cerrada", EN: "Closed Agricultural Box"},
-            { ES: "Caja agricola #2", EN: "Agricultural Box #2"}, 
+            { ES: "Caja Agricola #  1 Calada", EN: "Agricultural harvesting #1 Openwork"},
+            { ES: "Caja Agricola #1 Calada", EN: "Agricultural harvesting #1 Openwork"},
+            { ES: "Caja Agricola Cerrada", EN: "Closed Agricultural container"},
+            { ES: "Caja agricola #2", EN: "Agricultural harvesting #2"}, 
             { ES: "Caja para Lacteos", EN: "Dairy Box"},
 
             { ES: "Vaso para helado 12 Onzas", EN: "Ice Cream Cup 12oz"},
@@ -1102,7 +1102,7 @@ export class FormComponent implements OnInit {
 
             { ES: "Canasto", EN: "Plastic Basket"},
 
-            { ES: "Tambo Vial", EN: "Tambo Vial"},
+            { ES: "Tambo Vial", EN: "Traffic barrels"},
             { ES: "Tapadera de caja de transporte", EN: "Transport box cover"},
             { ES: "Separador vial", EN: "Road separator"},
             { ES: "Delineador vial", EN: "Road Liner"},

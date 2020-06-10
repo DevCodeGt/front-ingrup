@@ -259,3 +259,21 @@ ngx-gallery-preview.ngx-gallery-active{
         padding-left: 0px;
     }
 }
+
+@media only screen and (max-width: 512px){
+
+    .container_boton1{
+        width: 50%;
+        margin: auto;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        .boton2{
+            padding: 0;
+            height: 30px;
+            line-height: 30px;
+            font-size: 10px;
+        }
+    }
+
+}
