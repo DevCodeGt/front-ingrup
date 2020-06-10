@@ -15,6 +15,30 @@ $rosado: #E06B70;
   src: url(../../../assets/fonts/Roboto-Medium.ttf);
 }
 
+/***responsive 320**/
+@media only screen and (max-width: 480px) , screen and (max-device-width: 480px) {
+.video1LadoDerecho{
+  max-width: 100% !important;
+  flex: 100% !important;
+  height: auto !important;
+  margin-bottom: 25px;
+}
+
+.Vide2Lateral{
+  max-width: 100% !important;
+  flex: 100% !important;
+  height: auto !important;
+  margin-bottom: 25px;
+}
+
+.EtiquetaVideo{
+  width:100%;
+}
+
+}
+
+/************/
+
 
 
 .video1LadoDerecho iframe{
@@ -22,6 +46,13 @@ $rosado: #E06B70;
 
 }
 
+
+.EtiquetaVideo{
+  margin: 0 auto;
+  float: initial;
+  display: block;
+  margin-bottom: 10px;
+}
 
 //video home
 
@@ -34,10 +65,16 @@ $rosado: #E06B70;
 
 
 .content_all_videos .row .Vide1Lateral{
-  height: 535px;
+  /*height: 535px;*/
+  height: 650px;
   max-width: 49%;
   flex: 49%;
   overflow: hidden;
+  position: relative;
+}
+
+.video1LadoDerecho iframe{
+  min-height: 66%;
 }
 
 .content_all_videos .row .Vide1Lateral iframe{
@@ -48,6 +85,7 @@ $rosado: #E06B70;
   height:600px;
   max-width: 49%;
   flex: 49%;
+  position: relative;
 }
 
 
