@@ -106,6 +106,7 @@
                     <!--Section 1-->
                     <div class='col-12 col-md-6 col-lg-6 Vide1Lateral  video1LadoDerecho {{ "yy-video_ESP_A" | translate }}'>
                         <ng-container *ngFor="let slide of alerts">
+                            <img src='assets/images/labels_video/quienes_somos_esp.jpg' class='EtiquetaVideo'/>
                             <iframe class="yy-video"   [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
                         </ng-container>
                     </div>
@@ -114,6 +115,7 @@
                     <!--Section 2-->
                     <div class='col-12 col-md-6 col-lg-6 Vide2Lateral {{ "yy-video_ESP_A" | translate }}'>
                         <ng-container *ngFor="let slide of alerts2">
+                            <img src='assets/images/labels_video/economia_esp.jpg' class='EtiquetaVideo'/>
                             <iframe class="yy-video"    [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
                         </ng-container>
                     </div>
@@ -122,6 +124,8 @@
                     <!--Section 1-->
                     <div class='col-12 col-md-6 col-lg-6 Vide1Lateral video1LadoDerecho {{ "yy-video_ING_A" | translate }}'>
                         <ng-container *ngFor="let slide of alerts_INGLES">
+                            
+                            <img src='assets/images/labels_video/quienes_somos_eng.jpg' class='EtiquetaVideo'/>
                             <iframe class="yy-video"   [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
                         </ng-container>
                     </div>
@@ -130,6 +134,7 @@
                     <!--Section 2-->
                     <div class='col-12 col-md-6 col-lg-6 Vide2Lateral {{ "yy-video_ING_A" | translate }}'>
                         <ng-container *ngFor="let slide of alerts_2_INGLES">
+                            <img src='assets/images/labels_video/economia_esp.jpg' class='EtiquetaVideo'/>
                             <iframe class="yy-video"    [src]="slide.type" frameborder="0" allow="accelerometer; autoplay;  gyroscope; picture-in-picture"></iframe>
                         </ng-container>
                     </div>
