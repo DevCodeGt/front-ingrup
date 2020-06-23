@@ -61,7 +61,8 @@ export class IntegrateComponent implements OnInit {
         marca: "Solicitud de empleo",
         mensaje:"[INTEGRATE]",
         emailSend:"",
-        emailResp:"suministros@ingrup.com"
+        ///emailResp:"suministros@ingrup.com"
+        emailResp:"anllelamasella@ingrup.com"
       }
       carouselData:any = [
         { text: 'Slide 1', src: 'assets/images/Nosotros/titulo1.png', dataHash: 'one'},
