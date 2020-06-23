@@ -670,3 +670,11 @@ $topnav-background-color: #ffffff;
     }
 
 }
+
+@media screen and (max-width: 512px) {
+    .results{
+        position: absolute;
+        top: 3vh;
+        z-index: 11;
+    }
+}

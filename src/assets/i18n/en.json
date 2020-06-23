@@ -477,6 +477,12 @@
     "assets/images/Mercados/Modulo-1/iconos/Food-service/Cajillas-plegadizas01.svg" : "assets/images/Mercados/Modulo-1/iconos/Food-service/Cajillas-plegadizasEN01.svg",
     "../../../assets/images/Sostenibilidad/informe/cover.png" : "../../../assets/images/Sostenibilidad/informe/Informe SosteniblidadEN.jpg",
     "../../../assets/images/Sostenibilidad/informe/covermb.png" : "../../../assets/images/Sostenibilidad/informe/Informe SosteniblidadENM.jpg",
-    "Descargar Forma" : "Download Form"
+    "Descargar Forma" : "Download Form",
+    "Contenedor Industrial " : "Trash bins",
+    "Fosas Sépticas " : "Septic tanks",
+    "Envases PE Industrial ":"PE Industrial bottles",
+    "Cajillas Plegadizas ":"Folding Carton",
+    "assets/images/Home/slides/mobile/slider2.png":"assets/images/Home/slides/home/BannerHome1m.jpg",
+    "No se ha encontrado ..." : "Item not found..."
     
 }

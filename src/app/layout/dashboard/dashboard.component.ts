@@ -296,7 +296,7 @@ export class DashboardComponent implements OnInit {
                 //     label: 'Third slide label',
                 // },
                 {
-                    imagePath: 'assets/images/Home/slides/home/BannerHome1m.jpg',
+                    imagePath: 'assets/images/Home/slides/mobile/slider2.png',
                     label: 'Third slide label',
                 },
                 {
@@ -402,7 +402,7 @@ export class DashboardComponent implements OnInit {
 
         ///Vide1Lateral Ing
         this.alerts_INGLES.push(
-            { id: 0, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/zGsbbkoKQUE")},
+            { id: 0, type: this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/rdEPcmVszZ8")},
         );
 
         ///Vide2Lateral Ing

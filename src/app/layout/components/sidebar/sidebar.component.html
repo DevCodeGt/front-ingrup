@@ -156,12 +156,16 @@
             <div class="toggle-button pc" [ngClass]="{collapsed: collapsed}">
                 <div class="results w-100" *ngIf="TableProdsFind">
                     <ul *ngIf="TableProdsFind.length>0">
-                            <li *ngFor="let data of TableProdsFind" (click)="recharge()" [routerLink]="['/'+data.pagina,data.id]">
+                            <!-- <li *ngFor="let data of TableProdsFind" (click)="recharge()" [routerLink]="['/'+data.pagina,data.id]">
+                                {{data.nombre  | translate }}
+                            </li> -->
+                            <li *ngFor="let data of TableProdsFind" (click)="toggleSidebar();toggleCollapsed()" [routerLink]="['/'+data.pagina,data.id]">
                                 {{data.nombre  | translate }}
                             </li>
+                            
                     </ul>
                     <ngb-alert *ngIf="TableProdsFind.length<=0 && buscado" type="danger" (close)="buscado = false">
-                            <strong> {{ 'No se ha encontrado nada ...'  | translate  }}</strong>
+                            <strong> {{ 'No se ha encontrado ...'  | translate }}</strong>
                     </ngb-alert>
         
                 </div>
@@ -319,7 +323,7 @@
                         </li>
                 </ul>
                 <ngb-alert *ngIf="TableProdsFind.length<=0 && buscado" type="danger" (close)="buscado = false">
-                        <strong> {{ 'No se ha encontrado nada ...'  | translate  }}</strong>
+                        <strong> {{ 'No se ha encontrado ...'  | translate  }}</strong>
                 </ngb-alert>
     
             </div>

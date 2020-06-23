@@ -5,7 +5,7 @@ import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { TiposService } from "./../../../shared/services/tipos.service";
 import { ProductosService } from "./../../../shared/services/productos.service";
 import { CategoriasService } from "./../../../shared/services/categorias.service";
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import {Subject} from 'rxjs';
 import {debounceTime} from 'rxjs/operators';
 declare var $: any
@@ -93,24 +93,38 @@ export class SidebarComponent implements OnInit {
     }
     
     public changeSuccessMessage() {
-        this._success.next(`<strong>No se ha encontrado nada en esta busqueda...</strong>`);
+        if(this.translate.currentLang === 'en'){
+            this._success.next(`<strong>Item not found ...</strong>`);
+        }else{
+            this._success.next(`<strong>No se ha encontrado ...</strong>`);
+        }
     }
-    findByName(formData){
 
-    this.blockUI.start();
-      const data = {
-        id:formData,
-        state:'0',
-        filter:'nombre'
-      };
+
+    findByName(formData){
     //   console.log('antes:'+this.selectedData.id+' Ahora'+id);
 
-    this.CategoriasService.getAllFilter(data)
+        console.log('Lang: ', this.translate.currentLang);
+        if(this.translate.currentLang === 'en'){
+            formData = formData.toLowerCase();
+            formData = this.getTraduccion(formData);
+            //console.log('Buscar: ', formData);
+        }
+
+        this.blockUI.start();
+            const data = {
+            id:formData,
+            state:'0',
+            filter:'nombre'
+        };
+    
+        this.CategoriasService.getAllFilter(data)
                           .then(response => {
 
                             this.TableProdsFind=response;
-                            /*console.log('OTROS');
-                            console.log(response);*/
+                            /*console.log('OTROS');*/
+                            console.log('Funcion Categoria');
+                            console.log(response);
                             this.expand_menu();
                             if(response.length<=0){
                                 this.buscado=true;
@@ -121,6 +135,47 @@ export class SidebarComponent implements OnInit {
                             console.clear;
                             this.blockUI.stop();
                           });
+    }
+
+    getTraduccion(word){
+        let diccio = [
+            {EN: "caps" , ES: "tapas"},
+            {EN: "bottle", ES: "envases"},
+            {EN: "preforms", ES: "preformas"},
+            {EN: "flexible packaging", ES: "empaque flexible"},
+            {EN: "lithographic package", ES: "empaque  litografico"},
+            {EN: "crates", ES: "cajillas"},
+            {EN: "agricultural harvesting containers", ES: "cajas agricolas"},
+            {EN: "cups", ES: "vasos"},
+            {EN: "folding carton", ES: "cajillas plegadizas"},
+            {EN: "recycled resins", ES: "resinas recicladas"},
+            {EN: "water storage tank", ES: "depositos de agua"},
+            {EN: "cisterns", ES: "cisternas"},
+            {EN: "septic tanks", ES: "fosas septicas"},
+            {EN: "plastic laundry sinks", ES: "pilas"},
+            {EN: "plastic baskets", ES: "lavaderos"},
+            {EN: "trash bins", ES: "contenedor industrial"},
+            {EN: "coolers", ES: "hieleras"},
+            {EN: "industrial / commercial locker", ES: "casillero industrial"},
+            {EN: "toilet plastic", ES: "letrinas"},
+            {EN: "pallets", ES: "tarima"},
+            {EN: "pe industrial bottles", ES: "envases pe industrial "},
+            {EN: "multibox", ES: "multibox"},
+            {EN: "buckets", ES: "cubetas"},
+            {EN: "plastic baskets", ES: "canastos"},
+            {EN: "road safety  products", ES: "linea vial"},
+            {EN: "bakety trays", ES: "bandejas de pan"}
+        ]
+
+        var patt = new RegExp(`${word}`);
+
+        for(var i = 0; i < diccio.length; i++){
+            var res = patt.test(diccio[i].EN);
+            if(res === true){
+                return diccio[i].ES;
+            }
+        }
+        return word;
     }
 
 
