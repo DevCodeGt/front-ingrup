@@ -1,6 +1,6 @@
 {
   "name": "sb-admin-bs4-angular-8",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "license": "Apache",
   "scripts": {
     "ng": "ng",
@@ -17,7 +17,7 @@
     "@angular/animations": "~8.0.0",
     "@angular/common": "~8.0.0",
     "@angular/compiler": "~8.0.0",
-    "@angular/core": "~8.0.0",
+    "@angular/core": "^8.0.3",
     "@angular/forms": "~8.0.0",
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
@@ -42,7 +42,7 @@
     "ngx-owl-carousel": "^2.0.7",
     "ngx-owl-carousel-o": "^2.0.1",
     "rxjs": "6.5.2",
-    "three": "~0.108.0",
+    "three": "^0.107.0",
     "three-orbitcontrols-ts": "~0.1.2",
     "three.meshline": "~1.2.0",
     "tslib": "^1.9.0",
