@@ -365,7 +365,7 @@
     "../../../assets/images/Nosotros/c2.png":"../../../assets/images/Nosotros/FSSC-path.svg",
     "../../../assets/images/Nosotros/c3.png":"../../../assets/images/Nosotros/ISO-path.svg",
 
-    "assets/images/Home/slides/home/caratula-min.png":"assets/images/Home/slides/home/Slide-3-home-desktop.jpg",
+    "assets/images/Home/slides/home/caratula-min.jpg":"assets/images/Home/slides/home/Slide-3-home-desktop.jpg",
     "assets/images/Home/slides/home/BannerHome1.jpg":"assets/images/Home/slides/home/Slide-1-home-desktop.jpg",
     "assets/images/Home/slides/home/BannerHome2.jpg":"assets/images/Home/slides/home/Slide-2-home.jpg",
 
@@ -483,6 +483,7 @@
     "Envases PE Industrial ":"PE Industrial bottles",
     "Cajillas Plegadizas ":"Folding Carton",
     "assets/images/Home/slides/mobile/slider2.png":"assets/images/Home/slides/home/BannerHome1m.jpg",
-    "No se ha encontrado ..." : "Item not found..."
+    "No se ha encontrado ..." : "Item not found...",
+    "assets/images/Home/slides/home/slider4.jpg" : "assets/images/Home/slides/home/slider4_en.jpg"
     
 }

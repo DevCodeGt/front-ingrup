@@ -340,13 +340,13 @@ export class DashboardComponent implements OnInit {
                     label: 'Third slide label',
                 },*/,
                 {
-                    imagePath: 'assets/images/Home/slides/home/caratula-min.png',
+                    imagePath: 'assets/images/Home/slides/home/caratula-min.jpg',
                     label: 'Third slide label',
                 },
-                // {
-                //     imagePath: 'assets/images/Home/slides/home/slider4.png',
-                //     label: 'Third slide label',
-                // },
+                 {
+                     imagePath: 'assets/images/Home/slides/home/slider4.jpg',
+                     label: 'Third slide label',
+                 },
                 // {
                 //     imagePath: 'assets/images/Home/slides/home/slider5.png',
                 //     label: 'Third slide label',
